@@ -42,6 +42,21 @@
   */
 }
 
+.side-bar li {
+    padding-left: 0px;
+    border-left: 3px solid #2e353d;
+    border-bottom: 1px solid #23282e;
+}
+.side-bar li a {
+    text-decoration: none;
+    color: #e1ffff;
+}
+.side-bar li a i {
+    padding-left: 10px;
+    width: 20px;
+    padding-right: 20px;
+}
+
 .side-bar li:hover {
     border-left: 3px solid #d19b3d;
     background-color: #4f5b69;
@@ -50,6 +65,12 @@
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
+}
+
+@media (min-width: 767px) {
+    .nav-side-menu .menu-list .menu-content {
+        display: block;
+    }
 }
 
 @media (max-width: 767px) {

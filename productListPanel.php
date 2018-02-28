@@ -1,3 +1,25 @@
+<?php
+
+require_once 'dbconnect.php';
+
+function console_log($data){
+    echo '<script>';
+    echo 'console.log('. $data .')';
+    echo '</script>';
+}
+
+$sql = "SELECT * FROM producttable";
+$result = mysqli_query($conn,$sql);
+if(!$result){
+    echo'No result';
+    echo "Error: Our query failed to execute and here is why: \n";
+    echo "Query: " . $sql . "\n";
+    echo "Errno: " . $conn->errno . "\n";
+    echo "Error: " . $conn->error . "\n";
+}
+
+?>
+
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,18 +47,9 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-inverse"> <!-- DEFAULT BOOTSTRAP NAVBAR -->
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Merveilleuse</a>
-
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Page 1</a></li>
-                </ul>
-            </div>
-        </nav>
+    <?php
+        include('navbar.php');
+    ?>
 
 
 
@@ -52,15 +65,24 @@
                     <div id="sidebarID" class="menu-list active">
                         <ul class="menu-content">
                             <li>
-                                <a href="#"> <span class="glyphicon glyphicon-envelope"></span> Dashboard </a>
+                                <span href="#"> <span class="glyphicon glyphicon-stats"></span> Dashboard </span>
                             </li>
                             <li>
-                                <span href="#"> <span class="glyphicon glyphicon-envelope"</span> Product List </a>
+                                <span href="#"> <span class="glyphicon glyphicon-th-list"></span> Product List </span>
+                            </li>
+                            <li>
+                                <span href="#"> <span class="glyphicon glyphicon-user"></span> Users </span>
+                            </li>
+                            <li>
+                                <span href="#"> <span class="glyphicon glyphicon-tags"></span> Orders </span>
+                            </li>
+                            <li>
+                                <span href="#"> <span class="glyphicon glyphicon-camera"></span> Gallery </span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class = "col-sm-9">
+                <div class = "col-sm-10">
                     <div class="productTitle">
                         <h1 class = "h2">Product List</h1>
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#addModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Add">add_circle_outline</i></button>
@@ -78,6 +100,32 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    echo '<tr>
+                                            <td>
+                                                    <span class="custom-checkbox">
+                                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                                        <label for="checkbox1"></label>
+                                                    </span>
+                                            </td>
+                                            <td> <img src="res/unu.jpg"> </td>
+                                            <td>'. $row["nameProduct"] .'</td>
+                                            <td>'. $row["priceProduct"] . "/" . $row["unitProduct"] .'</td>
+                                            <td>'. "ceva" .'</td>
+                                            <td>
+            
+                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#editModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Edit">&#xE254;</i></button>
+                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Delete">delete</i></button>
+                                            </td>
+                                        </tr>';
+                                }
+                            } else {
+                                echo "0 results";
+                            }
+                            ?>
+                            <!--
                             <tr>
                                 <td>
                                         <span class="custom-checkbox">
@@ -95,6 +143,7 @@
                                     <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Delete">delete</i></button>
                                 </td>
                             </tr>
+                            -->
                             </tbody>
                         </table>
                     </div>
@@ -109,34 +158,27 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h4 class="modal-title">Edit Product</h4>
                     </div>
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Edit Product</h4>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Price/Unit</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label></label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
+                        <div class="form-group">
+                            <label>Price/Unit</label>
+                            <input type="email" class="form-control" required>
                         </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
+                        <div class="form-group">
+                            <label></label>
+                            <textarea class="form-control" required></textarea>
                         </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
                     </div>
                 </div>
-
             </div>
         </div>
         <div id="deleteModal" class="modal fade" role="dialog">
@@ -162,32 +204,35 @@
             <div class="modal-dialog">
 
                 <!-- Modal content-->
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Add New Product</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" required>
+                <form action="productListPanel.php" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Add New Product</h4>
                         </div>
-                        <div class="form-group">
-                            <label>Price/Unit</label>
-                            <input type="email" class="form-control" required>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="newProductName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Price/Unit</label>
+                                <input type="email" name="newProductPriceperUnit" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label></label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label></label>
-                            <textarea class="form-control" required></textarea>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-info" name="saveNewProduct" value="Save">
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
+
     </body>
 </html>
+
