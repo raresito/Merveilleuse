@@ -1,207 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <link rel="shortcut icon" href="res/favicon.ico" />
-	  
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <meta name="description" content="">
+          <meta name="author" content="">
+          <link rel="shortcut icon" href="res/favicon.ico" />
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic">
+        <link rel="stylesheet" href="assets/css/dh-navbar-centered-brand.css">
+        <link rel="stylesheet" href="assets/css/Header-Cover01.css">
+        <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/Footer-Clean.css">
   
       <title>Merveilleuse - Atelier de prajituri Artizanale</title>
-     
-	 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-reboot.css" >
-		<link rel="stylesheet" href="css/bootstrap-grid.css" >
-		<link rel="stylesheet" href="css/starter-template.css" >
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
-		<script src="js/myJavaScript.js"> </script>
+
     </head>
   
     <body>
-	  <nav class = "navbar navbar-toggleable-md navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class = "navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class = "navbar-brand" href = "#"> Merveilleuse </a>
-			</div>
-			
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class = "nav navbar-nav">
-					<li class = "nav-item active"> <a href="#"> Home </a> </li>
-					<li class="nav-item" > <a href="#"> Page 1 </a> </li>
-					<li class="nav-item" > <a href="#"> Page 2 </a> </li>
-					<li class="nav-item" > <a href="#"> Page 3 </a> </li>
-				</ul>
-			</div>
-			
-			<div class = "pull-right">
-				<ul class = "navbar-nav ml-auto ">
-					<li>  <a class="nav-item nav-link" href="#">Logout</a> </li>
-				</ul>
-			</div>
-		</div>
-	  </nav>
-	  
-	  
-      <section class = "bg">
-        <div class = "jumbotron">
-          <div class = "container-fluid text-center">
-            <img src = "res/logo.jpg" alt = "placeholder " class = "img-responsive center-block drop-shadow">
-          </div>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="#"><img class="navbar-logo" src="res/logo.jpg"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Noi</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Bunătăți</a></li>
+
+                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="shop.php"><img src="res/cupcake-icon2.png" class="icon-cupcake">Gustă-mă</a></span></div>
         </div>
-      </section>
-	<div id="about" class = "container">
-		<div class = "starter-template">
-			<p class = "text-center"><h1>About</h1></p>
-		</div>
-	</div>
-	<div class = "container">
-		<div class = "row">
-			<div class = "col-lg-6 col-md-push-6">
-				<p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-			</div>
-			<div class = "col-lg-6 col-md-pull-6">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				  </ol>
-					
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner">
-					<div class="item active">
-					  <img src="res/unu.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h2>Mousse de zmeura</h2>
-					  </div>
-					</div>
-					<div class="item">
-					  <img src="res/doi.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h2>Procesul de fabricatie</h2>
-					  </div>
-					</div>
-					<div class="item">
-					  <img src="res/trei.jpg" alt="...">
-					  <div class="carousel-caption">
-						<h2>Candybar cu fantezii</h2>
-					  </div>
-					</div>
-				  </div>
-			
-				  <!-- Controls 
-				  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				  </a>
-				  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				  </a>
-					-->
-				</div>
-			</div>
-		</div>
-	</div>
-    <br>
-    <br>
+    </nav>
 
-    <br>
-    <br>
+    <div class="container hero">
+        <div class="jumbotron" style="background-color:rgb(234,235,146);border-radius:20px;padding:22px;">
+            <p></p>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6">
+                    <h1>Merveilleuse</h1>
+                    <p>O afacere de familie</p><a class="btn btn-primary" role="button" href="#">Learn more</a></div>
+                <div class="col-12 col-sm-12 col-lg-6 col-xl-6 justify-content-center" style="display:flex;align-content:center;">
+                    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item"><img class="w-100 d-block" src="res/doi.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="res/unu.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item active"><img class="w-100 d-block" src="res/family-639.jpg" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1"
+                                                                                                                                                                                                             role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-1" data-slide-to="1"></li>
+                            <li data-target="#carousel-1" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <br>
-    <br>
+    <!--<div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><img src="res/candybar1-removal.png" width="100%"></div>
+            </div>
+        </div>
+    </div>-->
 
-    <br>
-    <br>
+    <div class="highlight-phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2>Recomandare</h2>
+                        <p>Nu e ușor când trebuie să faci fericiți mulți pofticioși. Spune-ne pentru ce fel de eveniment te pregătești, iar noi îți vom recomanda candybar-ul perfect!</p><a class="btn btn-primary" role="button" href="#">Recomanda-mi</a></div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-none d-md-block iphone-mockup"><img src="res/candybar1-removal.png" class="device">
+                        <div class="screen"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="article-list">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center"><br>Tot ce e mai bun, pentru evenimente unice!<br></h2>
+                <p class="text-center"> </p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img  class="img-fluid favorite-prodcut-image" src="res/generic-cupcake.png"></a>
+                    <h3 class="name">Article Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid favorite-prodcut-image" src="res/generic-cupcake.png"></a>
+                    <h3 class="name">Article Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                <div
+                        class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid favorite-prodcut-image" src="res/generic-cupcake.png"></a>
+                    <h3 class="name">Article Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+            </div>
+        </div>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <br>
-    <br>
-  
-      </div><!-- /.container -->
-  
-  
-      <!-- Bootstrap core JavaScript
-      ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-	  <!--
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-      <script src="js/myJavaScript.js"> </script> -->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2017</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     </body>
   </html>

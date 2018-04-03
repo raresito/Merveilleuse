@@ -1,0 +1,23 @@
+.navbar-logo{
+    max-height: 70px;
+}
+.icon-cupcake{
+    max-height: 37px;
+}
+
+.navbar {
+    background: transparent;
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+
+.carousel-item{
+    height: 400px;
+    width: 400px;
+}
+
+.favorite-prodcut-image{
+    height: 330px;
+    width: 300px;
+}

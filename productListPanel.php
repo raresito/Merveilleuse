@@ -55,7 +55,7 @@ if(!$result){
 
         <div class = "container-fluid">
             <div class="row">
-                <div class="col-sm-3 content side-bar">
+                <div class="col-sm-2 content side-bar">
                     <div class="brand" >
                         Merveilleuse
                         <div class = "toggle-button">
@@ -68,10 +68,10 @@ if(!$result){
                                 <span href="#"> <span class="glyphicon glyphicon-stats"></span> Dashboard </span>
                             </li>
                             <li>
-                                <span href="#"> <span class="glyphicon glyphicon-th-list"></span> Product List </span>
+                                <a href="productListPanel.php"><span href="#"> <span class="glyphicon glyphicon-th-list"></span> Product List </span></a>
                             </li>
                             <li>
-                                <span href="#"> <span class="glyphicon glyphicon-user"></span> Users </span>
+                                <a href = usersPanel.php><span href="#"> <span class="glyphicon glyphicon-user"></span> Users </span> </a>
                             </li>
                             <li>
                                 <span href="#"> <span class="glyphicon glyphicon-tags"></span> Orders </span>
