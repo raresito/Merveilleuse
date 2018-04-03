@@ -1,13 +1,3 @@
-.navbar-logo{
-    max-height: 70px;
-}
-.icon-cupcake{
-    max-height: 37px;
-}
-
-.navbar {
-    background: transparent;
-}
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 100%;
 }

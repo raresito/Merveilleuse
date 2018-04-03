@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/clientnavbar.css">
         <link rel="stylesheet" href="css/Footer-Clean.css">
   
       <title>Merveilleuse - Atelier de prajituri Artizanale</title>
@@ -26,16 +27,7 @@
     </head>
   
     <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-        <div class="container"><a class="navbar-brand" href="#"><img class="navbar-logo" src="res/logo.jpg"></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Noi</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Bunătăți</a></li>
-
-                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="shop.php"><img src="res/cupcake-icon2.png" class="icon-cupcake">Gustă-mă</a></span></div>
-        </div>
-    </nav>
+    <?php include 'clientnavbar.php';?>
 
     <div class="container hero">
         <div class="jumbotron" style="background-color:rgb(234,235,146);border-radius:20px;padding:22px;">
@@ -110,40 +102,6 @@
         </div>
     </div>
 
-    <div class="footer-clean">
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Careers</h3>
-                        <ul>
-                            <li><a href="#">Job openings</a></li>
-                            <li><a href="#">Employee success</a></li>
-                            <li><a href="#">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2017</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+    <?php include 'footer.php'?>
     </body>
   </html>
