@@ -25,7 +25,7 @@
       <title>Merveilleuse - Atelier de prajituri Artizanale</title>
 
     </head>
-  
+
     <body>
     <?php include 'clientnavbar.php';?>
 
@@ -55,14 +55,6 @@
             </div>
         </div>
     </div>
-
-    <!--<div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"><img src="res/candybar1-removal.png" width="100%"></div>
-            </div>
-        </div>
-    </div>-->
 
     <div class="highlight-phone">
         <div class="container">

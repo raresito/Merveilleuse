@@ -1,16 +1,8 @@
-$( document ).ready(function() {
-    //console.log("Test2");
-
-    $("#sidebarButon").click(function(){
-        //console.log("Test2.5");
-        if($("#sidebarID").hasClass("active")){
-            //console.log("test3");
-            $("#sidebarID").removeClass("active");
-            $("#sidebarID").slideUp();
-        }
-        else{
-            $("#sidebarID").addClass("active");
-            $("#sidebarID").slideDown();
-        }
-    });
-});
+function collapse(){
+    if(document.getElementById("sidebar").classList.contains("toggle")){
+        document.getElementById("sidebar").classList.remove("toggle")
+    }
+    else {
+        document.getElementById("sidebar").classList.add("toggle");
+    }
+}

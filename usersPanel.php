@@ -45,40 +45,17 @@ if(!$result){
 
 </head>
 <body>
+<div class="wrapper">
     <?php
-    include('navbar.php');
+    include("adminSidebar.php");
     ?>
-
-    <div class = "container-fluid">
+    <div class = "container">
         <div class="row">
-            <div class="col-sm-2 content side-bar">
-                <div class="brand" >
-                    Merveilleuse
-                    <div class = "toggle-button">
-                        <img id="sidebarButon" src="res/menu_icon.png" alt="Mountain View">
-                    </div>
-                </div>
-                <div id="sidebarID" class="menu-list active">
-                    <ul class="menu-content">
-                        <li>
-                            <span href="#"> <span class="glyphicon glyphicon-stats"></span> Dashboard </span>
-                        </li>
-                        <li>
-                            <a href="productListPanel.php"><span href="#"> <span class="glyphicon glyphicon-th-list"></span> Product List </span></a>
-                        </li>
-                        <li>
-                            <a href = usersPanel.php><span href="#"> <span class="glyphicon glyphicon-user"></span> Users </span> </a>
-                        </li>
-                        <li>
-                            <span href="#"> <span class="glyphicon glyphicon-tags"></span> Orders </span>
-                        </li>
-                        <li>
-                            <span href="#"> <span class="glyphicon glyphicon-camera"></span> Gallery </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10">
+            <div class="col">
+                <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span></span>
+                </button>
                 <h3 class="text-left">
                     Users
                 </h3>
@@ -124,105 +101,6 @@ if(!$result){
             </div>
         </div>
     </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="text-left">
-                    h3. Lorem ipsum dolor sit amet.
-                </h3>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>
-                            #
-                        </th>
-                        <th>
-                            Product
-                        </th>
-                        <th>
-                            Payment Taken
-                        </th>
-                        <th>
-                            Status
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            01/04/2012
-                        </td>
-                        <td>
-                            Default
-                        </td>
-                    </tr>
-                    <tr class="table-active">
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            01/04/2012
-                        </td>
-                        <td>
-                            Approved
-                        </td>
-                    </tr>
-                    <tr class="table-success">
-                        <td>
-                            2
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            02/04/2012
-                        </td>
-                        <td>
-                            Declined
-                        </td>
-                    </tr>
-                    <tr class="table-warning">
-                        <td>
-                            3
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            03/04/2012
-                        </td>
-                        <td>
-                            Pending
-                        </td>
-                    </tr>
-                    <tr class="table-danger">
-                        <td>
-                            4
-                        </td>
-                        <td>
-                            TB - Monthly
-                        </td>
-                        <td>
-                            04/04/2012
-                        </td>
-                        <td>
-                            Call in to confirm
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+</div>
 </body>
 </html>
