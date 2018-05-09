@@ -1,0 +1,48 @@
+.navbar-logo{
+    max-height: 70px;
+}
+.icon-cupcake{
+    max-height: 37px;
+}
+.navbar {
+    background: white;
+}
+
+.navbar-text .btn {
+    background: #56c6c6;
+    border-radius: 20px;
+    font-size: inherit;
+    color: #fff;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    padding: .5rem 1rem;
+    transition: background-color 0.25s;
+}
+
+
+/* ==========================================================
+        Navbar Shrink Styles
+   ==========================================================*/
+.navbar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: transparent;
+    color: black;
+    transition: all 0.3s;
+}
+.navbar a {
+    color: #fff !important;
+}
+
+.navbar button {
+    color: inherit !important;
+}
+
+.navbar.compressed {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #ffbc5f;
+    color: #ffbc5f;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}

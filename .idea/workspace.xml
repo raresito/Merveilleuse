@@ -1,22 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adminSidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/Lightbox-Gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/Sidebar-Menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/retrieveGallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploadImage.php" afterDir="false" />
+    <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="New Landing Page&#10;Organised Files">
+      <change afterPath="$PROJECT_DIR$/Admin/adminSidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/basket.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/clientnavbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/hello.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/shop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/sidebar-shop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/basket.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/clientnavbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/loaders.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo-lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/close@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/next@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/prev.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/prev@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/overlay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/spinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/css/swiper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/clientnavbarJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/isotope.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/merveilleuseSideBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/nivo-lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/overlay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/scrollPosStyler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/isotope.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/nivo-lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/scrollPosStyler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/slider/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Merveilleuse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Merveilleuse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/clientnavbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/clientnavbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/merveilleuseSideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/merveilleuseSideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/productListPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/productListPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/usersPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/adminLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminSidebar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Header-Cover01.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Header-Cover01.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Navigation-with-Search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Pretty-Product-List.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/dh-navbar-centered-brand.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/dh-navbar-centered-brand.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/cover01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/dh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/iphone6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientnavbar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Footer-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Footer-Clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Lightbox-Gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Lightbox-Gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Sidebar-Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Sidebar-Menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/adminLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/adminLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/clientnavbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/merveilleuseProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseProductList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/merveilleuseSideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseSideBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/merveilleuseTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/sidebarStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/sidebarStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/starter-template.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/starter-template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.2.1.min (1).js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/jquery-3.2.1.min (1).js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/merveilleuseSideBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/myJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/myJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/popper.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/popper.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productListPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/productListPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/addNewProductIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/addNewProductIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/candybar1 -removal.psd" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1 -removal.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/candybar1-removal.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1-removal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/candybar1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/cupcake-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/cupcake-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/cupcake-icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/cupcake-icon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/doi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/doi.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/family-639.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/family-639.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/family.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/family.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0000.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0001.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0002.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0003.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0004.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0005.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0006.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0007.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0008.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0008.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0009.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0010.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0010.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0011.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0012.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0013.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0013.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0014.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0015.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0016.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0017.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0018.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0018.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0019.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0020.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0020.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0021.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0022.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0023.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0024.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0025.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0026.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0026.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0027.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0027.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0028.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0028.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0029.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0029.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0030.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0030.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0031.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0031.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0032.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0032.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0033.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0033.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0034.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0034.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0035.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0035.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0036.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0036.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0037.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0037.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0038.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0038.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0039.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0039.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0040.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0040.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0041.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0041.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0042.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0042.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0043.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0043.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/generic-cupcake.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/generic-cupcake.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/logo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/menu_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/menu_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/pozaTop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/pozaTop.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/trei.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/trei.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/unu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/unu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrieveGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/retrieveGallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teste.html" beforeDir="false" afterPath="$PROJECT_DIR$/teste.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploadImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/uploadImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usersPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/usersPanel.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,74 +210,82 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="merveilleuse: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="merveilleuse@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="merveilleuse: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="producttable: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="productListPanel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/productListPanel.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="shop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/shop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="79" column="72" lean-forward="true" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+            <state relative-caret-position="-1717">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pretty-Product-List.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/basket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clientnavbar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar-shop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/sidebar-shop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
-                <element signature="e#4414#5572#0#PHP" />
-                <element signature="e#5594#6548#0#PHP" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="retrieveGallery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/retrieveGallery.php">
+      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbconnect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simple-sidebar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/simple-sidebar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/sidebar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sidebar-Menu.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/Sidebar-Menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminLogin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adminLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="49" />
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -135,8 +295,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -146,7 +306,29 @@
       <find>fa</find>
       <find>250</find>
       <find>get</find>
+      <find>wrapper</find>
+      <find>login</find>
+      <find>a</find>
+      <find>swiper-button-prev</find>
+      <find>shop.php</find>
+      <find>basket.php</find>
+      <find>footer.php</find>
+      <find>dh-</find>
+      <find>main-sli</find>
+      <find>username</find>
+      <find>Client</find>
+      <find>alert</find>
+      <find>quantity</find>
+      <find>border</find>
+      <find>compressed</find>
+      <find>header</find>
+      <find>category</find>
+      <find>add to</find>
+      <find>height</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,37 +336,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/css/sidebarStyle.css" />
-        <option value="$PROJECT_DIR$/css/merveilleuseTable.css" />
-        <option value="$PROJECT_DIR$/css/merveilleuseProductList.css" />
-        <option value="$PROJECT_DIR$/adminPanel.php" />
-        <option value="$PROJECT_DIR$/dbconnect.php" />
-        <option value="$PROJECT_DIR$/css/merveilleuseSideBar.css" />
-        <option value="$PROJECT_DIR$/css/adminLogin.css" />
-        <option value="$PROJECT_DIR$/adminLogin.php" />
-        <option value="$PROJECT_DIR$/css/starter-template.css" />
-        <option value="$PROJECT_DIR$/design shop/index.html" />
-        <option value="$PROJECT_DIR$/css/homepage.css" />
-        <option value="$PROJECT_DIR$/navbar.php" />
-        <option value="$PROJECT_DIR$/clientnavbar.php" />
-        <option value="$PROJECT_DIR$/shop.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/css/clientnavbar.css" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/basket.css" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/response.php" />
         <option value="$PROJECT_DIR$/test.html" />
-        <option value="$PROJECT_DIR$/uploadImage.php" />
-        <option value="$PROJECT_DIR$/css/Lightbox-Gallery.css" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql" />
-        <option value="$PROJECT_DIR$/gallery.php" />
-        <option value="$PROJECT_DIR$/js/sidebar.js" />
-        <option value="$PROJECT_DIR$/js/merveilleuseSideBar.js" />
-        <option value="$PROJECT_DIR$/usersPanel.php" />
-        <option value="$PROJECT_DIR$/adminSidebar.php" />
+        <option value="$PROJECT_DIR$/payment.php" />
         <option value="$PROJECT_DIR$/css/sidebar.css" />
-        <option value="$PROJECT_DIR$/retrieveGallery.php" />
-        <option value="$PROJECT_DIR$/productListPanel.php" />
+        <option value="$PROJECT_DIR$/adminSidebar.php" />
+        <option value="$PROJECT_DIR$/basket.php" />
+        <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/shop.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/design landing page/graf_77936_burnout/index.html" />
+        <option value="$PROJECT_DIR$/clientnavbar.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Client/footer.php" />
+        <option value="$PROJECT_DIR$/hello.php" />
+        <option value="$PROJECT_DIR$/Admin/uploadImage.php" />
+        <option value="$PROJECT_DIR$/Admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/Admin/productListPanel.php" />
+        <option value="$PROJECT_DIR$/Admin/usersPanel.php" />
+        <option value="$PROJECT_DIR$/resources/css/starter-template.css" />
+        <option value="$PROJECT_DIR$/Admin/adminLogin.php" />
+        <option value="$PROJECT_DIR$/resources/css/merveilleuseSideBar.css" />
+        <option value="$PROJECT_DIR$/Admin/adminSidebar.php" />
+        <option value="$PROJECT_DIR$/resources/css/sidebarStyle.css" />
+        <option value="$PROJECT_DIR$/teste.html" />
+        <option value="$PROJECT_DIR$/resources/css/merveilleuseTable.css" />
+        <option value="$PROJECT_DIR$/Client/hello.php" />
+        <option value="$PROJECT_DIR$/resources/css/clientnavbar.css" />
+        <option value="$PROJECT_DIR$/resources/css/custom.css" />
+        <option value="$PROJECT_DIR$/Client/logout.php" />
+        <option value="$PROJECT_DIR$/Client/register.php" />
+        <option value="$PROJECT_DIR$/Designs/Shop-Sidebar/index.html" />
+        <option value="$PROJECT_DIR$/resources/js/clientnavbarJS.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql" />
+        <option value="$PROJECT_DIR$/resources/js/sidebar-shop/index.js" />
+        <option value="$PROJECT_DIR$/resources/css/spinner.css" />
+        <option value="$PROJECT_DIR$/resources/js/overlay.js" />
+        <option value="$PROJECT_DIR$/resources/css/overlay.css" />
+        <option value="$PROJECT_DIR$/resources/img/cd-icon-cart.svg" />
+        <option value="$PROJECT_DIR$/resources/js/cart.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console_1.sql" />
+        <option value="$PROJECT_DIR$/Client/index.php" />
+        <option value="$PROJECT_DIR$/Client/shop.php" />
+        <option value="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" />
+        <option value="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" />
+        <option value="$PROJECT_DIR$/Client/sidebar-shop.php" />
+        <option value="$PROJECT_DIR$/Client/login.php" />
+        <option value="$PROJECT_DIR$/Client/basket.php" />
+        <option value="$PROJECT_DIR$/Client/clientnavbar.php" />
       </list>
     </option>
   </component>
@@ -203,10 +405,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2459" />
-    <option name="y" value="-19" />
-    <option name="width" value="1065" />
-    <option name="height" value="1040" />
+    <option name="x" value="-5" />
+    <option name="y" value="-20" />
+    <option name="width" value="1945" />
+    <option name="height" value="1105" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -230,6 +432,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,7 +443,17 @@
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Client" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Merveilleuse" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Designs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Merveilleuse" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
@@ -250,7 +463,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,16 +472,23 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Sqlite (Xerial)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\assets\img" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js\sidebar-shop" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\scss" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\sidebar-shop" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\Designs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\img" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\css" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\assets\css" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js\slider" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -330,7 +549,25 @@
       <workItem from="1522843628497" duration="1570000" />
       <workItem from="1522930593644" duration="7268000" />
       <workItem from="1522996226806" duration="11804000" />
-      <workItem from="1523023619954" duration="13229000" />
+      <workItem from="1523023619954" duration="13568000" />
+      <workItem from="1523053845761" duration="2087000" />
+      <workItem from="1523086508771" duration="8451000" />
+      <workItem from="1523209532855" duration="607000" />
+      <workItem from="1523268238280" duration="13220000" />
+      <workItem from="1523437827569" duration="114000" />
+      <workItem from="1523441651499" duration="1624000" />
+      <workItem from="1523453664519" duration="1756000" />
+      <workItem from="1523543488442" duration="14000" />
+      <workItem from="1523614441924" duration="2961000" />
+      <workItem from="1523623611331" duration="11358000" />
+      <workItem from="1523720879623" duration="640000" />
+      <workItem from="1523861874968" duration="620000" />
+      <workItem from="1523948464172" duration="4619000" />
+      <workItem from="1524837419312" duration="7507000" />
+      <workItem from="1525689950199" duration="243000" />
+      <workItem from="1525692781215" duration="11489000" />
+      <workItem from="1525770898692" duration="6053000" />
+      <workItem from="1525868818960" duration="5085000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Side-Bar">
       <created>1518605878436</created>
@@ -367,27 +604,40 @@
       <option name="project" value="LOCAL" />
       <updated>1522744764367</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Got Home.&#10;Fixed Admin Sidebar&#10;Added Delete product functionality">
+      <created>1523048207647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523048207648</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added photo gallery">
+      <created>1523048248795</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523048248795</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121575000" />
+    <option name="totallyTimeSpent" value="200362000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32909605" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32900432" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.36466593" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.18290043" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3644068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.20202559" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1785235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -395,33 +645,35 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3295583" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32909605" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32768363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.20903955" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Database Console" order="8" visible="true" weight="0.18290043" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32909605" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3295583" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20202559" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.36466593" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20202559" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -437,221 +689,237 @@
     <MESSAGE value="Fetch from Database for Product List" />
     <MESSAGE value="A lot of progres, new pages added" />
     <MESSAGE value="Resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resources" />
+    <MESSAGE value="Got Home.&#10;Fixed Admin Sidebar&#10;Added Delete product functionality" />
+    <MESSAGE value="Added photo gallery" />
+    <MESSAGE value="New Landing Page&#10;Organised Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Landing Page&#10;Organised Files" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/merveilleuseSideBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productListPanel.php" />
-    <entry file="file://$PROJECT_DIR$/css/sidebarStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/merveilleuseSideBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/productListPanel.php" />
-    <entry file="file://$PROJECT_DIR$/css/sidebarStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock" />
-    <entry file="file://$PROJECT_DIR$/vendor/twbs/bootstrap/index.html" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/merveilleuseTable.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="120" selection-start-column="8" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/merveilleuseSideBar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/628032b1/b92a5a03-82b0-4476-9723-16fce61e8162/merveilleuse.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/628032b1/b92a5a03-82b0-4476-9723-16fce61e8162/merveilleuse.admin">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/adminLogin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/Footer-Clean.css">
+    <entry file="file://$PROJECT_DIR$/Client/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design/assets/css/Footer-Clean.css">
+    <entry file="file://$PROJECT_DIR$/Designs/startbootstrap admin/startbootstrap-sb-admin-2-gh-pages/vendor/flot/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="251">
+          <caret line="7557" column="8" selection-start-line="7557" selection-start-column="8" selection-end-line="7557" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design shop/shop.php">
+    <entry file="file://$PROJECT_DIR$/hello.php" />
+    <entry file="file://$PROJECT_DIR$/Admin/uploadImage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="268" column="15" selection-start-line="268" selection-start-column="15" selection-end-line="268" selection-end-column="15" />
+        <state relative-caret-position="102">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design shop/index.html">
+    <entry file="file://$PROJECT_DIR$/Admin/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="269" column="50" selection-start-line="269" selection-start-column="50" selection-end-line="269" selection-end-column="50" />
+        <state relative-caret-position="292">
+          <caret line="138" column="10" selection-start-line="138" selection-start-column="10" selection-end-line="138" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientnavbar.php">
+    <entry file="file://$PROJECT_DIR$/resources/css/merveilleuseSideBar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="141">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/clientnavbar.css">
+    <entry file="file://$PROJECT_DIR$/Admin/adminSidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="119">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="74" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/images">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uploadImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="3" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design gallery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/merveilleuseProductList.css">
+    <entry file="file://$PROJECT_DIR$/resources/css/sidebarStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="143" column="14" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design gallery/assets/css/Lightbox-Gallery.css">
+    <entry file="file://$PROJECT_DIR$/resources/js/myJavaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/Lightbox-Gallery.css">
+    <entry file="file://$PROJECT_DIR$/resources/css/merveilleuseTable.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+        <state relative-caret-position="141">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navbar.php" />
-    <entry file="file://$PROJECT_DIR$/shop.php">
+    <entry file="file://$PROJECT_DIR$/teste.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="204">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design sidebar/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/resources/css/bootstrap-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="210" column="6" selection-start-line="210" selection-start-column="6" selection-end-line="210" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
-    <entry file="das://table:/628032b1/b92a5a03-82b0-4476-9723-16fce61e8162/merveilleuse.producttable">
+    <entry file="file://$PROJECT_DIR$/resources/css/starter-template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/usersPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/productListPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="336" column="81" selection-start-line="336" selection-start-column="81" selection-end-line="336" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/adminLogin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="200" column="16" lean-forward="true" selection-start-line="200" selection-start-column="16" selection-end-line="200" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1699" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Designs/design navbar/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/clientnavbarJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users_product.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/spinner.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/sidebar-shop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/overlay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/overlay.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/hello.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Designs/quick-add-to-cart-master/css/reset.css" />
+    <entry file="file://$PROJECT_DIR$/Designs/quick-add-to-cart-master/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/resources/js/cart.js" />
+    <entry file="file://$PROJECT_DIR$/Designs/quick-add-to-cart-master/js/main.js" />
+    <entry file="file://$PROJECT_DIR$/Designs/quick-add-to-cart-master/index.html" />
+    <entry file="file://$PROJECT_DIR$/Designs/Shop-Sidebar/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="24" column="8" selection-start-line="19" selection-start-column="2" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users_product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -660,114 +928,95 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/producttable">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
-          <caret selection-end-line="1" selection-end-column="28" />
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design sidebar/assets/js/Sidebar-Menu.js">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design sidebar/index.html">
+    <entry file="file://$PROJECT_DIR$/dbconnect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/merveilleuseSideBar.js">
+    <entry file="file://$PROJECT_DIR$/Client/shop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="-1717">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sidebar.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usersPanel.php">
+    <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="243">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/sidebar-shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
-            <element signature="n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminSidebar.php">
+    <entry file="file://$PROJECT_DIR$/Client/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/sidebarStyle.css">
+    <entry file="file://$PROJECT_DIR$/Client/basket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" column="20" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="20" />
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/simple-sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/Sidebar-Menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adminLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/retrieveGallery.php">
+    <entry file="file://$PROJECT_DIR$/Client/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productListPanel.php">
+    <entry file="file://$PROJECT_DIR$/resources/css/clientnavbarCSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="79" column="72" lean-forward="true" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
-          <folding>
-            <element signature="e#4414#5572#0#PHP" />
-            <element signature="e#5594#6548#0#PHP" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
