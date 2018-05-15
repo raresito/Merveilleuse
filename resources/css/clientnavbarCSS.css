@@ -2,14 +2,14 @@
     max-height: 70px;
 }
 .icon-cupcake{
-    max-height: 37px;
+    max-height: 40px;
 }
 .navbar {
     background: white;
 }
 
 .navbar-text .btn {
-    background: #56c6c6;
+    background: #54d44b;
     border-radius: 20px;
     font-size: inherit;
     color: #fff;

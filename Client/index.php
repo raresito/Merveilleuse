@@ -37,7 +37,7 @@
     <body>
     <?php include 'clientnavbar.php';?>
 
-    <div class="container-fluid hero" style="z-index: 5; margin-top: 100px">
+    <div class="container-fluid" style="z-index: 5; margin-top: 100px;">
         <div class="row">
             <div class="swiper-container main-slider" id="myCarousel">
                 <div class="swiper-wrapper">

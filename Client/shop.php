@@ -46,8 +46,12 @@ function console_log($data){
                     }
                     ';
                 }
+                else{
+                    echo'
+                    location.href="../Client/login.php";
+                    ';
+                }
             ?>
-
 
         }
     </script>

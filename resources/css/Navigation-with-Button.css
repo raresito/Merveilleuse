@@ -92,16 +92,17 @@
 }
 
 .navigation-clean-button .navbar-text .action-button, .navigation-clean-button .navbar-text .action-button:active, .navigation-clean-button .navbar-text .action-button:hover {
-  background:#56c6c6;
+  background: #66d858;
   border-radius:20px;
   font-size:inherit;
   color:#fff;
   box-shadow:none;
   border:none;
   text-shadow:none;
-  padding:.5rem 1rem;
+  padding: 0.3rem 1rem;
   transition:background-color 0.25s;
-  font-size:inherit;
+  height: 50px;
+  line-height: 2.3;
 }
 
 .navigation-clean-button .navbar-text .action-button:hover {

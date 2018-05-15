@@ -1,174 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="New Landing Page&#10;Organised Files">
-      <change afterPath="$PROJECT_DIR$/Admin/adminSidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/basket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/clientnavbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/hello.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/payment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/shop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/sidebar-shop.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/basket.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/clientnavbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/loaders.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo-lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/close@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/loading@2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/next@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/nivo_themes/default/prev@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/overlay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/css/swiper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/clientnavbarJS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/isotope.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/merveilleuseSideBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/nivo-lightbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/scrollPosStyler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/isotope.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/nivo-lightbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/scrollPosStyler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/swiper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/slider/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/swiper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Merveilleuse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Merveilleuse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="New progress">
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Merveilleuse Background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/adminLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminSidebar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/Header-Cover01.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Header-Cover01.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/Navigation-with-Search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/Pretty-Product-List.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/dh-navbar-centered-brand.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/dh-navbar-centered-brand.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/cover01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/dh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/iphone6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientnavbar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Footer-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Footer-Clean.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Lightbox-Gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Lightbox-Gallery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/Sidebar-Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Sidebar-Menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/adminLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/adminLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/clientnavbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/merveilleuseProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseProductList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/merveilleuseSideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseSideBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/merveilleuseTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/merveilleuseTable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sidebar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sidebarStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/sidebarStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/starter-template.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/starter-template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-3.2.1.min (1).js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/jquery-3.2.1.min (1).js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-3.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/merveilleuseSideBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/myJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/myJavaScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/popper.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/popper.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productListPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/productListPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/addNewProductIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/addNewProductIcon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/candybar1 -removal.psd" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1 -removal.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/candybar1-removal.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1-removal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/candybar1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/candybar1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/cupcake-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/cupcake-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/cupcake-icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/cupcake-icon2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/doi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/doi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/family-639.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/family-639.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/family.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/family.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0000.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0000.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0002.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0003.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0003.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0004.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0005.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0005.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0006.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0007.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0008.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0008.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0009.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0010.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0010.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0011.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0012.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0013.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0013.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0014.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0014.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0015.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0015.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0016.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0016.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0017.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0017.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0018.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0018.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0019.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0019.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0020.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0020.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0021.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0022.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0023.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0023.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0024.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0025.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0026.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0026.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0027.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0027.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0028.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0028.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0029.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0029.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0030.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0030.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0031.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0031.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0032.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0032.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0033.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0033.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0034.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0034.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0035.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0035.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0036.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0036.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0037.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0037.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0038.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0038.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0039.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0039.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0040.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0040.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0041.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0041.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0042.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0042.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/foto/IMG-20180403-WA0043.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0043.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/generic-cupcake.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/generic-cupcake.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/menu_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/menu_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/pozaTop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/pozaTop.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/trei.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/trei.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/unu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/unu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/res/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrieveGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/retrieveGallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.html" beforeDir="false" afterPath="$PROJECT_DIR$/teste.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/uploadImage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usersPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/usersPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/clientnavbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/clientnavbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/Footer-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Footer-Clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/custom.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -218,8 +64,8 @@
       <file leaf-file-name="shop.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/shop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1717">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="1785">
+              <caret line="110" column="39" lean-forward="true" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -227,8 +73,8 @@
       <file leaf-file-name="Pretty-Product-List.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="39">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -236,56 +82,47 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="-844">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basket.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/basket.php">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="629">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clientnavbar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
+      <file leaf-file-name="Footer-Clean.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/Footer-Clean.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="17">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar-shop.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/sidebar-shop.php">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="243">
+              <caret line="733" column="24" lean-forward="true" selection-start-line="733" selection-start-column="24" selection-end-line="733" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbconnect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="1" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="219">
+              <caret line="39" column="70" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -308,7 +145,6 @@
       <find>get</find>
       <find>wrapper</find>
       <find>login</find>
-      <find>a</find>
       <find>swiper-button-prev</find>
       <find>shop.php</find>
       <find>basket.php</find>
@@ -325,6 +161,15 @@
       <find>category</find>
       <find>add to</find>
       <find>height</find>
+      <find>sps</find>
+      <find>body</find>
+      <find>radius</find>
+      <find>action-button</find>
+      <find>.product-item a.product-image</find>
+      <find>a</find>
+      <find>footer</find>
+      <find>footer</find>
+      <find>padding</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -336,8 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/basket.css" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/response.php" />
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/payment.php" />
@@ -351,7 +194,6 @@
         <option value="$PROJECT_DIR$/clientnavbar.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/Client/footer.php" />
         <option value="$PROJECT_DIR$/hello.php" />
         <option value="$PROJECT_DIR$/Admin/uploadImage.php" />
         <option value="$PROJECT_DIR$/Admin/dashboard.php" />
@@ -366,7 +208,6 @@
         <option value="$PROJECT_DIR$/resources/css/merveilleuseTable.css" />
         <option value="$PROJECT_DIR$/Client/hello.php" />
         <option value="$PROJECT_DIR$/resources/css/clientnavbar.css" />
-        <option value="$PROJECT_DIR$/resources/css/custom.css" />
         <option value="$PROJECT_DIR$/Client/logout.php" />
         <option value="$PROJECT_DIR$/Client/register.php" />
         <option value="$PROJECT_DIR$/Designs/Shop-Sidebar/index.html" />
@@ -379,14 +220,18 @@
         <option value="$PROJECT_DIR$/resources/img/cd-icon-cart.svg" />
         <option value="$PROJECT_DIR$/resources/js/cart.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console_1.sql" />
-        <option value="$PROJECT_DIR$/Client/index.php" />
-        <option value="$PROJECT_DIR$/Client/shop.php" />
-        <option value="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" />
-        <option value="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" />
         <option value="$PROJECT_DIR$/Client/sidebar-shop.php" />
-        <option value="$PROJECT_DIR$/Client/login.php" />
         <option value="$PROJECT_DIR$/Client/basket.php" />
+        <option value="$PROJECT_DIR$/Client/shop.php" />
+        <option value="$PROJECT_DIR$/Client/login.php" />
+        <option value="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" />
         <option value="$PROJECT_DIR$/Client/clientnavbar.php" />
+        <option value="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" />
+        <option value="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" />
+        <option value="$PROJECT_DIR$/resources/css/custom.css" />
+        <option value="$PROJECT_DIR$/resources/css/Footer-Clean.css" />
+        <option value="$PROJECT_DIR$/Client/footer.php" />
+        <option value="$PROJECT_DIR$/Client/index.php" />
       </list>
     </option>
   </component>
@@ -405,10 +250,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-5" />
-    <option name="y" value="-20" />
-    <option name="width" value="1945" />
-    <option name="height" value="1105" />
+    <option name="x" value="642" />
+    <option name="y" value="-27" />
+    <option name="width" value="1943" />
+    <option name="height" value="1103" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -432,7 +277,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -448,12 +292,13 @@
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Designs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
@@ -463,6 +308,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,19 +322,19 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js\sidebar-shop" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\scss" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\sidebar-shop" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\Designs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\img" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\css" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js\slider" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js\sidebar-shop" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\scss" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\sidebar-shop" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\Designs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -567,7 +413,8 @@
       <workItem from="1525689950199" duration="243000" />
       <workItem from="1525692781215" duration="11489000" />
       <workItem from="1525770898692" duration="6053000" />
-      <workItem from="1525868818960" duration="5085000" />
+      <workItem from="1525868818960" duration="6331000" />
+      <workItem from="1526390841715" duration="5806000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Side-Bar">
       <created>1518605878436</created>
@@ -618,45 +465,59 @@
       <option name="project" value="LOCAL" />
       <updated>1523048248795</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="New progress">
+      <created>1525874550854</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525874550854</updated>
+    </task>
+    <task id="LOCAL-00009" summary="New progress">
+      <created>1525874746040</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1525874746040</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200362000" />
+    <option name="totallyTimeSpent" value="207414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32909605" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32900432" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32768363" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3644068" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17114094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1785235" />
+      <window_info anchor="right" id="Database" order="3" weight="0.4380368" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32909605" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32909605" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32768363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.20903955" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.20857143" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32768363" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Console" order="8" visible="true" weight="0.18290043" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -670,7 +531,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.36466593" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32909605" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20202559" />
@@ -692,30 +553,10 @@
     <MESSAGE value="Got Home.&#10;Fixed Admin Sidebar&#10;Added Delete product functionality" />
     <MESSAGE value="Added photo gallery" />
     <MESSAGE value="New Landing Page&#10;Organised Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Landing Page&#10;Organised Files" />
+    <MESSAGE value="New progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="New progress" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Designs/startbootstrap admin/startbootstrap-sb-admin-2-gh-pages/vendor/flot/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="7557" column="8" selection-start-line="7557" selection-start-column="8" selection-end-line="7557" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hello.php" />
     <entry file="file://$PROJECT_DIR$/Admin/uploadImage.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -773,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/bootstrap-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="210" column="6" selection-start-line="210" selection-start-column="6" selection-end-line="210" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/starter-template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -812,13 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="200" column="16" lean-forward="true" selection-start-line="200" selection-start-column="16" selection-end-line="200" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -947,34 +774,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/bootstrap-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/basket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dbconnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1717">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <caret line="12" column="1" selection-start-line="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/sidebar-shop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -987,36 +811,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="-844">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/basket.php">
+    <entry file="file://$PROJECT_DIR$/Client/shop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="1785">
+          <caret line="110" column="39" lean-forward="true" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/index.php">
+    <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="39">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/clientnavbarCSS.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/Navigation-with-Button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="192">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="733" column="24" lean-forward="true" selection-start-line="733" selection-start-column="24" selection-end-line="733" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/Footer-Clean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="39" column="70" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

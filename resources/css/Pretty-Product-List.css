@@ -1,3 +1,12 @@
+body{
+  background-image: url('../resources/img/Merveilleuse Background.jpg');
+}
+
+#filter-sidebar{
+    background-color: white;
+    border-radius:  20px;
+}
+
 .product-item {
   padding:10px;
 }
@@ -7,7 +16,7 @@
   font:normal 14px sans-serif;
   background-color:#ffffff;
   border:1px solid #dbe3e7;
-  border-radius:3px;
+  border-radius: 20px;
   box-shadow:1px 3px 1px rgba(0, 0, 0, 0.08);
   padding:25px;
 }
@@ -15,7 +24,6 @@
 .product-item a.product-image {
   display:block;
   text-align:center;
-  box-shadow:0 0 20px 8px #f3f3f3 inset;
   width:100%;
   margin-bottom:25px;
   padding:20px 0;
@@ -109,5 +117,9 @@
   font-size:20px;
   padding-top:5px;
   text-align:right;
+}
+
+.product-item img{
+    box-shadow: 4px 10px 30px lightgrey;
 }
 

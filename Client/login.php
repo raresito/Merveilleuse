@@ -1,9 +1,5 @@
 <?php
 
-if(isset($_SESSION["email"])){
-    header("Location: basket.php");
-}
-
 include "../dbconnect.php";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -14,8 +10,6 @@ function console_log($data){
     echo 'console.log('. $data .')';
     echo '</script>';
 }
-
-
 
 if(!isset($_SESSION['email'])) {
     if (isset($_POST['email'])) {
@@ -28,6 +22,7 @@ if(!isset($_SESSION['email'])) {
             $_SESSION["email"] = $row["email"];
             $_SESSION["name"] = $row["name"];
             $sql = "UPDATE users SET lastLogin = '" . date("Y-m-d H:i:s") . "' WHERE email ='" . $_POST['email'] . "';";
+            header("Location: basket.php");
         } else
             if (!$result) {
                 echo 'No result';
@@ -39,7 +34,6 @@ if(!isset($_SESSION['email'])) {
     }
 }
 else{
-    console_log("apca");
     header ("Location: basket.php");
 }
 ?>

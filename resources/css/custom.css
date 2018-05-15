@@ -6,6 +6,7 @@
 
 body {
 	color: #5a5a5a;
+	background-image: url('../img/Merveilleuse Background.jpg');
 	font-family: 'Lato', sans-serif;
 }
 h1, h2, h3, h4, h5 {
@@ -118,7 +119,7 @@ section {
 	width: 100%;
 }
 .sps--abv {
-	background-color: transparent;
+	background-color: white;
 	color: #000;
 }
 .sps--blw {
@@ -730,7 +731,7 @@ section {
 }
 footer {
 	float: left;
-	background: #0297FF;
+	background: #66d858;
 	width: 100%;
 	color: #fff;
 	padding: 20px 0

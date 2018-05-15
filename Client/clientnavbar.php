@@ -42,7 +42,7 @@ if(isset($_SESSION["email"])) {
                         echo '
                         <a class="btn btn-light action-button" role="button" href="login.php">
                             <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">
-                            Contul Meu
+                            Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
                         <a class="btn btn-light action-button" role="button" href="../Client/logout.php">
@@ -52,7 +52,7 @@ if(isset($_SESSION["email"])) {
                     } else {
                         echo '
                         <a class="btn btn-light action-button" role="button" href="../Client/login.php">
-                            <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Contul Meu
+                            <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
                         <a class="btn btn-light action-button" role="button" href="register.php">Sign Up</a>
