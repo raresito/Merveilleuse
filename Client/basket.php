@@ -11,10 +11,10 @@ function console_log($data){
     echo '<script>';
     echo 'console.log('. $data .')';
     echo '</script>';
+}
 
-    if (isset($_POST["quantity"])){
-        echo $_POST["quantity"];
-    }
+if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
+
 }
 ?>
 <html>
@@ -35,7 +35,9 @@ function console_log($data){
 
 <body>
 <?php include 'clientnavbar.php';?>
-<div class="container" style="margin-top: 100px">
+<div class="container content">
+
+
 
         <table id="cart" class="table table-hover table-condensed">
             <thead>
@@ -52,8 +54,20 @@ function console_log($data){
 
                 $subtotal = 0;
 
+                /**/
+
                 if(isset($_SESSION['email'])) {
-                    $sql = "SELECT * FROM users_product WHERE email = '" . $_SESSION["email"] . "';";
+                    $sql = "select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
+                            from(
+                                select email, order_id, product_id, quantity
+                                    from (
+                                        select u.email, o.orderID, o.orderStatus
+                                            from users u join merveilleuse.order o
+                                            on u.id = o.userID
+                                            where u.email = '" . $_SESSION["email"] . "' && orderStatus = 0) prev
+                                    join products_orders po
+                                    on prev.orderID = po.order_id ) ar join producttable pt
+                            on ar.product_id = pt.idProduct;";
                     $result = mysqli_query($conn, $sql);
                     if (!$result) {
                         echo 'No result';
@@ -72,24 +86,27 @@ function console_log($data){
                             if($resultProduct) {
                                 echo '
                                     <form action = "basket.php" method = "post" role="form">
-                                    <tr><td data-th="Product">
-                                        <div class="row">
-                                            <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
-                                            <div class="col-sm-8">
-                                                <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
-                                                <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Price">RON ' . $rowProduct["priceProduct"] . " /" . $rowProduct["unitProduct"] . '</td>
-                                    <td data-th="Quantity">
-                                        <input name = "quantity" type="number" class="form-control text-center" value="'.$row["quantity"].'">
-                                    </td>
-                                    <td data-th="Subtotal" class="text-center">' . $rowProduct["priceProduct"] * $row["quantity"]. '</td>
-                                    <td class="actions" data-th="">
-                                        <button type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-                                        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
-                                    </td></tr>
+                                        <tr>
+                                            <td data-th="Product">
+                                                <div class="row">
+                                                    <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
+                                                    <div class="col-sm-8">
+                                                        <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
+                                                        <input name="nameProduct" value="'.$rowProduct["nameProduct"].'" type="hidden"/>
+                                                        <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-th="Price">RON ' . $rowProduct["priceProduct"] . " /" . $rowProduct["unitProduct"] . '</td>
+                                            <td data-th="Quantity">
+                                                <input name = "quantity" type="number" class="form-control text-center" value="'.$row["quantity"].'">
+                                            </td>
+                                            <td data-th="Subtotal" class="text-center">' . $rowProduct["priceProduct"] * $row["quantity"]. '</td>
+                                            <td class="actions" data-th="">
+                                                <button type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                                                <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                                            </td>
+                                        </tr>
                                     </form>
                                 ';
                                 $subtotal = $subtotal + $rowProduct["priceProduct"] * $row["quantity"];
@@ -108,6 +125,12 @@ function console_log($data){
             <tfoot>
             <tr class="visible-xs">
                 <td class="text-center"><strong>Total <?php echo $subtotal; ?></strong></td>
+                <?php
+                if(isset($POST["quantity"])){
+                    echo $_POST["quantity"] . " " . $_POST["nameProduct"];
+                }
+
+                ?>
             </tr>
             <tr>
                 <td><a href="../Client/shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>

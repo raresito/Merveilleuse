@@ -7,6 +7,9 @@ function console_log($data){
     echo '</script>';
 }
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 
 ?>
@@ -50,9 +53,9 @@ function console_log($data){
                     ';
                 }
                 else{
-                    echo'
+                    /*echo'
                     location.href="../Client/login.php";
-                    ';
+                    ';*/
                 }
             ?>
 
@@ -63,8 +66,7 @@ function console_log($data){
 </head>
 
 <body>
-    <div id="content">
-    </div>
+
     <?php include 'clientnavbar.php';?>
 
     <div class="container" style="margin-top: 100px;">
@@ -89,7 +91,10 @@ function console_log($data){
             echo "Error: " . $conn->error . "\n";
         }
         ?>
+        <div class = "row" id="content">
+        </div>
         <div class="row">
+
             <div id="filter-sidebar" class="col-xs-6 col-sm-3 collapse">
                 <form>
                     <div style = "margin-top:20px">
@@ -144,6 +149,7 @@ function console_log($data){
 
                 </div>
                 <div class="row product-list">
+
                     <?php
 
                     if ($result->num_rows > 0) {
@@ -163,10 +169,10 @@ function console_log($data){
                                             <div class="col-12">
                                                 <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
                                                 <div class="row">
-                                                    <div class="col-6">
-                                                        <button class="btn btn-light" type="button" onclick="addToBasket('.$row["idProduct"].')">Cumpără!</button>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-light fill" type="button" onclick="addToBasket('.$row["idProduct"].')">Cumpără!</button>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12">
                                                         <p class="product-price">' . $row["priceProduct"] . "RON /" . $row["unitProduct"] .' </p>
                                                     </div>
                                                 </div>

@@ -14,7 +14,7 @@ $rawCategory = substr(substr($rawCategory,1), 0, -1);
 $categoryFinal = explode(",",$rawCategory);
 
 $rawPrice = $_REQUEST['price'];
-echo $rawPrice;
+//echo $rawPrice;
 $rawPrice = substr(substr($rawPrice,1), 0, -1);
 $priceFinal = explode(",",$rawPrice);
 
@@ -39,7 +39,7 @@ $result = mysqli_query($conn,$sql);
 
 $response='';
 
-if ($result->num_rows > 0) {
+if ($result->num_rows > 0) { // TODO CEVA PROBLEMS HERE
     while($row = $result->fetch_assoc()) {
         $response = $response . '<div class="col-xs-6 col-sm-6 col-md-3 product-item">
                                     <div class="product-container">
@@ -56,10 +56,10 @@ if ($result->num_rows > 0) {
                                             <div class="col-12">
                                                 <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare sem sed nisl dignissim, facilisis dapibus lacus vulputate. Sed lacinia lacinia magna. </p>
                                                 <div class="row">
-                                                    <div class="col-6">
-                                                        <button class="btn btn-light" type="button" onclick="addToBasket('.$row["idProduct"].')">Cumpără!</button>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-light fill" type="button" onclick="addToBasket('.$row["idProduct"].')">Cumpără!</button>
                                                     </div>
-                                                    <div class="col-6">
+                                                    <div class="col-12">
                                                         <p class="product-price">' . $row["priceProduct"] . "RON /" . $row["unitProduct"] .' </p>
                                                     </div>
                                                 </div>

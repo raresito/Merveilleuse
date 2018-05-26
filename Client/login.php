@@ -1,5 +1,5 @@
 <?php
-
+//TODO REGISTER REDIRECT
 include "../dbconnect.php";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -11,8 +11,10 @@ function console_log($data){
     echo '</script>';
 }
 
+$result = '';
+
 if(!isset($_SESSION['email'])) {
-    if (isset($_POST['email'])) {
+    if (isset($_POST['email']) && $_POST['email'] != '') {
         $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "';";
 
         $result = mysqli_query($conn, $sql);
@@ -46,6 +48,7 @@ else{
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../resources/css/basket.css">
+        <link rel="stylesheet" href="../resources/css/login.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
@@ -53,10 +56,27 @@ else{
 
     <body>
         <?php include 'clientnavbar.php';?>
-        <div class="container-fluid" style="margin-top: 100px;">
+        <div class="container-fluid respect">
             <div class="row">
+
                 <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 content">
+                    <?php
+                    if(!isset($_SESSION['email'])) {
+                        if (isset($_POST['email']) && $_POST['email'] == '') {
+                            echo '<div class="alert alert-danger">
+                                    Te rog scrie un mail!
+                                </div>';
+                        }
+                        if($result && $result -> num_rows == 0){
+                            echo '<div class="alert alert-danger">
+                                    Nu am găsit contul tău! Ai vrea să creezi un cont nou?
+                                </div>';
+                        }
+                    }
+
+
+                    ?>
                     <form action = "login.php" method = "post" role="form">
                         <div class="form-group">
                             <label for="exampleInputEmail1">
@@ -70,9 +90,13 @@ else{
                             </label>
                             <input type="password" class="form-control" id="InputPassword" name="password"/>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            Submit
-                        </button>
+
+                        <div class="buttons">
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                            <a href="register.php">Creează Cont</a>
+                        </div>
                     </form>
                 </div>
                 <div class="col-md-3"></div>

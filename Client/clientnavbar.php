@@ -13,13 +13,21 @@ if (session_status() == PHP_SESSION_NONE) {
 $basketAmount = '';
 if(isset($_SESSION["email"])) {
 
-
-    $sql = "Select SUM(quantity) as suma from users_product WHERE email ='" . $_SESSION['email'] . "';";
-    $result = mysqli_query($conn, $sql);
-    if ($result && $result -> num_rows == 1) {
-        $row = $result -> fetch_assoc();
-        $basketAmount = $row["suma"];
+    $sql = "SELECT `order`.orderID from  merveilleuse.order join users on userID = users.id where email = '".$_SESSION["email"]."' AND orderStatus = 0";
+    $result1 = mysqli_query($conn,$sql);
+    if($result1 && $result1 -> num_rows == 1){
+        $row1 = $result1 ->fetch_assoc();
+        $sql = "Select SUM(quantity) as suma from products_orders WHERE order_id ='" . $row1['orderID'] . "';";
+        $result = mysqli_query($conn, $sql);
+        if ($result && $result -> num_rows == 1) {
+            $row = $result -> fetch_assoc();
+            $basketAmount = $row["suma"];
+        }
     }
+
+
+
+
 }
 ?>
 

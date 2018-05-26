@@ -22,6 +22,7 @@ function console_log($data){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/basket.css">
+    <link rel="stylesheet" href="../resources/css/register.css">
 
 
 
@@ -57,32 +58,39 @@ function console_log($data){
 <body>
 <?php include 'clientnavbar.php';?>
 <div class="container-fluid" style="margin-top: 100px;">
-    <?php
-    if(isset($_SESSION["email"]))
-        header("Location: /Client/basket.php");
-    else{
-        if (isset($_POST["password"])) {
-            $sql = "INSERT INTO users (email, password, lastLogin, name) VALUES('" . $_POST["email"] . "','" . $_POST["password"] . "','" . date("Y-m-d H:i:s") . "','" . $_POST["surname"] . " " . $_POST["name"] . "')";
-            $result = mysqli_query($conn, $sql);
-            if($result){
-                echo '<div class="alert alert-success" role="alert">
-                    <strong>Felicitări!</strong> Tocmai ți-ai creat un cont nou! Te rugăm să validezi contul prin <strong> linkul primit pe mail!</strong>
-                </div>';
-            }
-            if(!$result){
-                echo'No result';
-                echo "Error: Our query failed to execute and here is why: \n";
-                echo "Query: " . $sql . "\n";
-                echo "Errno: " . $conn->errno . "\n";
-                echo "Error: " . $conn->error . "\n";
-            }
-        }
-    }
-    ?>
+
     <div class="row">
         <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-6 content">
+            <?php
+            if(isset($_SESSION["email"]))
+                header("Location: /Client/basket.php");
+            else{
+                if (isset($_POST["password"])) {
+                    $sql = "INSERT INTO users (email, password, lastLogin, name) VALUES('" . $_POST["email"] . "','" . $_POST["password"] . "','" . date("Y-m-d H:i:s") . "','" . $_POST["surname"] . " " . $_POST["name"] . "')";
+                    $result = mysqli_query($conn, $sql);
+                    if(isset($result)){ //TODO TRIMITE LINK PE MAIL
+                        echo '<div class="alert alert-success" role="alert">
+                                <strong>Felicitări!</strong> Tocmai ți-ai creat un cont nou! Te rugăm să validezi contul prin <strong> linkul primit pe mail!</strong>
+                              </div>';
+                    }
+                    if(!$result && $conn->errno == 1062){
+                        echo '<div class="alert alert-danger" role="alert">
+                                Deja există un cont cu această adresă de email. Ți-ai uitat parola? 
+                              </div>';
+                    } else {
+                        if (!$result) {
+                            //echo'No result';
+                            echo "Error: Our query failed to execute and here is why: \n";
+                            echo "Query: " . $sql . "\n";
+                            echo "Errno: " . $conn -> errno . "\n";
+                            echo "Error: " . $conn -> error . "\n";
+                        }
+                    }
+                }
+            }
 
+            ?>
             <form action = "register.php" method = "post" role="form">
                 <span id="confirmMessage" class="confirmMessage"></span>
                 <div class="form-group">

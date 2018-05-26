@@ -1,6 +1,12 @@
 .table>tbody>tr>td, .table>tfoot>tr>td{
     vertical-align: middle;
 }
+.content{
+    margin-top:150px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
 @media screen and (max-width: 600px) {
     table#cart tbody td .form-control{
         width:20%;
@@ -25,8 +31,6 @@
         content: attr(data-th); font-weight: bold;
         display: inline-block; width: 8rem;
     }
-
-
 
     table#cart tfoot td{display:block; }
     table#cart tfoot td .btn{display:block;}

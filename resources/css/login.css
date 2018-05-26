@@ -1,0 +1,15 @@
+.respect{
+    margin-top: 150px;
+}
+
+.content{
+    background-color: #ffffff;
+    border: 1px black;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}

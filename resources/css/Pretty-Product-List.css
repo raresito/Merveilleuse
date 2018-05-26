@@ -2,6 +2,10 @@ body{
   background-image: url('../resources/img/Merveilleuse Background.jpg');
 }
 
+.fill{
+  width:100%;
+}
+
 #filter-sidebar{
     background-color: white;
     border-radius:  20px;
