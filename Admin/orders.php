@@ -27,56 +27,55 @@ function console_log($data){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/spinnerAdmin.css">
 
     <script>
-        function deleteUser(user){
-            $.ajax({
-                type: 'POST',
-                url: 'deleteUser.php',
-                data:{userID: user.value},
-                success: function (data){
-                    if (data === "success"){
-                        reloadUsers(data);
-                    }
-                    else
-                        alert('Could not delete at this time!');
-                }
-            })
-        }
 
-        function reloadUsers(){
+        $(document).ready( function () {
+            $('#table_id').DataTable();
+        } );
+
+        function reloadOrders(){
             $.ajax({
                 type: 'POST',
-                url: 'selectUsers.php',
-                data:{},
+                url: 'selectOrders.php',
+                data:{type: "default" },
                 success: function (d){
+                    //document.getElementById("debug").innerHTML = d;
                     var myArray = JSON.parse(d);
-                    table = document.getElementById("userTable");
-                    head = "<thead><tr><th>#</th><th>Email</th><th>Last Login</th><th>Actions</th>  </tr></thead>";
+                    table = document.getElementById("table_id");
+                    head = "<thead><tr><th>#</th><th>userID</th><th>Delivery Status</th><th>Delivery Date</th> <th>Order Status</th> <th>Actions</th>  </tr></thead>";
                     ceva = '';
                     for(var i = 0; i < myArray.length; i++){
-                        ceva = ceva + "<tr> <td>" + myArray[i].id + "</td> <td> " + myArray[i].email + " </td> <td> " + myArray[i].lastLogin + " </td> <td>" +
+                        ceva = ceva + "<tr> <td>" + myArray[i].orderID + "</td> <td> " + myArray[i].userID + " </td> <td> " + ((myArray[i].deliveryStatus !== "0") ? "Delivered" : "Not Delivered" ) + " </td> <td> " + ((myArray[i].deliveryDate !== null) ? myArray[i].deliveryDate : "Not Delivered" ) + " </td> <td> " + ((myArray[i].orderStatus !== "0") ? "Delivered" : "Not delivered") + " </td> <td> " +
                             " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#editModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\" title=\"Edit\">&#xE254;</i></button>\n" +
-                            " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#deleteModal\" value = " + myArray[i].id + " onclick=\"deleteUser(this)\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\"  title=\"Delete\" >delete</i></button>\n" +
+                            " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#deleteModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\"  title=\"Delete\" ></i></button>\n" +
                             " </td>"
                     }
                     body = "<tbody>" + ceva + "</tbody>";
+                    document.getElementById("spinnerOrders").innerHTML = '';
                     table.innerHTML = head + body;
                 }
             });
         };
 
-        reloadUsers();
+        reloadOrders();
     </script>
+
+
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
 
 </head>
 <body>
 <div class="wrapper">
     <?php
-    include("adminSidebar.php");
+        include("adminSidebar.php");
     ?>
     <div class = "container">
         <div class="row">
@@ -86,9 +85,13 @@ function console_log($data){
                     <span></span>
                 </button>
                 <h3 class="text-left">
-                    Users
+                    Orders
                 </h3>
-                <table id="userTable" class="table">
+                <div id="spinnerOrders" >
+                    <div  class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+                <table id="table_id" class="display">
+
                 </table>
             </div>
         </div>

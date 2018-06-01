@@ -53,14 +53,30 @@ if (session_status() == PHP_SESSION_NONE) {
                     ';
                 }
                 else{
-                    /*echo'
+                    echo'
                     location.href="../Client/login.php";
-                    ';*/
+                    ';
                 }
             ?>
 
         }
 
+    </script>
+
+    <script>
+        function schemaBootstrap(){
+            let div = document.getElementsByClassName("product-list");
+
+            for(let i = 0; i <= div.children().size(); i++){
+                if(div.children(i).classList("col-lg-4"){
+                    div.children(i).classList.remove("col-lg-4");
+                    div.children(i).classList.add("col-lg-3");
+                } else {
+                    div.children(i).classList.remove("col-lg-3");
+                    div.children(i).classList.add("col-lg-4");
+                }
+            }
+        }
     </script>
 
 </head>
@@ -73,7 +89,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="row">
             <div class="navbar navbar-default visible-xs">
                 <div class="container-fluid">
-                    <button class="btn btn-default navbar-btn" data-toggle="collapse" data-target="#filter-sidebar">
+                    <button class="btn btn-default navbar-btn" data-toggle="collapse" onclick="schemaBootstrap()" data-target="#filter-sidebar">
                         <i class="fa fa-tasks"></i> Filtre
                     </button>
                 </div>
@@ -95,7 +111,7 @@ if (session_status() == PHP_SESSION_NONE) {
         </div>
         <div class="row">
 
-            <div id="filter-sidebar" class="col-xs-6 col-sm-3 collapse">
+            <div id="filter-sidebar" class="col-sm-6 col-md-3 col-lg-2 collapse">
                 <form>
                     <div style = "margin-top:20px">
                         <h4> Categorie </h4>
@@ -154,7 +170,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo '<div class="col-xs-6 col-sm-6 col-md-3 product-item">
+                            echo '<div class="col-xs-6 col-md-6 col-lg-3 product-item">
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-md-12"><a href="#" class="product-image"><img src="../resources/res/foto/' . $row["image"] . '"></a></div>
@@ -193,6 +209,8 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
         </div>
     </div>
+
+
 
 
 

@@ -13,7 +13,7 @@ if (session_status() == PHP_SESSION_NONE) {
 $basketAmount = '';
 if(isset($_SESSION["email"])) {
 
-    $sql = "SELECT `order`.orderID from  merveilleuse.order join users on userID = users.id where email = '".$_SESSION["email"]."' AND orderStatus = 0";
+    $sql = "SELECT orders.orderID from  orders join users on userID = users.id where email = '".$_SESSION["email"]."' AND orderStatus = 0";
     $result1 = mysqli_query($conn,$sql);
     if($result1 && $result1 -> num_rows == 1){
         $row1 = $result1 ->fetch_assoc();

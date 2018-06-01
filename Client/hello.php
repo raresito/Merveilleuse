@@ -13,28 +13,28 @@ function console_log($data){
 }
 
 $checkUserHasProductAlready = "
-    select users.id, users.email, order.orderID, order.orderStatus, product_id, quantity
-    from users join merveilleuse.order on users.id = order.userID
-    join products_orders on order.orderID = products_orders.order_id
+    select users.id, users.email, orders.orderID, orders.orderStatus, product_id, quantity
+    from users join orders on users.id = orders.userID
+    join products_orders on orders.orderID = products_orders.order_id
     where email = '".$_SESSION["email"]."'
     AND product_id = '".$_POST["id"]."'; ";
 $incrementProduct = "UPDATE products_orders
                 set quantity = quantity + 1
                 where order_id = (
-                        SELECT merveilleuse.order.orderID
-                        from merveilleuse.order
+                        SELECT orders.orderID
+                        from orders
                         join users
-                        on merveilleuse.order.userID = users.id
+                        on orders.userID = users.id
                         where users.email = '".$_SESSION["email"]."'
-                        And merveilleuse.order.orderStatus = 0)
+                        And orders.orderStatus = 0)
                 and product_id = '".$_POST["id"]."';";
 $checkUserHasOpenOrder = "SELECT orderID
-                FROM merveilleuse.order
+                FROM orders
                 where userID = (SELECT id
                                 from users
                                 where email = '".$_SESSION["email"]."')
                                 AND orderStatus = 0";
-$createEmptyOrder = "INSERT INTO merveilleuse.order (userID)
+$createEmptyOrder = "INSERT INTO orders (userID)
                     VALUES ((SELECT id
                             from users
                             where email = '".$_SESSION["email"]."'))";

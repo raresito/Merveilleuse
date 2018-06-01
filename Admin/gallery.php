@@ -45,7 +45,7 @@
                     </div>
                     <div class="">
                         <?php
-                        $files = glob("res/foto/*.jpg");
+                        $files = glob("../resources/res/foto/*.jpg");
                         for ($i=1; $i<count($files); $i++)
                         {
                             $num = $files[$i];

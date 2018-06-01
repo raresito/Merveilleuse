@@ -2,100 +2,19 @@
 
 require_once '../dbconnect.php';
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
-}
-
 ?>
 
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script
-                src="http://code.jquery.com/jquery-2.2.4.min.js"
-                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-                crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+        <?php
+            require '../libraries.php';
+        ?>
 
         <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
         <link href="../resources/css/merveilleuseProductList.css" rel="stylesheet">
-        <script src="../resources/js/merveilleuseSideBar.js"></script>
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../resources/css/Lightbox-Gallery.css">
-
-        <script>
-
-            var selectedPhoto;
-            function SelectPhoto(e) {
-                if(e.classList.contains("chosen-picture")){
-                    e.classList.remove("chosen-picture");
-                    selectedPhoto = null;
-                }
-                else {
-                    e.classList.add("chosen-picture");
-                    selectedPhoto = e;
-                }
-                for(var i = 1; i < e.parentElement.childNodes.length-2; i++){
-                    if(e.parentElement.childNodes[i] === e){
-                        i++;
-                    }
-                    //alert(e.parentElement.childNodes[i].classList);
-                    if(typeof e.parentElement.childNodes[i].classList !== 'undefined')
-                        if(e.parentElement.childNodes[i].classList.contains("chosen-picture"))
-                            e.parentElement.childNodes[i].classList.remove("chosen-picture");
-                }
-                //alert(e.parentElement.childNodes[2].innerHTML);
-                changePhotoPrompt();
-            }
-            function changePhotoPrompt(){
-                var space = document.getElementById("photoPrompt");
-                if(selectedPhoto != null){
-                    space.innerHTML = "Selected photo:" + selectedPhoto.children[0].children[0].getAttribute('src').split("/")[2];
-                }
-            }
-
-            function sendChosenPhoto(){
-                if(selectedPhoto != null){
-                    mydiv = document.getElementById("photoPreview");
-                    mydiv.innerHTML = selectedPhoto.children[0].children[0].getAttribute('src').split("/")[2] + "<input type=\"hidden\" name=\"newProductPhoto\" value=\"" + selectedPhoto.children[0].children[0].getAttribute('src').split("/")[2] + " \"/>";
-                }
-            }
-
-            function selectDelete(ceva){
-                //alert(ceva);
-                document.getElementById("deleteProduct").innerText = ceva;
-                document.getElementById("deleteInput").innerText = ceva;
-                console.log(document.getElementById("deleteInput").innerText)
-            }
-
-            $(document).ready(function (){
-                $("#galleryButton").click(function(){
-                    $.ajax({
-                        type: "POST",
-                        url: "retrieveGallery.php",
-                        dataType: "html",
-                        success: function(response){
-                            $("#galleryHere").html(response);
-                        }
-                    })
-                })
-            })
-
-
-        </script>
 
     </head>
     <body>
@@ -134,7 +53,7 @@ function console_log($data){
                         //echo mysqli_error($conn);
                         if($delete){
                             echo '<div class="alert alert-success" role="alert">
-                              <strong>Șters!</strong> Ai șters produsul'.$_POST["deleteProduct"].'
+                              <strong>Șters!</strong> Ai șters produsul '.$_POST["nameProduct"].'
                             </div>';
                         } else {
                             echo "File upload failed, please try again.";
@@ -164,47 +83,7 @@ function console_log($data){
                         <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#addModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Add">add_circle_outline</i></button>
                     </div>
                     <div class="productTable">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Icon</th>
-                                    <th>Name</th>
-                                    <th>Price/Unit</th>
-                                    <th>Category</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                            if ($result->num_rows > 0) {
-                                while($row = $result->fetch_assoc()) {
-                                    echo '<tr>
-                                            <td>
-                                                    <span class="custom-checkbox">
-                                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                                        <label for="checkbox1"></label>
-                                                    </span>
-                                            </td>
-                                            <td> <img src="../resources/res/foto/'.$row["image"] . '"> </td>
-                                            <td>'. $row["nameProduct"] .'</td>
-                                            <td>'. $row["priceProduct"] . "/" . $row["unitProduct"] .'</td>
-                                            <td>'. $row["category"] .'</td>
-                                            <td>
-            
-                                                
-                                               <!-- <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Delete" onClick="selectDelete(\''. $row["nameProduct"] . 'Are you sure you want to delete \'' . $row["nameProduct"] .'\');">
-                                                    <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#editModal"><i class="material-icons" data-toggle="tooltip" data-target="" title="Edit">&#xE254;</i></button>
-                                                    <button type="submit" class="btn btn-sm" name="deleteProduct" value="'.$row["idProduct"].'"><i class="material-icons" title="Delete">delete</i></button>
-                                                </form>
-                                            </td>
-                                        </tr>';
-                                }
-                            } else {
-                                echo "0 results";
-                            }
-                            ?>
-                            </tbody>
+                        <table id="product-table" class="table table-striped table-hover">
                         </table>
                     </div>
                 </div>
@@ -248,7 +127,7 @@ function console_log($data){
         </div>
         <div id="deleteModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
-                <form action="productListPanel.php" method="post"><div class="modal-content">
+                <form action="products.php" method="post"><div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Remove product</h4>
@@ -273,7 +152,7 @@ function console_log($data){
             <div class="modal-dialog">
 
                 <!-- Modal content-->
-                <form action="productListPanel.php" method="post">
+                <form action="products.php" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -338,14 +217,23 @@ function console_log($data){
                             </form>
                         </div>
                         <div id="galleryHere">
-                            <?php
-/*                            include("retrieveGallery.php");
-                            */?>
-                        <div>
+                            <div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Load JavaScript at end for performance -->
+        <script
+                src="http://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="../resources/js/merveilleuseSideBar.js"></script>
+
+        <script src="../resources/js/products.js"></script>
 
     </body>
 </html>

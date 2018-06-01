@@ -3,6 +3,8 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+include '../dbconnect.php';
+
 if(!isset($_SESSION["email"])){
     header("Location: login.php");
 }
@@ -13,8 +15,21 @@ function console_log($data){
     echo '</script>';
 }
 
-if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
+if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
+    if($_POST["quantity"] == 0){
 
+    }
+    $incrementProduct = "UPDATE products_orders
+                set quantity = ".$_POST["quantity"]."
+                where order_id = (
+                        SELECT orders.orderID
+                        from orders
+                        join users
+                        on orders.userID = users.id
+                        where users.email = '".$_SESSION["email"]."'
+                        And orders.orderStatus = 0)
+                and product_id = '".$_POST["idProduct"]."';";
+    $result = mysqli_query($conn, $incrementProduct);
 }
 ?>
 <html>
@@ -34,10 +49,11 @@ if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
 </head>
 
 <body>
-<?php include 'clientnavbar.php';?>
+<?php
+echo "Errno: " . $conn->errno . "\n";
+echo "Error: " . $conn->error . "\n";
+include 'clientnavbar.php';?>
 <div class="container content">
-
-
 
         <table id="cart" class="table table-hover table-condensed">
             <thead>
@@ -54,15 +70,13 @@ if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
 
                 $subtotal = 0;
 
-                /**/
-
                 if(isset($_SESSION['email'])) {
                     $sql = "select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
                             from(
                                 select email, order_id, product_id, quantity
                                     from (
                                         select u.email, o.orderID, o.orderStatus
-                                            from users u join merveilleuse.order o
+                                            from users u join orders o
                                             on u.id = o.userID
                                             where u.email = '" . $_SESSION["email"] . "' && orderStatus = 0) prev
                                     join products_orders po
@@ -92,7 +106,7 @@ if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
                                                     <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
                                                     <div class="col-sm-8">
                                                         <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
-                                                        <input name="nameProduct" value="'.$rowProduct["nameProduct"].'" type="hidden"/>
+                                                        <input name="idProduct" value="'.$rowProduct["idProduct"].'" type="hidden"/>
                                                         <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
                                                     </div>
                                                 </div>
@@ -136,7 +150,7 @@ if(isset($_POST["nameProduct"]) && isset($_POST["quantity"])){
                 <td><a href="../Client/shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
                 <td colspan="2" class="hidden-xs"></td>
                 <td class="hidden-xs text-center"><strong>Total <?php echo $subtotal; ?> RON</strong></td>
-                <td><a href="payment.php" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+                <td><a href="Stripe Payment/config.php" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
             </tr>
             </tfoot>
         </table>

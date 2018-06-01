@@ -27,7 +27,7 @@
         }
     }
     else{
-        header("Location: productListPanel.php");
+        header("Location: products.php");
     }
 ?>
 

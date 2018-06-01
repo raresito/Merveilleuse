@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="../resources/css/Header-Cover01.css">
 
         <link rel="stylesheet" href="../assets/css/styles.css">
-        <link rel="stylesheet" href="../resources/css/homepage.css">
+        <link rel="stylesheet" href="../resources/css/index.css">
 
         <!-- Helper Styles -->
         <link href="../resources/css/loaders.css" rel="stylesheet">
@@ -55,7 +55,23 @@
                 <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
             </div>
         </div>
-            <div class="highlight-phone">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <?php
+                for($i = 1; $i <= 9; $i++){
+                    echo'<div class="col-12 col-sm-6 col-md-4 col-lg-2 square-div"
+                            style = "background-image: url("../resources/res/foto/IMG-20180403-WA0001.jpg\");
+                                     background-size: cover;
+                                     background-repeat: no-repeat;
+                                     background-position: 50% 50%;">
+                        </div>';
+                }
+            ?>
+        </div>
+    </div>
+           <!-- <div class="highlight-phone content">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -71,13 +87,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-    </div>
-
-    <div class="article-list">
-        <div class="container">
-            <div class="intro">
+            </div>-->
+<!--
+        <div class="container-fluid">
+            <div class="row intro">
                 <h2 class="text-center"><br>Tot ce e mai bun, pentru evenimente unice!<br></h2>
                 <p class="text-center"> </p>
             </div>
@@ -94,8 +107,7 @@
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
             </div>
         </div>
-    </div>
-
+-->
     <?php include '../Client/footer.php' ?>
 
     <!-- Bootstrap core JavaScript

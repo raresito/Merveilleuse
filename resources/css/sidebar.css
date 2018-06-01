@@ -1,6 +1,6 @@
 body {
   font-family:'Poppins', sans-serif;
-  background:#fafafa;
+  background: #fafafa;
 }
 
 p {
@@ -52,7 +52,7 @@ i, span {
 #sidebar {
   min-width:250px;
   max-width:250px;
-  background: #ccd567;
+  background: #ffbc5f;
   color: #fff;
   transition:all 0.3s;
 }
@@ -107,7 +107,8 @@ i, span {
 
 #sidebar .sidebar-header {
   padding:20px;
-  background: #b2bb5e;
+  background: #ffbc5f;
+  border-bottom: 1px solid gray;
 }
 
 #sidebar .sidebar-header strong {
@@ -172,8 +173,7 @@ ul.CTAs a {
   font-size:0.9em !important;
   display:block;
   border-radius:5px;
-  margin-bottom:5px;
-}
+  margin-bottom:5px;}
 
 a.download {
   background:#fff;

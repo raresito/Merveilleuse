@@ -1,5 +1,6 @@
 <?php
 //TODO REGISTER REDIRECT
+//TODO SEND MAIL TO CONFIRM
 include "../dbconnect.php";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
