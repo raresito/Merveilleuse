@@ -1,4 +1,5 @@
 
+    <!--TODO Ask for Admin Features -->
 
     <link rel="stylesheet" href="../resources/css/sidebar.css">
     <link rel="stylesheet" href="../resources/css/Sidebar-Menu.css">
@@ -41,5 +42,16 @@
                     Orders
                 </a>
             </li>
+            <li>
+                <form id="leave" method="post" href="adminLogin.php">
+                    <input type="hidden" name="logoutVariable" value="true">
+                    <a onclick="document.getElementById('leave').submit()">
+                        <i class="glyphicon glyphicon-remove"></i>
+                        Logout
+                    </a>
+
+                </form>
+            </li>
         </ul>
+
     </nav>

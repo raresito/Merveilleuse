@@ -1,5 +1,6 @@
 <html>
 <head>
+    <!-- TODO Get more images -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script
         src="http://code.jquery.com/jquery-2.2.4.min.js"
@@ -40,8 +41,7 @@
                             <i class="glyphicon glyphicon-align-left"></i>
                             <span></span>
                         </button>
-                        <h2 class="text-center">Lightbox Gallery</h2>
-                        <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                        <h2 class="text-center">Gallerie de fotografii</h2>
                     </div>
                     <div class="">
                         <?php

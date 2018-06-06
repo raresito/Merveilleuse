@@ -76,7 +76,7 @@ function sendConfirmMail(){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function checkPass(){
+        function checkPass(){ //TODO Prevent SQL injection on form input
             var goodColor = "#66cc66";
             var badColor = "#ff6666";
 

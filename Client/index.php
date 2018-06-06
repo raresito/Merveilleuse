@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic">
         <link rel="stylesheet" href="../resources/css/Header-Cover01.css">
 
-        <link rel="stylesheet" href="../assets/css/styles.css">
         <link rel="stylesheet" href="../resources/css/index.css">
 
         <!-- Helper Styles -->
@@ -28,6 +27,7 @@
         <!-- Font Awesome Style -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+        <script src = "../resources/js/indexClient.js"></script>
 
 
         <title>Merveilleuse - Atelier de prajituri Artizanale</title>
@@ -57,57 +57,14 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <?php
-                for($i = 1; $i <= 9; $i++){
-                    echo'<div class="col-12 col-sm-6 col-md-4 col-lg-2 square-div"
-                            style = "background-image: url("../resources/res/foto/IMG-20180403-WA0001.jpg\");
-                                     background-size: cover;
-                                     background-repeat: no-repeat;
-                                     background-position: 50% 50%;">
-                        </div>';
-                }
-            ?>
+
+
+    <div class="container-fluid">
+        <div id="image-holder" class="row">
+
         </div>
     </div>
-           <!-- <div class="highlight-phone content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="intro">
-                                <h2>Visul unui Candybar ...</h2>
-                                <p>Nu e ușor când trebuie să faci fericiți mulți pofticioși. Spune-ne pentru ce fel de eveniment te pregătești, iar noi îți vom recomanda candybar-ul perfect!</p>
-                                <a class="btn btn-primary" role="button" href="#">Recomandă!</a></div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="d-none d-md-block iphone-mockup"><img src="../resources/res/candybar1-removal.png" style="margin-left: -350px" class="device">
-                                <div class="screen"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-<!--
-        <div class="container-fluid">
-            <div class="row intro">
-                <h2 class="text-center"><br>Tot ce e mai bun, pentru evenimente unice!<br></h2>
-                <p class="text-center"> </p>
-            </div>
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img  class="img-fluid favorite-prodcut-image" src="../resources/res/generic-cupcake.png"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid favorite-prodcut-image" src="../resources/res/generic-cupcake.png"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
-                <div
-                        class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid favorite-prodcut-image" src="../resources/res/generic-cupcake.png"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
-            </div>
-        </div>
--->
+
     <?php include '../Client/footer.php' ?>
 
     <!-- Bootstrap core JavaScript

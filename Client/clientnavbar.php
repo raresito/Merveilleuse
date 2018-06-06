@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../resources/css/clientnavbarCSS.css">
 <link rel="stylesheet" href="../resources/css/Navigation-with-Button.css">
 <link rel="stylesheet" href="../resources/css/custom.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <script src="../resources/js/clientnavbarJS.js"></script>
 
 <?php
@@ -13,12 +14,16 @@ if (session_status() == PHP_SESSION_NONE) {
 $basketAmount = '';
 if(isset($_SESSION["email"])) {
 
-    $sql = "SELECT orders.orderID from  orders join users on userID = users.id where email = '".$_SESSION["email"]."' AND orderStatus = 0";
-    $result1 = mysqli_query($conn,$sql);
+    $stmt1 = $conn->prepare("SELECT orders.orderID from  orders join users on userID = users.id where email = ? AND orderStatus = 0");
+    $stmt1 -> bind_param("s",$_SESSION["email"] );
+    $stmt1 -> execute();
+    $result1 = $stmt1 -> get_result();
     if($result1 && $result1 -> num_rows == 1){
         $row1 = $result1 ->fetch_assoc();
-        $sql = "Select SUM(quantity) as suma from products_orders WHERE order_id ='" . $row1['orderID'] . "';";
-        $result = mysqli_query($conn, $sql);
+        $stmt = $conn->prepare( "Select SUM(quantity) as suma from products_orders WHERE order_id = ?;");
+        $stmt ->bind_param("i",$row1['orderID']);
+        $stmt -> execute();
+        $result = $stmt->get_result();
         if ($result && $result -> num_rows == 1) {
             $row = $result -> fetch_assoc();
             $basketAmount = $row["suma"];
@@ -48,6 +53,7 @@ if(isset($_SESSION["email"])) {
                 <?php
                     if(isset($_SESSION["email"])){
                         echo '
+                        <!--<div id="popHere"> </div>-->
                         <a class="btn btn-light action-button" role="button" href="login.php">
                             <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">
                             Cont
@@ -59,6 +65,7 @@ if(isset($_SESSION["email"])) {
                         ';
                     } else {
                         echo '
+                        <div id="popHere"> </div>
                         <a class="btn btn-light action-button" role="button" href="../Client/login.php">
                             <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>

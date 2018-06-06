@@ -1,11 +1,13 @@
 <?php
 
     require_once '../dbconnect.php';
-    session_start();
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
 
     if(!isset($_SESSION['email'])){
         if(isset($_POST['email'])){
-            $sql = "SELECT * FROM admin WHERE email ='" . $_POST['email'] . "';";
+            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1;";
             $result = mysqli_query($conn,$sql);
             if ($result->num_rows > 0) {
                 while ($row = $result -> fetch_assoc()) {
@@ -13,7 +15,6 @@
                     $_SESSION["role"] = $row["role"];
                     $_SESSION["name"] = $row["name"];
                 }
-                //echo $_SESSION["email"];
             }
             else
 
@@ -27,7 +28,11 @@
         }
     }
     else{
-        header("Location: products.php");
+        if($_POST["logoutVariable"] == "true"){
+            session_unset();
+            session_destroy();
+        }
+        header("Location: dashboard.php");
     }
 ?>
 
@@ -36,19 +41,30 @@
 <html>
 <head>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link href="../resources/css/adminLogin.css" rel="stylesheet">
+     <link href="../resources/css/adminLogin.css" rel="stylesheet">
 
+    <?php
+        include '../libraries.php';
+    ?>
 
 </head>
-
 <body>
 
-<div class="container-fluid">
+<div class="flex-center" style="height: 100%;">
+<div class="container-fluid flex-center flex-column" >
     <div class="row">
+        <img src="../resources/res/logo.jpg">
+    </div>
+    <?php
+    if($_POST["logoutVariable"] == "true"){
+        echo'
+             <div class="alert alert-primary" role="alert">
+                   Te-ai delogat cu succes!
+             </div>  
+        ';
+    }
+    ?>
+    <div class="row" style="width:100%;">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <form action = "adminLogin.php" method = "post" role="form">
@@ -80,5 +96,11 @@
         <div class="col-md-3"></div>
     </div>
 </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

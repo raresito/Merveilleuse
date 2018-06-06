@@ -2,46 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/deleteUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/orders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/selectOrders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/selectProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/selectUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/confirmPurchase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/selectOldOrders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/indexClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Merveilleuse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Merveilleuse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/adminLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/adminLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/adminSidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/adminSidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/productListPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/retrieveGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/retrieveGallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/usersPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/usersPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/basket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/clientnavbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/clientnavbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/hello.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/hello.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/payment.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/shop-filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/shop-filter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/clientnavbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/spinnerAdmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/sidebarStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/simple-sidebar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/Merveilleuse Background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/Merveilleuse Background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries.php" beforeDir="false" afterPath="$PROJECT_DIR$/libraries.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/Footer-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/Footer-Clean.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/adminLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/adminLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,43 +56,69 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="merveilleuse@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="merveilleuse@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="merveilleuse@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="merveilleuse: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="merveilleuse@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="merveilleuse: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="products_orders: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Merveilleuse" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/products.php">
+      <file leaf-file-name="basket.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/basket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1445">
-              <caret line="85" column="90" selection-start-line="85" selection-start-column="90" selection-end-line="85" selection-end-column="90" />
+            <state relative-caret-position="425">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+              <folding>
+                <element signature="n#console_log#0;n#!!top" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shop.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/shop.php">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Admin/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+            <state relative-caret-position="306">
+              <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/products.js">
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="retrieveGallery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/retrieveGallery.php">
+      <file leaf-file-name="adminSidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/adminSidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="348">
+              <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -127,22 +136,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>compressed</find>
-      <find>header</find>
-      <find>category</find>
-      <find>add to</find>
-      <find>height</find>
-      <find>sps</find>
-      <find>body</find>
-      <find>radius</find>
-      <find>action-button</find>
       <find>.product-item a.product-image</find>
       <find>a</find>
       <find>footer</find>
       <find>padding</find>
       <find>myNav</find>
       <find>select orderID</find>
-      <find>content</find>
       <find>errno</find>
       <find>galleryHere</find>
       <find>photopre</find>
@@ -157,6 +156,16 @@
       <find>order</find>
       <find>TODO</find>
       <find>js</find>
+      <find>var_dump</find>
+      <find>product d</find>
+      <find>data-th</find>
+      <find>content</find>
+      <find>3.3.1</find>
+      <find>window.on</find>
+      <find>alrt</find>
+      <find>&lt;/div&gt;&lt;/div&gt;</find>
+      <find>checko</find>
+      <find>adminLogin.php</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -171,57 +180,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/css/clientnavbar.css" />
-        <option value="$PROJECT_DIR$/Client/logout.php" />
-        <option value="$PROJECT_DIR$/Designs/Shop-Sidebar/index.html" />
-        <option value="$PROJECT_DIR$/resources/js/clientnavbarJS.js" />
-        <option value="$PROJECT_DIR$/resources/css/spinner.css" />
-        <option value="$PROJECT_DIR$/resources/js/overlay.js" />
-        <option value="$PROJECT_DIR$/resources/css/overlay.css" />
-        <option value="$PROJECT_DIR$/resources/img/cd-icon-cart.svg" />
         <option value="$PROJECT_DIR$/resources/js/cart.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console_1.sql" />
         <option value="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" />
         <option value="$PROJECT_DIR$/resources/css/Navigation-with-Button.css" />
-        <option value="$PROJECT_DIR$/resources/css/Footer-Clean.css" />
         <option value="$PROJECT_DIR$/Client/footer.php" />
         <option value="$PROJECT_DIR$/Client/sidebar-shop.php" />
         <option value="$PROJECT_DIR$/resources/js/sidebar-shop/index.js" />
         <option value="$PROJECT_DIR$/resources/css/login.css" />
         <option value="$PROJECT_DIR$/resources/css/register.css" />
         <option value="$PROJECT_DIR$/resources/css/Pretty-Product-List.css" />
-        <option value="$PROJECT_DIR$/resources/css/basket.css" />
-        <option value="$PROJECT_DIR$/Client/hello.php" />
-        <option value="$PROJECT_DIR$/Client/clientnavbar.php" />
         <option value="$PROJECT_DIR$/Client/Stripe Payment/charge.php" />
         <option value="$PROJECT_DIR$/Client/Stripe Payment/payment.php" />
         <option value="$PROJECT_DIR$/resources/css/index.css" />
-        <option value="$PROJECT_DIR$/Client/index.php" />
-        <option value="$PROJECT_DIR$/Admin/gallery.php" />
         <option value="$PROJECT_DIR$/Admin/retrieveGallery.php" />
         <option value="$PROJECT_DIR$/Admin/deleteUser.php" />
         <option value="$PROJECT_DIR$/Admin/selectUsers.php" />
         <option value="$PROJECT_DIR$/Admin/usersPanel.php" />
         <option value="$PROJECT_DIR$/Admin/selectOrders.php" />
-        <option value="$PROJECT_DIR$/Admin/dashboard.php" />
         <option value="b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/order.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql" />
-        <option value="$PROJECT_DIR$/Client/basket.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/Client/login.php" />
         <option value="$PROJECT_DIR$/Client/shop-filter.php" />
-        <option value="$PROJECT_DIR$/Client/register.php" />
         <option value="$PROJECT_DIR$/resources/css/spinnerAdmin.css" />
-        <option value="$PROJECT_DIR$/Admin/orders.php" />
-        <option value="$PROJECT_DIR$/Admin/adminSidebar.php" />
         <option value="$PROJECT_DIR$/resources/css/sidebar.css" />
-        <option value="$PROJECT_DIR$/libraries.php" />
         <option value="$PROJECT_DIR$/Admin/productListPanel.php" />
         <option value="$PROJECT_DIR$/Admin/selectProducts.php" />
         <option value="$PROJECT_DIR$/resources/js/products.js" />
         <option value="$PROJECT_DIR$/Admin/products.php" />
         <option value="$PROJECT_DIR$/resources/css/custom.css" />
+        <option value="$PROJECT_DIR$/Client/register.php" />
+        <option value="$PROJECT_DIR$/resources/css/adminLogin.css" />
+        <option value="$PROJECT_DIR$/libraries.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/Client/efecte.js" />
+        <option value="$PROJECT_DIR$/resources/css/Footer-Clean.css" />
+        <option value="$PROJECT_DIR$/Client/index.php" />
+        <option value="$PROJECT_DIR$/resources/js/indexClient.js" />
+        <option value="$PROJECT_DIR$/Client/hello.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql" />
         <option value="$PROJECT_DIR$/Client/shop.php" />
+        <option value="$PROJECT_DIR$/Client/contact.php" />
+        <option value="$PROJECT_DIR$/Client/selectOldOrders.php" />
+        <option value="$PROJECT_DIR$/Admin/orders.php" />
+        <option value="$PROJECT_DIR$/Admin/gallery.php" />
+        <option value="$PROJECT_DIR$/Client/clientnavbar.php" />
+        <option value="$PROJECT_DIR$/resources/css/basket.css" />
+        <option value="$PROJECT_DIR$/Client/confirmPurchase.php" />
+        <option value="$PROJECT_DIR$/Admin/adminSidebar.php" />
+        <option value="$PROJECT_DIR$/Admin/adminLogin.php" />
+        <option value="$PROJECT_DIR$/Client/basket.php" />
+        <option value="$PROJECT_DIR$/Admin/dashboard.php" />
       </list>
     </option>
   </component>
@@ -246,10 +255,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-80" />
-    <option name="y" value="-30" />
-    <option name="width" value="1944" />
-    <option name="height" value="1104" />
+    <option name="x" value="720" />
+    <option name="y" value="-20" />
+    <option name="width" value="1945" />
+    <option name="height" value="1105" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -273,7 +282,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,57 +301,42 @@
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value=" e&#9;ACTION&#9;CloseEditor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Sqlite (Xerial)" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sqlDump27052018" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\can_remove" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\Client\Stripe Payment" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js\sidebar-shop" />
+      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\scss" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\img" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\css" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js" />
       <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\js\slider" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\can_remove" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\Client\Stripe Payment" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\js\sidebar-shop" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\scss" />
-      <recent name="C:\Users\Rares\Desktop\LICENTA - Rares Cristea\Merveilleuse\resources\css\sidebar-shop" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -433,7 +426,14 @@
       <workItem from="1527594684604" duration="2074000" />
       <workItem from="1527776750333" duration="3820000" />
       <workItem from="1527856986448" duration="4537000" />
-      <workItem from="1527864112057" duration="1867000" />
+      <workItem from="1527864112057" duration="2257000" />
+      <workItem from="1527866484146" duration="2639000" />
+      <workItem from="1527874126290" duration="2443000" />
+      <workItem from="1528013766366" duration="632000" />
+      <workItem from="1528040954608" duration="5755000" />
+      <workItem from="1528098847514" duration="16956000" />
+      <workItem from="1528187531553" duration="13054000" />
+      <workItem from="1528269491660" duration="9403000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Side-Bar">
       <created>1518605878436</created>
@@ -519,29 +519,36 @@
       <option name="project" value="LOCAL" />
       <updated>1527348986710</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Converted requests to Ajax requests">
+      <created>1527866191807</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527866191808</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283928000" />
+    <option name="totallyTimeSpent" value="335200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067115" side_tool="true" weight="0.36324787" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32909605" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32768363" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32768363" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49932885" weight="0.28062677" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14832215" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2590604" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20402685" />
+      <window_info anchor="right" id="Database" order="3" weight="0.40335572" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21367522" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -552,7 +559,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.27207977" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +580,8 @@
     <MESSAGE value="More graphics as in: background!, new button color! better footer!" />
     <MESSAGE value="One filter in shop" />
     <MESSAGE value="Redesigned the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redesigned the database" />
+    <MESSAGE value="Converted requests to Ajax requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted requests to Ajax requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -591,141 +598,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/Pretty-Product-List.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/sidebar-shop/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="43" column="70" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/basket.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users_product" />
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/products_orders.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/products_orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/hello.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="54" selection-start-line="20" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Stripe Payment/config.php" />
-    <entry file="file://$PROJECT_DIR$/Client/Stripe Payment/payment.php" />
-    <entry file="file://$PROJECT_DIR$/Client/Stripe Payment/charge.php" />
-    <entry file="file://$PROJECT_DIR$/resources/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Designs/design/assets/css/Article-List.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/producttable">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/deleteUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/selectOrders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/order" />
     <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/order.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="296" selection-start-column="296" selection-end-column="296" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbconnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -760,27 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="95" column="18" lean-forward="true" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/basket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -792,13 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -817,24 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminSidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/selectProducts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/usersPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -845,31 +677,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/retrieveGallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/products.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
           <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="90" selection-start-line="85" selection-start-column="90" selection-end-line="85" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -887,10 +698,235 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Client/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/retrieveGallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/adminLogin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/res/foto/IMG-20180403-WA0000.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/Footer-Clean.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/res/logo - Copy.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/res/logoBG.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/hello.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/Header-Cover01.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Client/shop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+        <state relative-caret-position="391">
+          <caret line="224" column="10" lean-forward="true" selection-start-line="216" selection-start-column="4" selection-end-line="224" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/selectOrders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="76" />
+          <folding>
+            <element signature="e#4633#4640#1#HTML" expanded="true" />
+            <element signature="e#6408#6415#1#HTML" expanded="true" />
+            <element signature="e#7738#7745#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="94" column="3" selection-start-line="93" selection-start-column="20" selection-end-line="94" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/usersPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/indexClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/products_orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/selectOldOrders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/basket.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/adminSidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/confirmPurchase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="179" column="72" selection-start-line="179" selection-start-column="72" selection-end-line="179" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/basket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="n#console_log#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>

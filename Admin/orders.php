@@ -31,14 +31,20 @@ function console_log($data){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/spinnerAdmin.css">
 
-    <script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" >
 
-        $(document).ready( function () {
-            $('#table_id').DataTable();
+    <script>
+        $(document).ready(function() {
+            reloadOrders();
+
         } );
+    </script>
+
+    <script>
 
         function reloadOrders(){
             $.ajax({
@@ -47,7 +53,7 @@ function console_log($data){
                 data:{type: "default" },
                 success: function (d){
                     //document.getElementById("debug").innerHTML = d;
-                    var myArray = JSON.parse(d);
+                    let myArray = JSON.parse(d);
                     table = document.getElementById("table_id");
                     head = "<thead><tr><th>#</th><th>userID</th><th>Delivery Status</th><th>Delivery Date</th> <th>Order Status</th> <th>Actions</th>  </tr></thead>";
                     ceva = '';
@@ -60,17 +66,11 @@ function console_log($data){
                     body = "<tbody>" + ceva + "</tbody>";
                     document.getElementById("spinnerOrders").innerHTML = '';
                     table.innerHTML = head + body;
+                    $('#table_id').DataTable();
                 }
             });
-        };
-
-        reloadOrders();
+        }
     </script>
-
-
-
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-
 </head>
 <body>
 <div class="wrapper">
@@ -91,7 +91,8 @@ function console_log($data){
                     <div  class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
                 <table id="table_id" class="display">
-
+                    <!--<thead><tr><th>#</th><th>userID</th><th>Delivery Status</th><th>Delivery Date</th> <th>Order Status</th> <th>Actions</th>  </tr></thead>
+-->
                 </table>
             </div>
         </div>

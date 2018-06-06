@@ -1,6 +1,10 @@
 <?php
 
-require_once '../dbconnect.php';
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+require '../dbconnect.php';
 
 function console_log($data){
     echo '<script>';
@@ -8,7 +12,20 @@ function console_log($data){
     echo '</script>';
 }
 
+function isAdmin(){
+    $sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+    $result = mysqli_query($conn,$sql);
+    $row = $result ->fetch_assoc();
+    if($row["admin"] == 0){
+        header("Location: login.php");
+    }
+}
+
+isAdmin();
+
 ?>
+
+<!-- TODO Ask for admin features -->
 
 <html>
 <head>

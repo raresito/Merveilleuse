@@ -34,6 +34,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <script src="../resources/js/overlay.js"></script>
 
     <script type="text/javascript">
+        /*$('[data-toggle="popover"]').popover();*/
+
         function addToBasket(info){
             <?php
                 if(isset($_SESSION["email"])){
@@ -45,6 +47,8 @@ if (session_status() == PHP_SESSION_NONE) {
                     xmlhttp.send("id=" + info.toString());
                     xmlhttp.onreadystatechange = function() {
                         if (this.readyState === 4 && this.status === 200) {
+                            document.getElementById("popHere").innerHTML += "<a href=\"#\" data-toggle=\"popover\" title=\"Popover Header\" data-content=\"Some content inside the popover\">Toggle popover</a>";
+                            alert(";)");
                             display.innerHTML = this.responseText;
                         } else {
                             display.innerHTML = "Loading...";
@@ -205,6 +209,16 @@ if (session_status() == PHP_SESSION_NONE) {
                 </div>
                 <div id="outputDiv">
 
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="alert alert-warning" style = "width: 100%">
+                <div style="text-align: center">
+                    N-ai găsit ce căutai? <a href = "contact.php"> Scrie-ne! </a>
                 </div>
             </div>
         </div>

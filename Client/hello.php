@@ -2,8 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-var_dump($_POST);
-var_dump($_SESSION);
+
 require_once '../dbconnect.php';
 
 function console_log($data){
@@ -49,7 +48,7 @@ if(isset($_POST["id"])) {
         if ($hasProduct && $hasProduct -> num_rows > 0) {
             mysqli_query($conn, $incrementProduct);
         } else {
-            echo 'Product didn\'t exist before';
+            //echo 'Product didn\'t exist before';
             mysqli_query($conn, $createProductInOrder);
         }
     } else {
