@@ -2,12 +2,20 @@
 
 include '../dbconnect.php';
 
+echo $_POST["selection"]["type"][0];
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
+$sql = "SELECT * FROM producttable" ;
+
+$wherePlaced = 0;
+
+if(isset($_POST["selection"]["type"])){
+    $wherePlaced = 1;
+    $sql = $sql . " where ";
+    foreach ($_POST["selection"]["type"] as $value){
+        $sql = $sql . " category = '" . $_POST["selection"]["type"] ."' ";
+    }
 }
+
 
 function price_interpret($priceString){
     if($priceString == "\"1\""){
@@ -33,7 +41,6 @@ $rawPrice = substr(substr($rawPrice,1), 0, -1);
 $priceFinal = explode(",",$rawPrice);
 
 
-$sql = "SELECT * FROM producttable" ;
 
 if($categoryFinal[0] != "" || $priceFinal[0] != "") {
     $sql = "SELECT * FROM producttable where ";

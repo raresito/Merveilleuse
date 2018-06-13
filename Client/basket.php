@@ -6,6 +6,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 include '../dbconnect.php';
 
+$driver = new mysqli_driver();
+$driver->report_mode = MYSQLI_REPORT_ERROR;
+
 if(!isset($_SESSION["email"])){
     header("Location: login.php");
 }
@@ -214,21 +217,6 @@ include 'clientnavbar.php';?>
                             on ar.product_id = pt.idProduct;";
                     $result = mysqli_query($conn, $sql);
 
-                    $stmt = $conn->prepare("select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
-                                                  from(
-                                                      select email, order_id, product_id, quantity
-                                                          from (
-                                                              select u.email, o.orderID, o.orderStatus
-                                                                  from users u join orders o
-                                                                  on u.id = o.userID
-                                                                  where u.email = ? && orderStatus = 0) prev
-                                                          join products_orders po
-                                                          on prev.orderID = po.order_id ) ar join producttable pt
-                                                  on ar.product_id = pt.idProduct;");
-                    $stmt -> bind_param("s",$_SESSION["email"]);
-                    $stmt -> execute();
-                    /*$stmt -> store_result();*/
-                    $result = $stmt->get_result();
                     if (!$result) {
                         echo 'No result';
                         echo "Error: Our query failed to execute and here is why: \n";
@@ -237,46 +225,34 @@ include 'clientnavbar.php';?>
                         echo "Error: " . $conn -> error . "\n";
                     }
                     if ($result -> num_rows > 0) {
-                        while ($row = $result -> fetch_assoc()) {
-                            //echo $row["product_id"] . ",";
-                            $stmtProduct = $conn->prepare("SELECT * FROM producttable WHERE idProduct = ?;");
-                            $stmtProduct -> bind_param("i",$row["product_id"]);
-                            $stmtProduct -> execute();
-                            $resultProduct = $stmtProduct -> get_result();
-                            $rowProduct = $resultProduct -> fetch_assoc();
+                        while ($rowProduct = $result -> fetch_assoc()) {
 
-                            if($resultProduct) {
-                                echo '
-                                    <form action = "basket.php" method = "post" role="form">
-                                        <tr>
-                                            <td data-th="Produs">
-                                                <div class="row">
-                                                    <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
-                                                    <div class="col-sm-8">
-                                                        <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
-                                                        <input name="idProduct" value="'.$rowProduct["idProduct"].'" type="hidden"/>
-                                                        <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
-                                                    </div>
+                            echo '
+                                <form action = "basket.php" method = "post" role="form">
+                                    <tr>
+                                        <td data-th="Produs">
+                                            <div class="row">
+                                                <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
+                                                <div class="col-sm-8">
+                                                    <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
+                                                    <input name="idProduct" value="'.$rowProduct["product_id"].'" type="hidden"/>
+                                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
                                                 </div>
-                                            </td>
-                                            <td data-th="Preț">RON ' . $rowProduct["priceProduct"] . " /" . $rowProduct["unitProduct"] . '</td>
-                                            <td data-th="Cantitate">
-                                                <input name = "quantity" type="number" class="form-control text-center" value="'.$row["quantity"].'">
-                                            </td>
-                                            <td data-th="Subtotal" class="text-center">' . $rowProduct["priceProduct"] * $row["quantity"]. '</td>
-                                            <td class="actions" data-th="">
-                                                <button type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-                                                <button onclick = "setZero(this)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                    </form>
-                                ';
-                                $subtotal = $subtotal + $rowProduct["priceProduct"] * $row["quantity"];
-                            }
-
-
-                            else
-                                echo 'No result';
+                                            </div>
+                                        </td>
+                                        <td data-th="Preț">RON ' . $rowProduct["priceProduct"] . " /" . $rowProduct["unitProduct"] . '</td>
+                                        <td data-th="Cantitate">
+                                            <input name = "quantity" type="number" class="form-control text-center" value="'.$rowProduct["quantity"].'">
+                                        </td>
+                                        <td data-th="Subtotal" class="text-center">' . $rowProduct["priceProduct"] * $rowProduct["quantity"]. '</td>
+                                        <td class="actions" data-th="">
+                                            <button type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                                            <button onclick = "setZero(this)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                                        </td>
+                                    </tr>
+                                </form>
+                            ';
+                            $subtotal = $subtotal + ($rowProduct["priceProduct"] * $rowProduct["quantity"]);
                         }
                     }
 

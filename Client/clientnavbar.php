@@ -14,25 +14,18 @@ if (session_status() == PHP_SESSION_NONE) {
 $basketAmount = '';
 if(isset($_SESSION["email"])) {
 
-    $stmt1 = $conn->prepare("SELECT orders.orderID from  orders join users on userID = users.id where email = ? AND orderStatus = 0");
-    $stmt1 -> bind_param("s",$_SESSION["email"] );
-    $stmt1 -> execute();
-    $result1 = $stmt1 -> get_result();
-    if($result1 && $result1 -> num_rows == 1){
-        $row1 = $result1 ->fetch_assoc();
-        $stmt = $conn->prepare( "Select SUM(quantity) as suma from products_orders WHERE order_id = ?;");
-        $stmt ->bind_param("i",$row1['orderID']);
-        $stmt -> execute();
-        $result = $stmt->get_result();
-        if ($result && $result -> num_rows == 1) {
-            $row = $result -> fetch_assoc();
-            $basketAmount = $row["suma"];
-        }
+    $sql = "Select SUM(quantity) as suma
+            from products_orders
+            WHERE order_id = (SELECT orders.orderID
+                              from  orders join users
+                                  on userID = users.id
+                              where email = '".$_SESSION["email"]."'
+                                    AND orderStatus = 0);";
+    $result = mysqli_query($conn, $sql);
+    while($row = $result->fetch_assoc()){
+        $basketAmount = $row["suma"];
     }
-
-
-
-
+    echo $basketAmount;
 }
 ?>
 

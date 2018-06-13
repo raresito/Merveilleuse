@@ -1,17 +1,8 @@
 <?php
 
-
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
-}
-
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -28,60 +19,112 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="../resources/js/sidebar-shop/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="../resources/css/overlay.css">
     <script src="../resources/js/overlay.js"></script>
 
-    <script type="text/javascript">
-        /*$('[data-toggle="popover"]').popover();*/
+    <script>
 
-        function addToBasket(info){
-            <?php
-                if(isset($_SESSION["email"])){
-                    echo'
-                    var display = document.getElementById("content");
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.open("POST", "hello.php");
-                    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xmlhttp.send("id=" + info.toString());
-                    xmlhttp.onreadystatechange = function() {
-                        if (this.readyState === 4 && this.status === 200) {
-                            document.getElementById("popHere").innerHTML += "<a href=\"#\" data-toggle=\"popover\" title=\"Popover Header\" data-content=\"Some content inside the popover\">Toggle popover</a>";
-                            alert(";)");
-                            display.innerHTML = this.responseText;
-                        } else {
-                            display.innerHTML = "Loading...";
-                        }
-                    }
-                    ';
-                }
-                else{
-                    echo'
-                    location.href="../Client/login.php";
-                    ';
-                }
-            ?>
-
-        }
 
     </script>
 
-    <script>
-        function schemaBootstrap(){
-            let div = document.getElementsByClassName("product-list");
+    <script type="text/javascript">
 
-            for(let i = 0; i <= div.children().size(); i++){
-                if(div.children(i).classList("col-lg-4"){
-                    div.children(i).classList.remove("col-lg-4");
-                    div.children(i).classList.add("col-lg-3");
+
+        function schemaBootstrap(){
+            let dives = document.getElementsByClassName("product-list");
+            dive = dives[0];
+            for(let i = 0; i <= dive.childNodes.length; i++){
+                if(dive.childNodes[i].classList.contains("col-lg-4")){
+                    dive.childNodes[i].classList.remove("col-lg-4");
+                    dive.childNodes[i].classList.add("col-lg-3");
                 } else {
-                    div.children(i).classList.remove("col-lg-3");
-                    div.children(i).classList.add("col-lg-4");
+                    dive.childNodes[i].classList.remove("col-lg-3");
+                    dive.childNodes[i].classList.add("col-lg-4");
                 }
             }
         }
+
+        function addToBasket(info){
+            if("<?php if(isset($_SESSION)){ echo $_SESSION["email"]; } else echo "" ?>" !== ""){
+                $.ajax({
+                    type: 'POST',
+                    url: 'insertBasket.php',
+                    data: {id: info},
+                    success: function (d) {
+                        alert(d);
+                    }
+                })
+            }
+            else {
+                location.href="../Client/login.php";
+            }
+        }
+
+        let filterSelection = {
+            type : [],
+            flavour: [],
+            price: []
+        };
+
+        function filterProduct(obj) {
+            if (obj.checked === true) {
+                if (obj.classList.contains("type")) {
+                    filterSelection.type.push(obj.value);
+                }
+                if (obj.classList.contains("flavour")) {
+                    filterSelection.flavour.push(obj.value);
+                }
+                if (obj.classList.contains("pret")) {
+                    filterSelection.pret.push(obj.value);
+                }
+            }
+            if(obj.checked === false){
+                if(obj.classList.contains("type")) {
+                    for(let k in filterSelection.type){
+                        if(filterSelection.type[k] === obj.value){
+                            filterSelection.type.splice(k, 1);
+                        }
+                    }
+                }
+                if(obj.classList.contains("flavour")) {
+                    for(let k in filterSelection.flavour){
+                        if(filterSelection.flavour[k] === obj.value){
+                            filterSelection.flavour.splice(k, 1);
+                        }
+                    }
+                }
+                if(obj.classList.contains("pret")) {
+                    for(let k in filterSelection.flavour){
+                        if(filterSelection.price[k] === obj.value){
+                            filterSelection.price.splice(k, 1);
+                        }
+                    }
+                }
+            }
+            reloadCatalog();
+        }
+
+        function reloadCatalog(){
+            $.ajax({
+                type: 'POST',
+                url: 'shop-filter.php',
+                data:{
+                    selection : filterSelection
+                },
+                success: function (d){
+                    alert(d);
+
+                }
+            });
+        }
+
+
+
     </script>
+    <!-- TODO alerta timp de livrare, bani -->
 
 </head>
 
@@ -93,24 +136,12 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="row">
             <div class="navbar navbar-default visible-xs">
                 <div class="container-fluid">
-                    <button class="btn btn-default navbar-btn" data-toggle="collapse" onclick="schemaBootstrap()" data-target="#filter-sidebar">
+                    <button class="btn btn-default navbar-btn" data-toggle="collapse" data-target="#filter-sidebar"> <!--onclick="schemaBootstrap()"-->
                         <i class="fa fa-tasks"></i> Filtre
                     </button>
                 </div>
             </div>
         </div>
-        <?php
-
-        $sql = "SELECT * FROM producttable";
-        $result = mysqli_query($conn,$sql);
-        if(!$result){
-            echo'No result';
-            echo "Error: Our query failed to execute and here is why: \n";
-            echo "Query: " . $sql . "\n";
-            echo "Errno: " . $conn->errno . "\n";
-            echo "Error: " . $conn->error . "\n";
-        }
-        ?>
         <div class = "row" id="content">
         </div>
         <div class="row">
@@ -121,16 +152,46 @@ if (session_status() == PHP_SESSION_NONE) {
                         <h4> Categorie </h4>
                         <div id="group-category" class="list-group collapse in">
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type category" value = "Tort">
+                                <input type="checkbox" onchange="filterProduct(this)" class="type category" value = "Tort">
                                 Tort
                             </a>
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type category" value = "Prăjitură">
-                                Prăjitură
+                                <input type="checkbox" onchange="filterProduct(this)" class="type category" value = "Patiserie">
+                                Patiserie
                             </a>
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type category" value = "CandyBar">
+                                <input type="checkbox" onchange="filterProduct(this)" class="type category" value = "Platouri">
+                                Platouri prăjituri
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" onchange="filterProduct(this)" class="type category" value = "Tarte/Quiche-uri">
+                                Tarte/Quiche-uri
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" onchange="filterProduct(this)" class="type category" value = "CandyBar">
                                 Candy Bar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style = "margin-top:20px">
+                        <h4> Arome </h4>
+                        <div id="group-category" class="list-group collapse in">
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" class="flavour category" value = "Ciocolata">
+                                Ciocolata
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" class="flavour category" value = "Fructe">
+                                Fructe
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" class="flavour category" value = "Vanilie">
+                                Vanilie
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <input type="checkbox" class="flavour category" value = "Fără zahăr">
+                                Fără zahăr
                             </a>
                         </div>
                     </div>
@@ -139,25 +200,25 @@ if (session_status() == PHP_SESSION_NONE) {
                         <h4> Preț </h4>
                         <div id="group-pret" class="list-group collapse in">
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type pret" value = "1">
+                                <input type="checkbox" class="category pret" value = "1">
                                 0-20 lei
                             </a>
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type pret" value = "2">
+                                <input type="checkbox" class="category pret" value = "2">
                                 20-60 lei
                             </a>
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type pret" value = "3">
+                                <input type="checkbox" class="category pret" value = "3">
                                 60-200 lei
                             </a>
                             <a class="list-group-item" href="#">
-                                <input type="checkbox" class="type pret" value = "4">
+                                <input type="checkbox" class="category pret" value = "4">
                                 200+ lei
                             </a>
                         </div>
                     </div>
                 </form>
-                <script  src="../resources/js/sidebar-shop/index.js"></script>
+
             </div>
             <div class="col">
                 <div id="myNav" class="overlay">
@@ -171,6 +232,16 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="row product-list">
 
                     <?php
+
+                    $sql = "SELECT * FROM producttable";
+                    $result = mysqli_query($conn,$sql);
+                    if(!$result){
+                        echo'No result';
+                        echo "Error: Our query failed to execute and here is why: \n";
+                        echo "Query: " . $sql . "\n";
+                        echo "Errno: " . $conn->errno . "\n";
+                        echo "Error: " . $conn->error . "\n";
+                    }
 
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
@@ -223,12 +294,6 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
         </div>
     </div>
-
-
-
-
-
-    <span onclick="openNav()">open</span>
 
 </body>
 

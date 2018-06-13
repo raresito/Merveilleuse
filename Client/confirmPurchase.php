@@ -32,71 +32,101 @@ function console_log($data){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        let order_id;
+        function selectOrder(){
+            $.ajax({
+                type: 'POST',
+                url: '../selectOrders.php',
+                data:{type: "mine", email: "<?php echo $_SESSION["email"]; ?>" },
+                success: function (d){
+                    console.log(d);
+                    let productArray = JSON.parse(d);
+                    order_id = productArray[0].order_id;
+                    let total = 0;
+                    document.getElementById("number-of-products").innerText = productArray.length;
+                    for(let i = 0; i < productArray.length; i++) {
+                        document.getElementById("finalProductList").innerHTML +=
+                            "<li class=\"list-group-item d-flex justify-content-between lh-condensed\">\n" +
+                            "                    <div>\n" +
+                            "                        <h6 class=\"my-0\">" + productArray[i].nameProduct + "</h6>\n" +
+                            "                        <small class=\"text-muted\">Cantitate: " + productArray[i].quantity + "</small>\n" +
+                            "                    </div>\n" +
+                            "                    <span class=\"text-muted\">" + productArray[i].quantity * productArray[i].priceProduct + " RON</span>\n" +
+                            "                </li>";
+                        total = total + productArray[i].quantity * productArray[i].priceProduct;
+                    }
+                    document.getElementById("finalProductList").innerHTML +=
+                        "<li class=\"list-group-item d-flex justify-content-between\">\n" +
+                        "                    <span>Total (RON)</span>\n" +
+                        "                    <strong>"+total+" RON</strong>\n" +
+                        "                </li>"
+                }
+            });
+        }
+
+        selectOrder();
+
+        function purchase(){
+
+            $.ajax({
+                type: 'POST',
+                url: 'buy.php',
+                data:{
+                    id: order_id,
+                    name: $("#firstName").val(),
+                    lastName: $("#lastName").val(),
+                    email: $("#email").val(),
+                    mobil: $("#phone").val(),
+                    address: $("#address").val()
+                },
+                success: function (d){
+                    alert(d);
+                    $("#content").innerHTML = '';
+                }
+            })
+        }
+    </script>
+
 </head>
 
 <body style="font-family: 'Slabo 27px', serif;">
 <?php
-echo "Errno: " . $conn->errno . "\n";
-echo "Error: " . $conn->error . "\n";
 include 'clientnavbar.php';?>
 
-<div class="container" style="background:rgba(256, 256, 256, .9); margin-top: 150px">
+<div id = "content" class="container" style="background:rgba(256, 256, 256, .9); margin-top: 150px">
     <div class="py-5 text-center">
         <h2>Checkout</h2>
         <p class="lead">După finalizarea comenzii, unul dintre operatorii noștrii vă vor suna pentru a confirma comanda, și pentru a prelua detalii adiționale asupra comenzii.</p>
     </div>
 
     <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
+        <div class="col-md-4 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Coșul tău</span>
-                <span class="badge badge-secondary badge-pill">3</span>
+                <span id="number-of-products" class="badge badge-secondary badge-pill">3</span>
             </h4>
-            <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Product name</h6>
-                        <small class="text-muted">Brief description</small>
-                    </div>
-                    <span class="text-muted">$12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Second product</h6>
-                        <small class="text-muted">Brief description</small>
-                    </div>
-                    <span class="text-muted">$8</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Third item</h6>
-                        <small class="text-muted">Brief description</small>
-                    </div>
-                    <span class="text-muted">$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
+            <ul id="finalProductList" class="list-group mb-3">
+                <!--<li class="list-group-item d-flex justify-content-between bg-light">
                     <div class="text-success">
                         <h6 class="my-0">Promo code</h6>
                         <small>EXAMPLECODE</small>
                     </div>
                     <span class="text-success">-$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span>Total (USD)</span>
-                    <strong>$20</strong>
-                </li>
+                </li>-->
+
             </ul>
 
-            <form class="card p-2">
+            <!--<form class="card p-2">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Promo code">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-secondary">Redeem</button>
                     </div>
                 </div>
-            </form>
+            </form>-->
         </div>
-        <div class="col-md-8 order-md-1">
+        <div class="col-md-8">
             <h4 class="mb-3">Adresă de livrare</h4>
             <form class="needs-validation" novalidate="">
                 <div class="row">
@@ -116,7 +146,7 @@ include 'clientnavbar.php';?>
                     </div>
                 </div>
 
-                <div class="mb-3">
+                <!--<div class="mb-3">
                     <label for="username">Nume de utilizator</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -127,11 +157,19 @@ include 'clientnavbar.php';?>
                             Câmp necesar
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="mb-3">
                     <label for="email">Email <span class="text-muted">(Opțional)</span></label>
                     <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                        Te rog introdu o adresă validă de email.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone"> Mobil </label>
+                    <input type="number" class="form-control" id="phone" placeholder="0721234567" required>
                     <div class="invalid-feedback">
                         Te rog introdu o adresă validă de email.
                     </div>
@@ -145,31 +183,32 @@ include 'clientnavbar.php';?>
                     </div>
                 </div>
 
-                <div class="mb-3">
+                <!--<div class="mb-3">
                     <label for="address2">Adresă 2 <span class="text-muted">(Opțional)</span></label>
                     <input type="text" class="form-control" id="address2" placeholder="Apartament, scară, bloc">
-                </div>
+                </div>-->
+                <!--<div class="mb-3">
+                    <label for="state">Oraș</label>
+                    <select class="custom-select d-block" id="state" required="">
+                        <option value="">Choose...</option>
+                        <option>București</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Introdu un oraș valid.
+                    </div>
+                </div>-->
 
                 <div class="row">
                     </div>
-                    <div class="col-md-8 mb-3">
-                        <label for="state">State</label>
-                        <select class="custom-select d-block w-100" id="state" required="">
-                            <option value="">Choose...</option>
-                            <option>California</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please provide a valid state.
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
+
+                    <!--<div class="col-md-4 mb-3">
                         <label for="zip">Cod poștal</label>
                         <input type="text" class="form-control" id="zip" placeholder="" required="">
                         <div class="invalid-feedback">
                             Trebuie un cod poștal
                         </div>
-                    </div>
-                </div>
+                    </div>-->
+                <!--</div>
                 <hr class="mb-4">
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="same-address">
@@ -178,63 +217,15 @@ include 'clientnavbar.php';?>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="save-info">
                     <label class="custom-control-label" for="save-info"></label>
-                </div>
-                <hr class="mb-4">
+                </div>-->
 
-                <h4 class="mb-3">Payment</h4>
-
-                <div class="d-block my-3">
-                    <div class="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-                        <label class="custom-control-label" for="credit">Credit card</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                        <label class="custom-control-label" for="debit">Debit card</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                        <label class="custom-control-label" for="paypal">Paypal</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="cc-name">Name on card</label>
-                        <input type="text" class="form-control" id="cc-name" placeholder="" required="">
-                        <small class="text-muted">Full name as displayed on card</small>
-                        <div class="invalid-feedback">
-                            Name on card is required
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="cc-number">Credit card number</label>
-                        <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Credit card number is required
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">Expiration</label>
-                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Expiration date required
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">CVV</label>
-                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Security code required
-                        </div>
-                    </div>
-                </div>
-                <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                <button onclick="purchase()" class="btn btn-primary btn-lg btn-block" type="button">Confirmă Comanda</button>
             </form>
         </div>
     </div>
+</div>
+    <hr>
+<?php include 'footer.php'; ?>
 
 </body>
 </html>

@@ -59,7 +59,6 @@ function console_log($data){
                     ceva = '';
                     for(var i = 0; i < myArray.length; i++){
                         ceva = ceva + "<tr> <td>" + myArray[i].id + "</td> <td> " + myArray[i].email + " </td> <td> " + myArray[i].lastLogin + " </td> <td>" +
-                            " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#editModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\" title=\"Edit\">&#xE254;</i></button>\n" +
                             " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#deleteModal\" value = " + myArray[i].id + " onclick=\"deleteUser(this)\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\"  title=\"Delete\" >delete</i></button>\n" +
                             " </td>"
                     }

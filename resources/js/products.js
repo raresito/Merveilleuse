@@ -47,9 +47,16 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             url: "retrieveGallery.php",
-            dataType: "html",
             success: function(response){
-                $("#galleryHere").html(response);
+                let arrayGallery = JSON.parse(response);
+                for(let i = 0; i < arrayGallery.length; i++){
+                    document.getElementById("galleryHere").innerHTML +=
+                        "<div class=\"col-sm-6 col-md-4 col-lg-3 item\" onclick=\"SelectPhoto(this)\"> "+
+                        "    <a data-lightbox=\"photos\"> " +
+                        "       <img class=\"img-responsive\" src='" + arrayGallery[i] + "' style='max-width: 150px'> " +
+                        "    </a> " +
+                        " </div> ";
+                }
             }
         })
     })

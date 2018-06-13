@@ -5,12 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once '../dbconnect.php';
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
-}
-
+echo $_POST["id"];
 $checkUserHasProductAlready = "
     select users.id, users.email, orders.orderID, orders.orderStatus, product_id, quantity
     from users join orders on users.id = orders.userID
@@ -44,15 +39,19 @@ if(isset($_POST["id"])) {
         $row = $hasOpenOrder ->fetch_assoc();
         $createProductInOrder = "INSERT INTO products_orders
                     VALUES ( '".$row["orderID"]."', '".$_POST["id"]."', '1')";
+
         $hasProduct = mysqli_query($conn, $checkUserHasProductAlready);
         if ($hasProduct && $hasProduct -> num_rows > 0) {
+            //echo 'Insert 1.5';
             mysqli_query($conn, $incrementProduct);
+
         } else {
             //echo 'Product didn\'t exist before';
+            //echo 'Insert 1.7';
             mysqli_query($conn, $createProductInOrder);
         }
     } else {
-        echo 'Order didn\'t exist before';
+        //echo 'Order didn\'t exist before';
         mysqli_query($conn, $createEmptyOrder);
         $hasOpenOrder = mysqli_query($conn, $checkUserHasOpenOrder);
         /*echo $checkUserHasOpenOrder;
@@ -62,6 +61,7 @@ if(isset($_POST["id"])) {
             $row = $hasOpenOrder -> fetch_assoc();
             $createProductInOrder = "INSERT INTO products_orders
                     VALUES ( '" . $row["orderID"] . "', '" . $_POST["id"] . "', '1')";
+            //echo "Insert 2";
             mysqli_query($conn, $createProductInOrder);
         }
     }

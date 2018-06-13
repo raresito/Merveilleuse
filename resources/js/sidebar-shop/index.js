@@ -1,7 +1,3 @@
-if (!isTouchDevice()) {
-  $('[data-toggle*="tooltip"]').tooltip();
-}
-
 // utility
 
 function isTouchDevice() {

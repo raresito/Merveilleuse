@@ -12,20 +12,18 @@ function console_log($data){
     echo '</script>';
 }
 
-function isAdmin(){
+function isAdmin($c){
     $sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
-    $result = mysqli_query($conn,$sql);
+    $result = mysqli_query($c,$sql);
     $row = $result ->fetch_assoc();
     if($row["admin"] == 0){
-        header("Location: login.php");
+        header("Location: adminLogin.php");
     }
 }
 
-isAdmin();
+isAdmin($conn);
 
 ?>
-
-<!-- TODO Ask for admin features -->
 
 <html>
 <head>
@@ -39,7 +37,7 @@ isAdmin();
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+    <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
 
 
 </head>
@@ -78,6 +76,9 @@ isAdmin();
                     </a>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6">
+                <a href="bonConsum.php"> Emite Bon de Consum</a>
+            </div>
         </div>
     </div>
 
@@ -85,7 +86,7 @@ isAdmin();
         function openOrderCount(){
             $.ajax({
                 type: 'POST',
-                url: 'selectOrders.php',
+                url: '../selectOrders.php',
                 data:{type: "open"},
                 success: function (d){
                     document.getElementById("divOpenOrderCount").innerText = d;

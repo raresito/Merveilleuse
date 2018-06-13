@@ -7,16 +7,20 @@
 
     if(!isset($_SESSION['email'])){
         if(isset($_POST['email'])){
-            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1;";
+            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1 AND password = '".$_POST["password"]."';";
             $result = mysqli_query($conn,$sql);
             if ($result->num_rows > 0) {
                 while ($row = $result -> fetch_assoc()) {
                     $_SESSION["email"] = $row["email"];
-                    $_SESSION["role"] = $row["role"];
                     $_SESSION["name"] = $row["name"];
                 }
+                header("location: dashboard.php");
             }
-            else
+            else{
+                echo '<div class="alert alert-danger" role="alert">
+                                A apărut o problemă, mai încearcă odată!
+                            </div>';
+            }
 
             if(!$result){
                 echo'No result';
@@ -28,9 +32,12 @@
         }
     }
     else{
-        if($_POST["logoutVariable"] == "true"){
-            session_unset();
-            session_destroy();
+        if(isset($_POST["logoutVariable"])) {
+            if ($_POST["logoutVariable"] == "true") {
+                session_unset();
+                session_destroy();
+                header("Location: adminLogin.php");
+            }
         }
         header("Location: dashboard.php");
     }
@@ -56,7 +63,7 @@
         <img src="../resources/res/logo.jpg">
     </div>
     <?php
-    if($_POST["logoutVariable"] == "true"){
+    if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){
         echo'
              <div class="alert alert-primary" role="alert">
                    Te-ai delogat cu succes!
@@ -64,10 +71,13 @@
         ';
     }
     ?>
+    <div id="alertDiv" class="row">
+
+    </div>
     <div class="row" style="width:100%;">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <form action = "adminLogin.php" method = "post" role="form">
+            <form id = "loginForm" action = "adminLogin.php" method = "post" role="form">
                 <div class="form-group">
 
                     <label for="exampleInputEmail1">

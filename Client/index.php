@@ -37,7 +37,12 @@
     <body>
     <?php include 'clientnavbar.php';?>
 
-    <div class="container-fluid" style="z-index: 5; margin-top: 100px;">
+    <div class="container-fluid" style="position:relative">
+        <div style="position: relative; z-index:6; top:660px; text-align: center;">
+            <a class="btn action-button" style="color: black; background-color: greenyellow" role="button" href="../Client/shop.php">
+                <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Încearcă!
+            </a>
+        </div>
         <div class="row">
             <div class="swiper-container main-slider" id="myCarousel">
                 <div class="swiper-wrapper">
@@ -54,6 +59,7 @@
                 <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
                 <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
             </div>
+
         </div>
     </div>
 
