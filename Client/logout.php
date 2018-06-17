@@ -28,7 +28,7 @@ session_destroy();
 include 'clientnavbar.php';
 
 echo'
-    <div class="container" style="margin-top: 100px;">
+    <div class="container" style="margin-top: 150px;">
         <div class="row">
             <div class="alert alert-success" role="alert">
                 Te-ai delogat cu succes!

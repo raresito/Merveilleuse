@@ -7,28 +7,7 @@
     width: 400px;
 }
 
-.favorite-prodcut-image{
-    height: 330px;
-    width: 300px;
-}
-
 .content{
     background-color: #ffffff;
     border-radius: 20px;
-}
-
-.square-div{
-    padding: 5px;
-    height: 250px;
-    overflow:hidden;
-}
-
-.square-image{
-    /* position: absolute; */
-    /* padding: 5px; */
-    background-color: #ffffff;
-    border-radius: 20px;
-    width: -webkit-fill-available;
-    min-height: 250px;
-    /* height: 300px; */
 }

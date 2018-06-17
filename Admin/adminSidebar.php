@@ -1,5 +1,7 @@
 
 
+    <!-- ALL BOOTSTRAP DEPENDENCIES -->
+
     <link rel="stylesheet" href="../resources/css/sidebar.css">
     <link rel="stylesheet" href="../resources/css/Sidebar-Menu.css">
     <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
@@ -8,7 +10,7 @@
 
     <nav id="sidebar" class="toggle">
         <div class="sidebar-header">
-            <img id="sidebarBrand" class="toggle" src="../resources/res/logo.jpg" style="">
+            <img id="sidebarBrand" class="toggle" src="../resources/img/logo.jpg" style="">
             <strong>M</strong>
         </div>
 

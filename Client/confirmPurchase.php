@@ -81,7 +81,7 @@ function console_log($data){
                     address: $("#address").val()
                 },
                 success: function (d){
-                    alert(d);
+                    console.log(d);
                     $("#content").innerHTML = '';
                 }
             })

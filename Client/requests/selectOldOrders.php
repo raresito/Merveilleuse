@@ -1,6 +1,6 @@
 <?php
 
-include "../dbconnect.php";
+include "../../dbconnect.php";
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

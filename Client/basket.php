@@ -13,11 +13,6 @@ if(!isset($_SESSION["email"])){
     header("Location: login.php");
 }
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
-}
 
 if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
     if($_POST["quantity"] == 0){
@@ -63,18 +58,20 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
 
     <script>
 
-        function setZero(x){
+        function setZero(x, idProduct, idOrder){
             x.parentElement.parentElement.getElementsByClassName("text-center")[0].value = 0;
+            updateProduct(x, idProduct, idOrder);
         }
         window.onload = function() {
             let space = document.getElementById("accordion");
+            loadBasketProduct();
             $.ajax({
                 type: 'POST',
-                url: 'selectOldOrders.php',
+                url: 'requests/selectOldOrders.php',
                 data: {},
                 success: function (d) {
 
-                    console.log(d);
+                    //console.log(d);
                     var result = JSON.parse(d);
 
                     for(let i = 0; i < result.length; i++){
@@ -104,6 +101,9 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
                         var collapse = document.createElement("DIV");
                         collapse.id="collapse"+result[i].order_id;
                         collapse.classList.add("collapse");
+                        if(i === 0){
+                            collapse.classList.add("show");
+                        }
                         collapse.setAttribute("aria-labelledby", "heading" + result[i].order_id);
                         collapse.setAttribute("data-parent", "#accordion");
 
@@ -121,7 +121,7 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
                             var cell1 = document.createElement("TD");
                             cell1.classList.add("d-none");
                             cell1.classList.add("d-md-table-cell");
-                            cell1.innerHTML = "<img src = \"../resources/res/foto/" + result[i].image +"\" style=\"max-height:100px\" class=\"img-responsive\" >";
+                            cell1.innerHTML = "<img src = \"../resources/img/foto/" + result[i].image +"\" style=\"max-height:100px\" class=\"img-responsive\" >";
                             row.appendChild(cell1);
                             var cell2 = document.createElement("TD");
                             cell2.innerText = result[i].nameProduct;
@@ -144,7 +144,7 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
                             var cell1 = document.createElement("TD");
                             cell1.classList.add("d-none");
                             cell1.classList.add("d-md-table-cell");
-                            cell1.innerHTML = "<img src = \"../resources/res/foto/" + result[i].image +"\" style=\"max-height:100px\" class=\"img-responsive\" >";
+                            cell1.innerHTML = "<img src = \"../resources/img/foto/" + result[i].image +"\" style=\"max-height:100px\" class=\"img-responsive\" >";
                             row.appendChild(cell1);
                             var cell2 = document.createElement("TD");
                             cell2.innerText = result[i].nameProduct;
@@ -177,17 +177,82 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
 
             });
         }
+        function updateProduct(but, idProduct, idOrder) {
+            let val = but.parentElement.parentElement.getElementsByClassName("quantity")[0].value;
+            $.ajax({
+                type: 'POST',
+                url: 'requests/updateBasketProducts.php',
+                data: {
+                    idProd: idProduct,
+                    idOrder: idOrder,
+                    quant: val
+                },
+                success: function (d) {
+                    console.log(d);
+                    loadBasketProduct();
+                }
+            });
+        }
+        function loadBasketProduct(){
+            $.ajax({
+                type: 'POST',
+                url: 'requests/selectBasketProducts.php',
+                data: {},
+                success: function (d) {
+                    //console.log(d);
+                    produse = JSON.parse(d);
+                    document.getElementById("tableBody").innerHTML = '';
+                    for(let i in produse){
+                        //console.log(produse[i]);
+                        document.getElementById("tableBody").innerHTML += tableEntry(produse[i])
+                    }
+                }
+            });
+            updateTotal();
+        }
+        function tableEntry(produs){
+            return '<tr>\n' +
+                   '    <td data-th="Produs">\n' +
+                   '        <div class="row">\n' +
+                   '            <div class="col-sm-4 hidden-xs"><img src="../resources/img/foto/'+ produs.image + '" style="max-height:100px" class="img-responsive"/></div>\n' +
+                   '            <div class="col-sm-8">\n' +
+                   '                <h4 class="nomargin">' + produs.nameProduct + '</h4>\n' +
+                   '                <input name="idProduct" value="' + produs.product_id + '" type="hidden"/>\n' +
+                   '                <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>\n' +
+                   '            </div>\n' +
+                   '        </div>\n' +
+                   '    </td>\n' +
+                   '    <td data-th="Preț">RON' + produs.priceProduct + ' /' + produs.unitProduct + '</td>\n' +
+                   '    <td data-th="Cantitate">\n' +
+                   '        <input id = "quantity" type="number" class="quantity form-control text-center" min = 0 value="'+ produs.quantity +'">\n' +
+                   '    </td>\n' +
+                   '    <td data-th="Subtotal" class="text-center">'+ produs.priceProduct * produs.quantity + '</td>\n' +
+                   '    <td class="actions" data-th="">\n' +
+                   '        <button onclick ="updateProduct(this, '+produs.product_id+', '+produs.order_id+')" type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>\n' +
+                   '        <button onclick = "setZero(this, '+produs.product_id+', '+produs.order_id+')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>\n' +
+                   '    </td>\n' +
+                   '</tr>\n';
+        }
+        function updateTotal() {
+            $.ajax({
+                type: 'POST',
+                url: 'requests/selectTotal.php',
+                success: function (d) {
+                    console.log("Success"+ d);
+                    document.getElementById("hereTotal").innerHTML = "Total " + d + " RON (TVA inclus)";
+                },
+                fail: function(d){
+                    console.log("fail de ajax");
+                }
+            });
+        }
     </script>
 
 </head>
 
 <body>
-<?php
-echo "Errno: " . $conn->errno . "\n";
-echo "Error: " . $conn->error . "\n";
-include 'clientnavbar.php';?>
+<?php include 'clientnavbar.php';?>
 <div class="container content">
-
         <table id="cart" class="table table-hover table-condensed">
             <thead>
             <tr>
@@ -198,82 +263,21 @@ include 'clientnavbar.php';?>
                 <th style="width:10%"></th>
             </tr>
             </thead>
-            <tbody>
-                <?php
-
-                $subtotal = 0;
-
-                if(isset($_SESSION['email'])) {
-                    $sql = "select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
-                            from(
-                                select email, order_id, product_id, quantity
-                                    from (
-                                        select u.email, o.orderID, o.orderStatus
-                                            from users u join orders o
-                                            on u.id = o.userID
-                                            where u.email = '" . $_SESSION["email"] . "' && orderStatus = 0) prev
-                                    join products_orders po
-                                    on prev.orderID = po.order_id ) ar join producttable pt
-                            on ar.product_id = pt.idProduct;";
-                    $result = mysqli_query($conn, $sql);
-
-                    if (!$result) {
-                        echo 'No result';
-                        echo "Error: Our query failed to execute and here is why: \n";
-                        echo "Query: " . $sql . "\n";
-                        echo "Errno: " . $conn -> errno . "\n";
-                        echo "Error: " . $conn -> error . "\n";
-                    }
-                    if ($result -> num_rows > 0) {
-                        while ($rowProduct = $result -> fetch_assoc()) {
-
-                            echo '
-                                <form action = "basket.php" method = "post" role="form">
-                                    <tr>
-                                        <td data-th="Produs">
-                                            <div class="row">
-                                                <div class="col-sm-4 hidden-xs"><img src=../resources/res/foto/' . $rowProduct["image"] . ' style="max-height:100px" class="img-responsive"/></div>
-                                                <div class="col-sm-8">
-                                                    <h4 class="nomargin">' . $rowProduct["nameProduct"] . '</h4>
-                                                    <input name="idProduct" value="'.$rowProduct["product_id"].'" type="hidden"/>
-                                                    <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td data-th="Preț">RON ' . $rowProduct["priceProduct"] . " /" . $rowProduct["unitProduct"] . '</td>
-                                        <td data-th="Cantitate">
-                                            <input name = "quantity" type="number" class="form-control text-center" value="'.$rowProduct["quantity"].'">
-                                        </td>
-                                        <td data-th="Subtotal" class="text-center">' . $rowProduct["priceProduct"] * $rowProduct["quantity"]. '</td>
-                                        <td class="actions" data-th="">
-                                            <button type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-                                            <button onclick = "setZero(this)" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
-                                        </td>
-                                    </tr>
-                                </form>
-                            ';
-                            $subtotal = $subtotal + ($rowProduct["priceProduct"] * $rowProduct["quantity"]);
-                        }
-                    }
-
-                }
-                ?>
-
-            </tbody>
+            <tbody id="tableBody"></tbody>
             <tfoot>
-            <tr class="visible-xs">
-                <td class="text-center"><strong>Total <?php echo $subtotal; ?></strong></td>
+            <!--<tr class="visible-xs">
+                <td class="text-center"><strong>Total <?php /*/*echo $subtotal;*/ ?></strong></td>
                 <?php
-                if(isset($POST["quantity"])){
+/*                if(isset($POST["quantity"])){
                     echo $_POST["quantity"] . " " . $_POST["nameProduct"];
                 }
 
-                ?>
-            </tr>
+                */?>
+            </tr>-->
             <tr>
                 <td><a href="../Client/shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
                 <td colspan="2" class="hidden-xs"></td>
-                <td class="hidden-xs text-center"><strong>Total <?php echo $subtotal; ?> RON</strong></td>
+                <td id = "hereTotal" class="hidden-xs text-center"><strong>Total RON (TVA inclus)</strong></td>
                 <td><a href="confirmPurchase.php" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
             </tr>
             </tfoot>
@@ -291,8 +295,10 @@ include 'clientnavbar.php';?>
     </div>
 </div>
 
-<div class = "container">
+<div class = "container" style="margin-bottom: 75px">
     <div id="accordion"></div>
 </div>
+
+<?php include 'footer.php'; ?>
 </body>
 </html>

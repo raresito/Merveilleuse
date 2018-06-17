@@ -707,7 +707,7 @@ section {
 	color: #fff;
 }
 .contact-sec input[type="text"], .contact-sec input[type="email"] {
-	border-radius: 0px;
+	border-radius: 0;
 }
 .contact-sec textarea {
 	border-radius: 0;

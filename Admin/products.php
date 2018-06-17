@@ -6,12 +6,8 @@ require_once '../dbconnect.php';
 
 <html>
     <head>
+        <?php include '../libraries.php'; ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script src="../resources/js/merveilleuseSideBar.js"></script>
 
 
@@ -159,8 +155,6 @@ require_once '../dbconnect.php';
         </div>
         <div id="addModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
-
-                <!-- Modal content-->
                 <form action="products.php" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -170,8 +164,8 @@ require_once '../dbconnect.php';
                         <div class="modal-body">
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label>Name</label>
-                                    <input type="text" name="newProductName" class="form-control" required>
+                                    <label for="newProductName" >Name</label>
+                                    <input type="text" id="newProductName" name="newProductName" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -213,7 +207,6 @@ require_once '../dbconnect.php';
         <div id="galleryModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                <!-- Modal content-->
                     <div class="photo-gallery"  style="border-radius: 20px">
                         <div class="modal-header">
                             <h2 class="text-center">Gallery</h2>
@@ -225,20 +218,12 @@ require_once '../dbconnect.php';
                             </form>
                         </div>
                         <div class="modal-body">
-                            <div class="row" id="galleryHere">
-                                </div>
+                            <div class="row" id="galleryHere"> </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Load JavaScript at end for performance -->
-
-
-        <!-- Latest compiled and minified JavaScript -->
-
-
     </body>
 </html>
 

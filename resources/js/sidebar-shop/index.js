@@ -8,7 +8,7 @@ $(".type").change(function() {
 
     var categoryCheckboxes = document.getElementsByClassName("category");
     var categories = [];
-    for(var i = 0; i < categoryCheckboxes.length; i++){
+    for(let i = 0; i < categoryCheckboxes.length; i++){
         if(categoryCheckboxes[i].checked) {
             categories.push(categoryCheckboxes[i].value);
         }
@@ -17,7 +17,7 @@ $(".type").change(function() {
 
     var priceCheckboxes = document.getElementsByClassName("pret");
     var prices = [];
-    for(var i = 0; i < priceCheckboxes.length;i++){
+    for(let i = 0; i < priceCheckboxes.length;i++){
         if(priceCheckboxes[i].checked){
             prices.push(priceCheckboxes[i].value);
         }

@@ -20,38 +20,25 @@ if (session_status() == PHP_SESSION_NONE) {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script  src="../resources/js/sidebar-shop/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
     <link rel="stylesheet" href="../resources/css/overlay.css">
     <script src="../resources/js/overlay.js"></script>
 
-    <script>
-
-
-    </script>
-
     <script type="text/javascript">
 
-
-        function schemaBootstrap(){
-            let dives = document.getElementsByClassName("product-list");
-            dive = dives[0];
-            for(let i = 0; i <= dive.childNodes.length; i++){
-                if(dive.childNodes[i].classList.contains("col-lg-4")){
-                    dive.childNodes[i].classList.remove("col-lg-4");
-                    dive.childNodes[i].classList.add("col-lg-3");
-                } else {
-                    dive.childNodes[i].classList.remove("col-lg-3");
-                    dive.childNodes[i].classList.add("col-lg-4");
-                }
+        function toggleSidebar() {
+            if (document.getElementById("filter-sidebar").classList.contains("collapse")) {
+                document.getElementById("filter-sidebar").classList.remove("collapse");
             }
+            else
+                document.getElementById("filter-sidebar").classList.add("collapse");
         }
 
         function addToBasket(info){
-            if("<?php if(isset($_SESSION)){ echo $_SESSION["email"]; } else echo "" ?>" !== ""){
+            if("<?php if(isset($_SESSION["email"])){ echo $_SESSION["email"]; } else echo "" ?>" !== ""){
                 $.ajax({
                     type: 'POST',
-                    url: 'insertBasket.php',
+                    url: 'requests/insertBasket.php',
                     data: {id: info},
                     success: function (d) {
                         alert(d);
@@ -104,6 +91,10 @@ if (session_status() == PHP_SESSION_NONE) {
                     }
                 }
             }
+            if(!obj.classList.contains("pret") && !obj.classList.contains("type") && !obj.classList.contains("flavour")){
+                filterSelection = '';
+            }
+            console.log(filterSelection);
             reloadCatalog();
         }
 
@@ -116,12 +107,10 @@ if (session_status() == PHP_SESSION_NONE) {
                 },
                 success: function (d){
                     alert(d);
-
+                    productDiv.innerHTML = d;
                 }
             });
         }
-
-
 
     </script>
     <!-- TODO alerta timp de livrare, bani -->
@@ -136,7 +125,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="row">
             <div class="navbar navbar-default visible-xs">
                 <div class="container-fluid">
-                    <button class="btn btn-default navbar-btn" data-toggle="collapse" data-target="#filter-sidebar"> <!--onclick="schemaBootstrap()"-->
+                    <button class="btn btn-default navbar-btn" onclick="toggleSidebar()">
                         <i class="fa fa-tasks"></i> Filtre
                     </button>
                 </div>
@@ -229,7 +218,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     <div class="spinner"></div>
 
                 </div>
-                <div class="row product-list">
+                <div id="productDiv" class="row row-eq-height product-list">
 
                     <?php
 
@@ -245,10 +234,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
                     if ($result->num_rows > 0) {
                         while($row = $result->fetch_assoc()) {
-                            echo '<div class="col-xs-6 col-md-6 col-lg-3 product-item">
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-md-12"><a href="#" class="product-image"><img src="../resources/res/foto/' . $row["image"] . '"></a></div>
+                            echo '<div class="col-xs-6 col-md-6 col-lg-3 product-item d-flex flex-column">
+                                    <div class="product-container d-flex flex-column" style="height: 100%;">
+                                        <div class="row" style="flex-grow: 1"> 
+                                            <div class="col-md-12"><a href="#" class="product-image"><img src="../resources/img/foto/' . $row["image"] . '"></a></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-8">

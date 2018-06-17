@@ -32,7 +32,7 @@ if($_POST["type"] == "default"){
     echo json_encode($arr);
 
 } elseif ($_POST["type"] == "mine"){
-    $sql = "select pt.idProduct, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, z.order_id, z.quantity
+    $sql = "select pt.idProduct, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, z.order_id as order_id, z.quantity
             from producttable pt join (
             select *
             from products_orders po join orders o

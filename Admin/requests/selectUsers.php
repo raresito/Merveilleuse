@@ -1,7 +1,7 @@
 <?php
 
-include "../dbconnect.php";
-$sql = "select * from producttable";
+include "../../dbconnect.php";
+$sql = "select * from users";
 $result = mysqli_query($conn,$sql);
 
 $arr = array();

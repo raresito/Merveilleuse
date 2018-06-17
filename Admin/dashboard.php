@@ -20,69 +20,35 @@ function isAdmin($c){
         header("Location: adminLogin.php");
     }
 }
-
 isAdmin($conn);
 
 ?>
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-        src="http://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
+    <?php include '../libraries.php'; ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
-
-
-</head>
-<body>
-<div class="wrapper">
-    <?php
-    include("adminSidebar.php");
-    ?>
-    <div class = "container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Dashboard</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fas fa-clipboard-list fa-5x"></i>
-                            </div>
-                            <div class="col-xs-9 text-right">
-                                <div id="divOpenOrderCount" class="huge"></div>
-                                <div>Open Orders!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="orders.php">
-                        <div class="panel-footer">
-                            <span class="pull-left">View List</span>
-                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <a href="bonConsum.php"> Emite Bon de Consum</a>
-            </div>
-        </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
     <script>
+
+        window.onload = function(){
+            today();
+            openOrderCount();
+        };
+        function today(){
+            let today = new Date();
+            let dd = today.getDate();
+            let mm = today.getMonth()+1; //January is 0!
+            let yyyy = today.getFullYear();
+
+            document.getElementById("todayDiv").innerText += dd + "/" + mm + "/" + yyyy;
+
+        }
+
         function openOrderCount(){
             $.ajax({
                 type: 'POST',
@@ -94,9 +60,130 @@ isAdmin($conn);
             });
         }
 
-        openOrderCount();
 
     </script>
+
+
+</head>
+<body>
+<div class="wrapper">
+    <?php
+    include("adminSidebar.php");
+    ?>
+    <div class = "container">
+        <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
+            <i class="glyphicon glyphicon-align-left"></i>
+            <span></span>
+        </button>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Dashboard</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Comenzi primite:  </h5><div id="divOpenOrderCount" class="huge"></div>
+                    </div>
+                    <a href="orders.php">
+                        <div class="card-footer">
+                            <span class="pull-left">Vezi Comenzi</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Bonul de Consum,  </h5>
+                        <div id="todayDiv">
+
+                        </div>
+                    </div>
+                    <a href="bonConsum.php">
+                        <div class="card-footer">
+                            <span class="pull-left">Descarca PDF</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="width:600px; height: 300px">
+                <canvas id="myChart" width="100" height="100"></canvas>
+                <script>
+
+                    let counts;
+                    window.onload = function() {
+                        counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'requests/countOrders.php',
+                            success: function (d) {
+                                console.log(d);
+                                array = JSON.parse(d);
+                                for (let i in array) {
+                                    alert(array[i].month);
+                                    counts[parseInt(array[i].month)] = parseInt(array[i].cnt);
+                                }
+                            }
+
+                        });
+                    };
+
+                    let ctx = document.getElementById("myChart").getContext('2d');
+
+                    let myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Octombrie", "Noiembrie", "Decembrie"],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: counts,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            },
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -6,7 +6,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="description" content="">
           <meta name="author" content="">
-          <link rel="shortcut icon" href="../resources/res/favicon.ico" />
+          <link rel="shortcut icon" href="../resources/img/favicon.ico" />
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -40,16 +40,16 @@
     <div class="container-fluid" style="position:relative">
         <div style="position: relative; z-index:6; top:660px; text-align: center;">
             <a class="btn action-button" style="color: black; background-color: greenyellow" role="button" href="../Client/shop.php">
-                <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Încearcă!
+                <img src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">Încearcă!
             </a>
         </div>
         <div class="row">
             <div class="swiper-container main-slider" id="myCarousel">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/res/unu.jpg')" data-hash="slide1">
+                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/unu.jpg')" data-hash="slide1">
                         <h2>It is health that is real wealth and not pieces of gold and silver</h2>
                     </div>
-                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/res/doi.jpg')" data-hash="slide2">
+                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/doi.jpg')" data-hash="slide2">
                         <h2>Happiness is nothing more than good health and a bad memory</h2>
                     </div>
                 </div>

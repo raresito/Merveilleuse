@@ -65,7 +65,7 @@ $(document).ready(function (){
 function reloadProducts(){
     $.ajax({
         type: 'POST',
-        url: 'selectProducts.php',
+        url: 'requests/selectProducts.php',
         data:{},
         success: function (d){
             var myArray = JSON.parse(d);
@@ -73,7 +73,7 @@ function reloadProducts(){
             head = "<thead><tr><th>Icon</th><th>Denumire</th><th>Preț/unitate</th> <th>Categorie</th> <th>Acțiuni</th>  </tr></thead>";
             ceva = '';
             for(var i = 0; i < myArray.length; i++){
-                ceva = ceva + "<tr> <td><img src=\"../resources/res/foto/" + myArray[i].image + " \"></td> <td> " + myArray[i].nameProduct + " </td> <td> " + myArray[i].priceProduct + "/" + myArray[i].unitProduct + " </td> <td>" + myArray[i].category + " </td> <td> " +
+                ceva = ceva + "<tr> <td><img src=\"../resources/img/foto/" + myArray[i].image + " \"></td> <td> " + myArray[i].nameProduct + " </td> <td> " + myArray[i].priceProduct + "/" + myArray[i].unitProduct + " </td> <td>" + myArray[i].category + " </td> <td> " +
                     "<form method=\"post\" action=\"products.php\">" +
                     "<input name=\"nameProduct\" type=\"hidden\" value =\" " + myArray[i].nameProduct + " \"> " +
                     "<button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#editModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></button> " +

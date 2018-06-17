@@ -48,11 +48,8 @@
 <html>
 <head>
 
+     <?php include '../libraries.php'; ?>
      <link href="../resources/css/adminLogin.css" rel="stylesheet">
-
-    <?php
-        include '../libraries.php';
-    ?>
 
 </head>
 <body>
@@ -60,7 +57,7 @@
 <div class="flex-center" style="height: 100%;">
 <div class="container-fluid flex-center flex-column" >
     <div class="row">
-        <img src="../resources/res/logo.jpg">
+        <img src="../resources/img/logo.jpg">
     </div>
     <?php
     if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){

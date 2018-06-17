@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="../resources/css/Footer-Clean.css">
 
-<div class="footer-clean">
+<div class="footer-clean" style="bottom:0;">
     <footer>
         <div class="container">
             <div class="row justify-content-center">

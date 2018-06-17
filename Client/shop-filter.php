@@ -2,88 +2,44 @@
 
 include '../dbconnect.php';
 
-echo $_POST["selection"]["type"][0];
+//echo $_POST["selection"]["type"][0];
 
 $sql = "SELECT * FROM producttable" ;
 
-$wherePlaced = 0;
+if($_POST["selection"] !== '' || !isset($_POST["selection"])) {
 
-if(isset($_POST["selection"]["type"])){
-    $wherePlaced = 1;
-    $sql = $sql . " where ";
-    foreach ($_POST["selection"]["type"] as $value){
-        $sql = $sql . " category = '" . $_POST["selection"]["type"] ."' ";
+
+    $wherePlaced = 0;
+
+    if (isset($_POST["selection"]["type"])) {
+        $wherePlaced = 1;
+        $sql = $sql . " where ";
+        foreach ($_POST["selection"]["type"] as $value) {
+            $sql = $sql . " category = '" . $value . "' OR ";
+        }
+        $sql = substr($sql, 0, -4);
     }
-}
 
 
-function price_interpret($priceString){
-    if($priceString == "\"1\""){
-        return "(priceProduct <= 20)";
-    }
-    if($priceString == "\"2\""){
-        return "(priceProduct >= 20 && priceProduct <=60)";
-    }
-    if($priceString == "\"3\""){
-        return "(priceProduct >= 60 && priceProduct <= 200)";
-    }
-    if($priceString == "\"4\""){
-        return "(priceProduct >= 200)";
-    }
-}
-
-$rawCategory = $_REQUEST['category'];
-$rawCategory = substr(substr($rawCategory,1), 0, -1);
-$categoryFinal = explode(",",$rawCategory);
-
-$rawPrice = $_REQUEST['price'];
-$rawPrice = substr(substr($rawPrice,1), 0, -1);
-$priceFinal = explode(",",$rawPrice);
-
-
-
-if($categoryFinal[0] != "" || $priceFinal[0] != "") {
-    $sql = "SELECT * FROM producttable where ";
-
-    if ($categoryFinal[0] != "")
-    {
-        $sql = $sql . "(";
-        for ($i = 0; $i < sizeof($categoryFinal); $i++) {
-            if ($i == sizeof($categoryFinal) - 1) {
-                $sql = $sql . "category = " . $categoryFinal[$i] . "";
-            } else {
-                $sql = $sql . "category = " . $categoryFinal[$i] . " OR ";
+    /*if(isset($_POST["selection"]["pret"])){
+        if($wherePlaced == 0){
+            $sql = $sql . "where ";
+            foreach ($_POST["selection"]["pret"] as $value){
+                $sql = $sql . ""
             }
         }
-        $sql = $sql . ")";
-        if($priceFinal[0] != ""){
-            $sql = $sql . " AND ";
-        }
-    }
-
-    if($priceFinal[0] != ""){
-        $sql = $sql . "(";
-        for ($i = 0; $i < sizeof($priceFinal); $i++) {
-            if ($i == sizeof($priceFinal) - 1) {
-                $sql = $sql . price_interpret($priceFinal[$i]);
-            } else {
-                $sql = $sql . price_interpret($priceFinal[$i]) . " OR ";
-            }
-        }
-        $sql = $sql . ")";
-    }
+    }*/
 }
-
 $result = mysqli_query($conn,$sql);
 
 $response='';
 
 if ($result && $result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        $response = $response . '<div class="col-xs-6 col-sm-6 col-md-3 product-item">
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-md-12"><a href="#" class="product-image"><img src="../resources/res/foto/' . $row["image"] . '"></a></div>
+        $response = $response . '<div class="col-xs-6 col-sm-6 col-md-3 product-item d-flex flex-column">
+                                    <div class="product-container d-flex flex-column">
+                                        <div class="row" style="flex-grow: 1">
+                                            <div class="col-md-12"><a href="#" class="product-image"><img src="../resources/img/foto/' . $row["image"] . '"></a></div>
                                         </div>
                                         <div class="row">
                                             <div class="col-8">
@@ -108,6 +64,6 @@ if ($result && $result->num_rows > 0) {
                                 </div>';
     }
 }
-
+echo $sql;
 echo $response;
 ?>

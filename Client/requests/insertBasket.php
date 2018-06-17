@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once '../dbconnect.php';
+require_once '../../dbconnect.php';
 
 echo $_POST["id"];
 $checkUserHasProductAlready = "
@@ -11,7 +11,8 @@ $checkUserHasProductAlready = "
     from users join orders on users.id = orders.userID
     join products_orders on orders.orderID = products_orders.order_id
     where email = '".$_SESSION["email"]."'
-    AND product_id = '".$_POST["id"]."'; ";
+    AND product_id = '".$_POST["id"]."'
+    AND orderStatus = 0; ";
 $incrementProduct = "UPDATE products_orders
                 set quantity = quantity + 1
                 where order_id = (
@@ -27,7 +28,7 @@ $checkUserHasOpenOrder = "SELECT orderID
                 where userID = (SELECT id
                                 from users
                                 where email = '".$_SESSION["email"]."')
-                                AND orderStatus = 0";
+                AND orderStatus = 0";
 $createEmptyOrder = "INSERT INTO orders (userID)
                     VALUES ((SELECT id
                             from users
@@ -42,16 +43,16 @@ if(isset($_POST["id"])) {
 
         $hasProduct = mysqli_query($conn, $checkUserHasProductAlready);
         if ($hasProduct && $hasProduct -> num_rows > 0) {
-            //echo 'Insert 1.5';
+            echo 'Insert 1.5'. $_POST["id"];
             mysqli_query($conn, $incrementProduct);
 
         } else {
-            //echo 'Product didn\'t exist before';
-            //echo 'Insert 1.7';
+            echo 'Product didn\'t exist before';
+            echo 'Insert 1.7';
             mysqli_query($conn, $createProductInOrder);
         }
     } else {
-        //echo 'Order didn\'t exist before';
+        echo 'Order didn\'t exist before';
         mysqli_query($conn, $createEmptyOrder);
         $hasOpenOrder = mysqli_query($conn, $checkUserHasOpenOrder);
         /*echo $checkUserHasOpenOrder;
@@ -61,7 +62,7 @@ if(isset($_POST["id"])) {
             $row = $hasOpenOrder -> fetch_assoc();
             $createProductInOrder = "INSERT INTO products_orders
                     VALUES ( '" . $row["orderID"] . "', '" . $_POST["id"] . "', '1')";
-            //echo "Insert 2";
+            echo "Insert 2";
             mysqli_query($conn, $createProductInOrder);
         }
     }

@@ -4,7 +4,7 @@ window.onload = function() {
 
     let images = new Array(50);
     for(let i = 0; i < 42; i++){
-        images[i] = "../resources/res/foto/IMG-20180403-WA00" + (i>9 ? i : "0" + i) + ".jpg";
+        images[i] = "../resources/img/foto/IMG-20180403-WA00" + (i>9 ? i : "0" + i) + ".jpg";
 
         let image = document.createElement('div');
 
@@ -27,7 +27,7 @@ window.onload = function() {
 
 
         if(i === 2){
-            image.style.backgroundImage = "url(../resources/res/logoBG.png)";
+            image.style.backgroundImage = "url(../resources/img/logoBG.png)";
             image.classList.remove("col-sm-6");
             image.classList.remove("col-md-3");
             image.classList.remove("col-lg-2");

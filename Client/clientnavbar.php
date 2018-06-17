@@ -31,7 +31,7 @@ if(isset($_SESSION["email"])) {
 
 <nav id="clientNavBar" class="navbar navbar-light navbar-static-top sps sps--abv navbar-expand-md navigation-clean-button" style="z-index: 10">
     <div class="container">
-        <a class="navbar-brand" href="index.php"><img class="navbar-logo" src="../resources/res/logo.jpg"></a>
+        <a class="navbar-brand" href="index.php"><img class="navbar-logo" src="../resources/img/logo.jpg"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
             <span class="sr-only">
                 Toggle navigation
@@ -41,14 +41,14 @@ if(isset($_SESSION["email"])) {
             <ul class="nav navbar-nav mr-auto"></ul>
             <span class="navbar-text actions">
                                 <a class="btn btn-light action-button" role="button" href="../Client/shop.php">
-                    <img src="../resources/res/cupcake-icon2.png" class="icon-cupcake">Gustă-mă
+                    <img src="../resources/img/cupcake-icon2.png" class="icon-cupcake">Gustă-mă
                 </a>
                 <?php
                     if(isset($_SESSION["email"])){
                         echo '
                         <!--<div id="popHere"> </div>-->
                         <a class="btn btn-light action-button" role="button" href="login.php">
-                            <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">
+                            <img src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">
                             Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
@@ -58,9 +58,9 @@ if(isset($_SESSION["email"])) {
                         ';
                     } else {
                         echo '
-                        <div id="popHere"> </div>
+                        <!--<div id="popHere"> </div>-->
                         <a class="btn btn-light action-button" role="button" href="../Client/login.php">
-                            <img src="../resources/res/shopping-cart-icon.png" class="icon-cupcake">Cont
+                            <img src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
                         <a class="btn btn-light action-button" role="button" href="register.php">Sign Up</a>
