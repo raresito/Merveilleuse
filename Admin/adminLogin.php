@@ -7,7 +7,7 @@
 
     if(!isset($_SESSION['email'])){
         if(isset($_POST['email'])){
-            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1 AND password = '".$_POST["password"]."';";
+            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1 AND password = '".md5($_POST["password"])."';";
             $result = mysqli_query($conn,$sql);
             if ($result->num_rows > 0) {
                 while ($row = $result -> fetch_assoc()) {

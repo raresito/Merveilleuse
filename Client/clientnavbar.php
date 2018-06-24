@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../resources/css/clientnavbarCSS.css">
 <link rel="stylesheet" href="../resources/css/Navigation-with-Button.css">
 <link rel="stylesheet" href="../resources/css/custom.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <script src="../resources/js/clientnavbarJS.js"></script>
 
 <?php
@@ -31,36 +30,39 @@ if(isset($_SESSION["email"])) {
 
 <nav id="clientNavBar" class="navbar navbar-light navbar-static-top sps sps--abv navbar-expand-md navigation-clean-button" style="z-index: 10">
     <div class="container">
-        <a class="navbar-brand" href="index.php"><img class="navbar-logo" src="../resources/img/logo.jpg"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+        <div>
+            <a class="navbar-brand" href="index.php"><img class="navbar-logo" alt="img" src="../resources/img/logo.jpg"></a>
+            <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navcol-1">
             <span class="sr-only">
                 Toggle navigation
             </span>
-            <span class="navbar-toggler-icon"></span></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mr-auto"></ul>
             <span class="navbar-text actions">
                                 <a class="btn btn-light action-button" role="button" href="../Client/shop.php">
-                    <img src="../resources/img/cupcake-icon2.png" class="icon-cupcake">Gustă-mă
+                    <img src="../resources/img/cupcake-icon2.png" alt="img" class="icon-cupcake">Gustă-mă
                 </a>
                 <?php
                     if(isset($_SESSION["email"])){
                         echo '
-                        <!--<div id="popHere"> </div>-->
                         <a class="btn btn-light action-button" role="button" href="login.php">
-                            <img src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">
+                            <img alt="img" src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">
                             Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
                         <a class="btn btn-light action-button" role="button" href="../Client/logout.php">
-                            <img src="" class="icon-cupcake">Log Out
+                            Log Out
                         </a>
                         ';
                     } else {
                         echo '
                         <!--<div id="popHere"> </div>-->
                         <a class="btn btn-light action-button" role="button" href="../Client/login.php">
-                            <img src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">Cont
+                            <img alt="img" src="../resources/img/shopping-cart-icon.png" class="icon-cupcake">Cont
                             <span class="badge badge-light">' . $basketAmount .  '</span>
                         </a>
                         <a class="btn btn-light action-button" role="button" href="register.php">Sign Up</a>

@@ -4,48 +4,20 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-include '../dbconnect.php';
-
-$driver = new mysqli_driver();
-$driver->report_mode = MYSQLI_REPORT_ERROR;
-
 if(!isset($_SESSION["email"])){
     header("Location: login.php");
 }
-
-
-if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
-    if($_POST["quantity"] == 0){
-        $deleteProduct = "DELETE FROM products_orders
-                          WHERE order_id = (
-                                            SELECT orders.orderID
-                                            from orders
-                                            join users
-                                            on orders.userID = users.id
-                                            where users.email = '".$_SESSION["email"]."'
-                                            And orders.orderStatus = 0)
-                          AND product_id = '".$_POST["idProduct"]."';";
-        $result = mysqli_query($conn, $deleteProduct);
-    } else {
-        $incrementProduct = "UPDATE products_orders
-                set quantity = " . $_POST["quantity"] . "
-                where order_id = (
-                        SELECT orders.orderID
-                        from orders
-                        join users
-                        on orders.userID = users.id
-                        where users.email = '" . $_SESSION["email"] . "'
-                        And orders.orderStatus = 0)
-                and product_id = '" . $_POST["idProduct"] . "';";
-        $result = mysqli_query($conn, $incrementProduct);
-    }
-}
 ?>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" />
     <title>Merveilleuse Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,7 +29,6 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
     <script>
-
         function setZero(x, idProduct, idOrder){
             x.parentElement.parentElement.getElementsByClassName("text-center")[0].value = 0;
             updateProduct(x, idProduct, idOrder);
@@ -265,15 +236,6 @@ if(isset($_POST["idProduct"]) && isset($_POST["quantity"])){
             </thead>
             <tbody id="tableBody"></tbody>
             <tfoot>
-            <!--<tr class="visible-xs">
-                <td class="text-center"><strong>Total <?php /*/*echo $subtotal;*/ ?></strong></td>
-                <?php
-/*                if(isset($POST["quantity"])){
-                    echo $_POST["quantity"] . " " . $_POST["nameProduct"];
-                }
-
-                */?>
-            </tr>-->
             <tr>
                 <td><a href="../Client/shop.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
                 <td colspan="2" class="hidden-xs"></td>

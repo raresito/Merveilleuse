@@ -9,28 +9,23 @@ if(!isset($_SESSION["email"])){
     header("Location: login.php");
 }
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
-}
-
 ?>
 <html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" />
     <title>Merveilleuse Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/basket.css">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <?php include '../libraries.php' ?>
 
     <script>
         let order_id;
@@ -106,25 +101,7 @@ include 'clientnavbar.php';?>
                 <span class="text-muted">Coșul tău</span>
                 <span id="number-of-products" class="badge badge-secondary badge-pill">3</span>
             </h4>
-            <ul id="finalProductList" class="list-group mb-3">
-                <!--<li class="list-group-item d-flex justify-content-between bg-light">
-                    <div class="text-success">
-                        <h6 class="my-0">Promo code</h6>
-                        <small>EXAMPLECODE</small>
-                    </div>
-                    <span class="text-success">-$5</span>
-                </li>-->
-
-            </ul>
-
-            <!--<form class="card p-2">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Promo code">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-secondary">Redeem</button>
-                    </div>
-                </div>
-            </form>-->
+            <ul id="finalProductList" class="list-group mb-3"></ul>
         </div>
         <div class="col-md-8">
             <h4 class="mb-3">Adresă de livrare</h4>
@@ -145,19 +122,6 @@ include 'clientnavbar.php';?>
                         </div>
                     </div>
                 </div>
-
-                <!--<div class="mb-3">
-                    <label for="username">Nume de utilizator</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                        <div class="invalid-feedback" style="width: 100%;">
-                            Câmp necesar
-                        </div>
-                    </div>
-                </div>-->
 
                 <div class="mb-3">
                     <label for="email">Email <span class="text-muted">(Opțional)</span></label>
@@ -182,42 +146,6 @@ include 'clientnavbar.php';?>
                         Te rog introdu o adresă validă
                     </div>
                 </div>
-
-                <!--<div class="mb-3">
-                    <label for="address2">Adresă 2 <span class="text-muted">(Opțional)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="Apartament, scară, bloc">
-                </div>-->
-                <!--<div class="mb-3">
-                    <label for="state">Oraș</label>
-                    <select class="custom-select d-block" id="state" required="">
-                        <option value="">Choose...</option>
-                        <option>București</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Introdu un oraș valid.
-                    </div>
-                </div>-->
-
-                <div class="row">
-                    </div>
-
-                    <!--<div class="col-md-4 mb-3">
-                        <label for="zip">Cod poștal</label>
-                        <input type="text" class="form-control" id="zip" placeholder="" required="">
-                        <div class="invalid-feedback">
-                            Trebuie un cod poștal
-                        </div>
-                    </div>-->
-                <!--</div>
-                <hr class="mb-4">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="same-address">
-                    <label class="custom-control-label" for="same-address">Adresa de livrare este aceeași cu adresa de facturare</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="save-info">
-                    <label class="custom-control-label" for="save-info"></label>
-                </div>-->
 
                 <button onclick="purchase()" class="btn btn-primary btn-lg btn-block" type="button">Confirmă Comanda</button>
             </form>

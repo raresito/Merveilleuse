@@ -3,8 +3,8 @@ window.onload = function() {
     let beautifulPlace = document.getElementById("image-holder");
 
     let images = new Array(50);
-    for(let i = 0; i < 42; i++){
-        images[i] = "../resources/img/foto/IMG-20180403-WA00" + (i>9 ? i : "0" + i) + ".jpg";
+    for(let i = 0; i < 41; i++){
+        images[i] = "../img/foto/IMG-20180403-WA00" + (i>9 ? i : "0" + i) + ".jpg";
 
         let image = document.createElement('div');
 
@@ -14,6 +14,7 @@ window.onload = function() {
         image.classList.add("col-lg-2");
         image.classList.add("square-div");
 
+        image.style.minHeight = "200px";
         image.style.display = "none";
         image.style.border = "1px transparent";
         image.style.backgroundImage = "url(" + images[i] + ")";

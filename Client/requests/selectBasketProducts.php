@@ -25,7 +25,6 @@ if(isset($_SESSION['email'])) {
     if ($result -> num_rows > 0) {
         while ($rowProduct = $result -> fetch_assoc()) {
             $arr[] = $rowProduct;
-            //$subtotal = $subtotal + ($rowProduct["priceProduct"] * $rowProduct["quantity"]);
         }
     }
 

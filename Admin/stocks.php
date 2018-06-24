@@ -6,22 +6,14 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require '../dbconnect.php';
 
-function console_log($data){
-    echo '<script>';
-    echo 'console.log('. $data .')';
-    echo '</script>';
+
+$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$result = mysqli_query($conn,$sql);
+$row = $result ->fetch_assoc();
+if($row["admin"] == 0){
+    header("Location: adminLogin.php");
 }
 
-function isAdmin($c){
-    $sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
-    $result = mysqli_query($c,$sql);
-    $row = $result ->fetch_assoc();
-    if($row["admin"] == 0){
-        header("Location: adminLogin.php");
-    }
-}
-
-isAdmin($conn);
 
 if(isset($_POST["newIngredienteId"])){
 
