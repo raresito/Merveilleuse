@@ -3,7 +3,7 @@ window.onload = function() {
     let beautifulPlace = document.getElementById("image-holder");
 
     let images = new Array(50);
-    for(let i = 0; i < 41; i++){
+    for(let i = 0; i < 35; i++){
         images[i] = "../img/foto/IMG-20180403-WA00" + (i>9 ? i : "0" + i) + ".jpg";
 
         let image = document.createElement('div');

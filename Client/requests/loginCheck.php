@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-include '../../dbconnect.php';
+include 'dbConnectClient.php';
 
 $sql = "SELECT * 
         FROM users 

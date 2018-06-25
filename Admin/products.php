@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require '../dbconnect.php';
+require 'requests/dbConnectAdmin.php';
 
 
 $sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";

@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once '../../dbconnect.php';
+require_once 'dbConnectClient.php';
 
 /*echo $_POST["id"];*/
 $checkUserHasProductAlready = "

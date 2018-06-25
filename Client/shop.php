@@ -20,11 +20,6 @@ if (session_status() == PHP_SESSION_NONE) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/Pretty-Product-List.css">
 
-
-
-
-
-
     <script>
         function toggleSidebar() {
             if (document.getElementById("filter-sidebar").classList.contains("collapse")) {
@@ -108,43 +103,50 @@ if (session_status() == PHP_SESSION_NONE) {
                 },
                 success: function (d) {
                     console.log(d);
-                    arrayProduse = JSON.parse(d);
-                    productDiv = document.getElementById("productDiv");
-                    productDiv.innerHTML = '';
-                    for (let i in arrayProduse) {
-                        productDiv.innerHTML += '' +
-                            '<div class="col-xs-6 col-sm-6 col-md-3 product-item d-flex flex-column">' +
-                                '<div class="product-container d-flex flex-column" style="height: 100%">' +
-                                    '<div class="row" style="flex-grow: 1">' +
-                                        '<div class="col-md-12">' +
-                                            '<a href="#" class="product-image">' +
-                                                '<img src="../resources/img/foto/' + arrayProduse[i].image + '">' +
-                                            '</a>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="row">' +
-                                        '<div class="col-8">' +
-                                            '<h2><a href="#">' + arrayProduse[i].nameProduct + '</a></h2>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    'Categorie: ' + arrayProduse[i].category +
-                                    '<div class="row">' +
-                                        '<div class="col-12">' +
-                                            '<div class="row">' +
-                                                '<div class="col-12">' +
-                                                    '<button class="btn btn-light fill" type="button" onclick="addToBasket(' + arrayProduse[i].idProduct + ')">Cumpără!</button> ' +
-                                                '</div>' +
-                                                '<div class="col-12">' +
-                                                    '<p class="product-price">' + arrayProduse[i].priceProduct + "RON /" + arrayProduse[i].unitProduct + ' </p>' +
-                                                '</div>' +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                '</div>' +
+                    if(d === "{}"){
+                        productDiv = document.getElementById("productDiv");
+                        productDiv.innerHTML = '<div class="alert alert-warning" style="width: 100%; text-align:center;" role="alert">\n' +
+                            'Dar pretențios mai ești ... \n' +
                             '</div>';
+                    } else {
+                        arrayProduse = JSON.parse(d);
+                        productDiv = document.getElementById("productDiv");
+                        productDiv.innerHTML = '';
+                        for (let i in arrayProduse) {
+                            //TODO Repair title only one row
+                            productDiv.innerHTML += '' +
+                                '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 product-item d-flex flex-column">' +
+                                '<div class="product-container d-flex flex-column" style="height: 100%">' +
+                                '<div class="row" style="flex-grow: 1">' +
+                                '<div class="col-md-12">' +
+                                '<a href="#" class="product-image">' +
+                                '<img src="../resources/img/foto/' + arrayProduse[i].image + '">' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="row">' +
+                                '<div class="col-8">' +
+                                '<h2><a href="#">' + arrayProduse[i].nameProduct + '</a></h2>' +
+                                '</div>' +
+                                '</div>' +
+                                'Categorie: ' + arrayProduse[i].category +
+                                '<div class="row">' +
+                                '<div class="col-12">' +
+                                '<div class="row">' +
+                                '<div class="col-12">' +
+                                '<button class="btn btn-light fill" type="button" onclick="addToBasket(' + arrayProduse[i].idProduct + ')">Cumpără!</button> ' +
+                                '</div>' +
+                                '<div class="col-12">' +
+                                '<p class="product-price">' + arrayProduse[i].priceProduct + "RON /" + arrayProduse[i].unitProduct + ' </p>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
 
-                    }/*
-                    alert(productDiv.innerHTML);*/
+                        }
+                    }
                 }
             });
         }
@@ -166,22 +168,29 @@ if (session_status() == PHP_SESSION_NONE) {
                     }
                 }
             });
+
+            $.ajax({
+                type: 'POST',
+                url: 'requests/selectFlavours.php',
+                success: function (d) {
+                    flavours = JSON.parse(d);
+                    for (let i in flavours) {
+                        document.getElementById("group-flavour").innerHTML += "" +
+                            "<a class=\"list-group-item\" href=\"#\">\n" +
+                            "    <input type=\"checkbox\" onchange=\"filterProduct(this)\" class=\"flavour category\" value = \"" +
+                            flavours[i].flavour +
+                            " \">\n" +
+                            flavours[i].flavour  +
+                            "</a>"
+                    }
+                }
+            });
         }
 
         reloadCatalog();
         loadCategories();
 
     </script>
-
-    <style>
-        img:before {
-            content: ' ';
-            display: block;
-            position: absolute;
-            height: 50px;
-            width: 50px;
-            background-image: url(ishere.jpg);
-    </style>
 
 </head>
 
@@ -205,7 +214,7 @@ if (session_status() == PHP_SESSION_NONE) {
             </div>
         </div>
         <div class="row">
-            <div id="filter-sidebar" class="col-sm-6 col-md-3 col-lg-2 collapse">
+            <div id="filter-sidebar" class="col-sm-12 col-md-3 col-lg-2 collapse">
                 <form>
                     <div style = "margin-top:20px">
                         <h4> Categorie </h4>
@@ -214,24 +223,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                     <div style = "margin-top:20px">
                         <h4> Arome </h4>
-                        <div id="group-flavour" class="list-group in">
-                            <a class="list-group-item" href="#">
-                                <input type="checkbox" class="flavour category" value = "Ciocolata">
-                                Ciocolata
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <input type="checkbox" class="flavour category" value = "Fructe">
-                                Fructe
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <input type="checkbox" class="flavour category" value = "Vanilie">
-                                Vanilie
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <input type="checkbox" class="flavour category" value = "Fără zahăr">
-                                Fără zahăr
-                            </a>
-                        </div>
+                        <div id="group-flavour" class="list-group in"></div>
                     </div>
 
                     <div style = "margin-top:20px">

@@ -1,6 +1,6 @@
 <?php
 
-include "../../dbconnect.php";
+include "dbConnectAdmin.php";
 $sql = "select MONTH(orderDate) as month, count(orderID) as cnt
         from orders
         group by MONTH(orderDate);";

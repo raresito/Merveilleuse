@@ -1,5 +1,5 @@
 <?php
-include "../../dbconnect.php";
+include "dbConnectClient.php";
 
 if($_POST["quant"] < 0){
     die("Hacker detected!");

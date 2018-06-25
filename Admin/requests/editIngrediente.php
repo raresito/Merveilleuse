@@ -1,5 +1,5 @@
 <?php
-include "../../dbconnect.php";
+include "dbConnectAdmin.php";
 
 $sql = "update ingrediente
         set denumire = '".$_POST["editDenumire"]."',

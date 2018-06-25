@@ -5,9 +5,10 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$sql = "select category
+$sql = "select flavour
         from producttable
-        group by category";
+        where flavour is not null
+        group by flavour";
 $result = mysqli_query($conn, $sql);
 $arr = array();
 if ($result -> num_rows > 0) {

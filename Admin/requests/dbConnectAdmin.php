@@ -1,7 +1,5 @@
 <?php
 
-//TODO Separate DBConnect for Admin and Client
-
 $servername = "localhost";
 $username = "rares";
 $password = "creative5436";

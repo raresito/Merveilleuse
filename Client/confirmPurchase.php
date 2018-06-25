@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-include '../dbconnect.php';
+include 'requests/dbConnectClient.php';
 
 if(!isset($_SESSION["email"])){
     header("Location: login.php");
@@ -20,7 +20,7 @@ if(!isset($_SESSION["email"])){
     <meta name="author" content="">
     <link rel="shortcut icon" href="../resources/img/favicon.ico" />
     <title>Merveilleuse Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <?php include '../libraries.php' ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/basket.css">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">

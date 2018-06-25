@@ -1,5 +1,5 @@
 <?php
-require_once '../dbconnect.php';
+require_once 'requests/dbConnectClient.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -21,19 +21,16 @@ if(isset($_SESSION["email"]))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/register.css">
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-
     <script>
+
+
         function checkPass(){ //TODO Prevent SQL injection on form input
-            var goodColor = "#66cc66";
-            var badColor = "#ff6666";
+            let goodColor = "#66cc66";
+            let badColor = "#ff6666";
 
-            var message = document.getElementById('confirmMessage');
+            let message = document.getElementById('confirmMessage');
 
-            pass1 = document.getElementById("InputPassword");
+            pass1 = document.getElementById("inputPassword");
             pass2 = document.getElementById("checkPassword");
 
             if(pass1.value === pass2.value){
@@ -50,23 +47,72 @@ if(isset($_SESSION["email"]))
             }
         }
 
+        function validateCode() {
+            $.ajax({
+                type: 'POST',
+                url: 'requests/validateCode.php',
+                data: {
+                    code: document.getElementById("validationCode").value
+                },
+                success: function (d) {
+                    if(d === "ok"){
+                        rp = document.getElementById("response");
+                        rp.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">" +
+                            "<strong>Cont autentificat!</strong> Acum poți cumpăra!" +
+                            "</div>";
+                    }
+                }
+            });
+        }
+
         function register(){
             $.ajax({
                 type: 'POST',
                 url: 'requests/registerCheck.php',
                 data: {
-                    email: document.getElementById("inputEmail"),
-                    password: document.getElementById("inputPassword"),
-                    surname: document.getElementById("surnameInput"),
-                    name: document.getElementById("nameInput")
+                    email: document.getElementById("inputEmail").value,
+                    password: document.getElementById("inputPassword").value,
+                    surname: document.getElementById("surnameInput").value,
+                    name: document.getElementById("nameInput").value
                 },
-                success: function(d){
-                    if(d === "Success!"){
-                        response.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">" +
-                                               "<strong>Felicitări!</strong> Tocmai ți-ai creat un cont nou! Te rugăm să validezi contul prin <strong> linkul primit pe mail!</strong>" +
-                                           "</div>";
+                success: function(d) {
+                    rp = document.getElementById("response");
+                    console.log(d);
+                    if(d !== "Account exists!"){
+                        let name = document.getElementById("nameInput").value + " " + document.getElementById("surnameInput").value;
+                        $.ajax({
+                            type: 'POST',
+                            url: 'requests/sendMail.php',
+                            data: {
+                                nume: name,
+                                email: document.getElementById("inputEmail").value,
+                                message: d,
+                                subiectMail: "Validare Cont"
+
+                            },
+                            success: function (rd) {
+
+                            }
+                        });
+                        rp.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">" +
+                                           "<strong>Felicitări!</strong> Tocmai ți-ai creat un cont nou! Te rugăm să validezi contul prin <strong> linkul primit pe mail!</strong>" +
+                                         "</div>" +
+                                        "<div class=\"alert alert-info\">\n" +
+                            "                    <label for=\"validationCode\">\n" +
+                            "                        Cod Validare\n" +
+                            "                    </label>\n" +
+                            "                    <input type=\"text\" class=\"form-control\" id=\"validationCode\"/>\n" +
+                            "                    <input type=\"button\" hidden id=\"fakeButton\" onclick=\"validateCode()\">" +
+                            "                </div>";
+                        document.getElementById("validationCode")
+                            .addEventListener("keyup", function(event) {
+                                event.preventDefault();
+                                if (event.keyCode === 13) {
+                                    document.getElementById("fakeButton").click();
+                                }
+                            });
                     } else {
-                        response.innerHTML = "<div class=\"alert alert-danger\" role=\"alert\">" +
+                        rp.innerHTML = "<div class=\"alert alert-danger\" role=\"alert\">" +
                                                 "Deja există un cont cu această adresă de email. Ți-ai uitat parola?" +
                                              "</div>"
                     }
@@ -83,7 +129,9 @@ if(isset($_SESSION["email"]))
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 content">
-            <div id="response"></div>
+            <div id="response">
+
+            </div>
             <span id="confirmMessage" class="confirmMessage"></span>
             <div class="form-group">
                 <label for="surnameInput">
@@ -98,13 +146,13 @@ if(isset($_SESSION["email"]))
                 <input type="text" class="form-control" id="nameInput" name="name"/>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">
+                <label for="inputEmail">
                     Email address
                 </label>
                 <input type="email" class="form-control" id="inputEmail" name="email"/>
             </div>
             <div class="form-group">
-                <label for="InputPassword">
+                <label for="inputPassword">
                     Password
                 </label>
                 <input type="password" class="form-control" id="inputPassword" name="password"/>

@@ -1,6 +1,6 @@
 <?php
 
-include "../../dbconnect.php";
+include "dbConnectAdmin.php";
 //echo $_POST['userID'];
 $sql = "delete from users where id = ".$_POST['userID'].";";
 $result = mysqli_query($conn,$sql);

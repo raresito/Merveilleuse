@@ -4,7 +4,7 @@ require_once ("../vendor/autoload.php");
 use setasign\Fpdi\Fpdi;
 use setasign\Fpdi\PdfReader;
 
-require '../dbconnect.php';
+require 'requests/dbConnectAdmin.php';
 
 $sql = "select po.order_id, po.product_id, po.quantity, pi.cantitate, pt.nameProduct, pi.id_ingredient, ing.denumire, ing.pret, po.quantity * pi.cantitate as ingredientpecomanda, ing.`U/M` as unitati, ROUND(ing.pret * po.quantity * pi.cantitate,3) as pretingcom
         from products_orders po join produs_ingredient pi

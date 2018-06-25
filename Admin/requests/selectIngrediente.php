@@ -1,6 +1,6 @@
 <?php
 
-include "../../dbconnect.php";
+include "dbConnectAdmin.php";
 $sql = "select * from ingrediente";
 $result = mysqli_query($conn,$sql);
 

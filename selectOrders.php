@@ -1,6 +1,6 @@
 <?php
 
-include "dbconnect.php";
+include "Client/requests/dbConnectClient.php";
 
 if($_POST["type"] == "default"){
     $sql = "select * from orders";

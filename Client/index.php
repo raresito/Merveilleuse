@@ -10,7 +10,6 @@
 
         <?php include '../libraries.php'; ?>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic">
         <link rel="stylesheet" href="../resources/css/Header-Cover01.css">
 
@@ -69,10 +68,6 @@
     </div>
 
     <?php include '../Client/footer.php' ?>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
 
     <script src="../resources/js/scrollPosStyler.js"></script>
     <script src="../resources/js/swiper.min.js"></script>
