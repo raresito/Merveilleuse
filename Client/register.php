@@ -6,7 +6,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 if(isset($_SESSION["email"]))
     header("Location: /Client/basket.php");
+
+//TODO Replace md5 with password HASH
 ?>
+
 <html>
 
 <head>
@@ -52,6 +55,7 @@ if(isset($_SESSION["email"]))
                 type: 'POST',
                 url: 'requests/validateCode.php',
                 data: {
+                    email: document.getElementById("inputEmail").value,
                     code: document.getElementById("validationCode").value
                 },
                 success: function (d) {
@@ -60,6 +64,9 @@ if(isset($_SESSION["email"]))
                         rp.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">" +
                             "<strong>Cont autentificat!</strong> Acum poți cumpăra!" +
                             "</div>";
+                    }
+                    else{
+                        console.log(d);
                     }
                 }
             });

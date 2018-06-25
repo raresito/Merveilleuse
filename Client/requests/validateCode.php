@@ -8,7 +8,7 @@ include 'dbConnectClient.php';
 
 $sql = "SELECT validation
         FROM users
-        where email='" . $_SESSION["email"] . "'";
+        where email='" . $_POST["email"] . "' ";
 
 $result = mysqli_query($conn, $sql);
 $row = $result ->fetch_assoc();
@@ -16,6 +16,9 @@ if($row["validation"] == $_POST["code"]){
     echo "ok";
     $sql = "UPDATE users
             set validation = 1
-            where email = '".$_SESSION["email"]."' ";
-    mysqli_query($conn, $sql);
+            where email = '".$_POST["email"]."' ";
+    $re = mysqli_query($conn, $sql);
+    if(!$re){
+        echo $conn->error;
+    }
 }

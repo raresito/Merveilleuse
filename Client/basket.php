@@ -20,7 +20,6 @@ if(!isset($_SESSION["email"])){
     <link rel="shortcut icon" href="../resources/img/favicon.ico" />
     <title>Merveilleuse Shop</title>
     <?php include '../libraries.php' ?>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../resources/css/basket.css">
 
     <script>
@@ -194,8 +193,8 @@ if(!isset($_SESSION["email"])){
                    '    </td>\n' +
                    '    <td data-th="Subtotal" class="text-center">'+ produs.priceProduct * produs.quantity + '</td>\n' +
                    '    <td class="actions" data-th="">\n' +
-                   '        <button onclick ="updateProduct(this, '+produs.product_id+', '+produs.order_id+')" type = "submit" class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>\n' +
-                   '        <button onclick = "setZero(this, '+produs.product_id+', '+produs.order_id+')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>\n' +
+                   '        <button onclick ="updateProduct(this, '+produs.product_id+', '+produs.order_id+')" type = "submit" class="btn btn-info btn-sm"><i class="fa fa-retweet" aria-hidden="true"></i></button>\n' +
+                   '        <button onclick = "setZero(this, '+produs.product_id+', '+produs.order_id+')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>\n' +
                    '    </td>\n' +
                    '</tr>\n';
         }

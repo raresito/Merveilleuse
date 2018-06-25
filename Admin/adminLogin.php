@@ -21,14 +21,6 @@
                                 A apărut o problemă, mai încearcă odată!
                             </div>';
             }
-
-            if(!$result){
-                echo'No result';
-                echo "Error: Our query failed to execute and here is why: \n";
-                echo "Query: " . $sql . "\n";
-                echo "Errno: " . $conn->errno . "\n";
-                echo "Error: " . $conn->error . "\n";
-            }
         }
     }
     else{
@@ -42,14 +34,27 @@
         header("Location: dashboard.php");
     }
 ?>
-
-
-
 <html>
 <head>
 
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../resources/img/favicon.ico" />
      <?php include '../libraries.php'; ?>
-     <link href="../resources/css/adminLogin.css" rel="stylesheet">
+
+    <style>
+        .flex-center{
+            display: flex;
+            align-items: center;
+        }
+        .flex-column{
+            flex-direction: column;
+        }
+    </style>
 
 </head>
 <body>
@@ -57,7 +62,7 @@
 <div class="flex-center" style="height: 100%;">
 <div class="container-fluid flex-center flex-column" >
     <div class="row">
-        <img src="../resources/img/logo.jpg">
+        <img src="../../resources/img/logo.jpg"> <!-- TODO Fix dieses -->
     </div>
     <?php
     if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){

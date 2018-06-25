@@ -110,69 +110,7 @@ if($row["admin"] == 0){
             </div>
         </div>
         <div class="row">
-            <div style="width:600px; height: 300px">
-                <canvas id="myChart" width="100" height="100"></canvas>
-                <script>
-
-                    let counts;
-                    window.onload = function() {
-                        counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-                        $.ajax({
-                            type: 'POST',
-                            url: 'requests/countOrders.php',
-                            success: function (d) {
-                                console.log(d);
-                                array = JSON.parse(d);
-                                for (let i in array) {
-                                    alert(array[i].month);
-                                    counts[parseInt(array[i].month)] = parseInt(array[i].cnt);
-                                }
-                            }
-
-                        });
-                    };
-
-                    let ctx = document.getElementById("myChart").getContext('2d');
-
-                    let myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Octombrie", "Noiembrie", "Decembrie"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: counts,
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            },
-                        }
-                    });
-                </script>
-            </div>
+            <div style="width:600px; height: 300px"></div>
         </div>
     </div>
 </body>

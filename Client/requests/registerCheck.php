@@ -12,8 +12,6 @@ $sql = "INSERT INTO users (email, password, lastLogin, name, validation)
 
 $result = mysqli_query($conn, $sql);
 
-//TODO Send email for activation account.
-
 if(!$result && $conn->errno == 1062){
     echo "Account exists!";
 } else {

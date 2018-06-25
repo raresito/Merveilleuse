@@ -5,46 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="603f9517-05db-411a-96af-0e5b0785e30a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Admin/requests/dbConnectAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/requests/selectFlavours.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/requests/validateCode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/adminLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/adminLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/bonConsum.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/bonConsum.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/countOrders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/countOrders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/deleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/deleteUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/editIngrediente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/editIngrediente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/insertIngrediente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/insertIngrediente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/selectIngrediente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/selectIngrediente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/selectProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/selectProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/requests/selectUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/requests/selectUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/stocks.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/stocks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/usersPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/usersPanel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/buy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/buy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/clientnavbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/clientnavbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/confirmPurchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/confirmPurchase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/insertBasket.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/insertBasket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/loginCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/loginCheck.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/requests/registerCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/registerCheck.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/selectBasketProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/selectBasketProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/selectCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/selectCategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/selectOldOrders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/selectOldOrders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/selectTotal.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/selectTotal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/requests/updateBasketProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/updateBasketProducts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/shop-filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/shop-filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/shop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/dbConnectClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/indexClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/indexClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selectOrders.php" beforeDir="false" afterPath="$PROJECT_DIR$/selectOrders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/requests/validateCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/Client/requests/validateCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries.php" beforeDir="false" afterPath="$PROJECT_DIR$/libraries.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/adminLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/adminLogin.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -109,65 +80,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/register.php">
+      <file leaf-file-name="adminLogin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="204">
+              <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registerCheck.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/requests/registerCheck.php">
+      <file leaf-file-name="adminLogin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/adminLogin.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="136">
+              <caret line="8" column="74" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="8" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validateCode.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Client/requests/validateCode.php">
+      <file leaf-file-name="gallery.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users" pinned="false" current-in-tab="false">
-        <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendMail.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/requests/sendMail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirmPurchase.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/confirmPurchase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shop-filter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Client/shop-filter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="340">
+              <caret line="23" column="74" lean-forward="true" selection-start-line="23" selection-start-column="74" selection-end-line="24" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -178,17 +121,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectOld</find>
-      <find>iso</find>
-      <find>starter</find>
-      <find>image-holder</find>
       <find>echo</find>
       <find>jQuery</find>
       <find>xml:lang=</find>
@@ -215,6 +154,10 @@
       <find>response</find>
       <find>numeContact</find>
       <find>validate</find>
+      <find>trash</find>
+      <find>awesome</find>
+      <find>sty</find>
+      <find>refres</find>
     </findStrings>
     <replaceStrings>
       <replace>, 49)</replace>
@@ -237,10 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Admin/requests/selectUsers.php" />
-        <option value="$PROJECT_DIR$/Admin/requests/retrieveGallery.php" />
-        <option value="$PROJECT_DIR$/resources/js/products.js" />
-        <option value="$PROJECT_DIR$/resources/css/index.css" />
         <option value="$PROJECT_DIR$/resources/css/custom.css" />
         <option value="$PROJECT_DIR$/resources/js/sidebar-shop/index.js" />
         <option value="$PROJECT_DIR$/Client/requests/selectOldOrders.php" />
@@ -250,19 +189,15 @@
         <option value="$PROJECT_DIR$/Admin/bonConsum.php" />
         <option value="$PROJECT_DIR$/Client/buy.php" />
         <option value="$PROJECT_DIR$/resources/css/starter-template.css" />
-        <option value="$PROJECT_DIR$/Admin/dashboard.php" />
         <option value="$PROJECT_DIR$/Admin/gallery.php" />
         <option value="$PROJECT_DIR$/Admin/orders.php" />
         <option value="$PROJECT_DIR$/Admin/products.php" />
         <option value="$PROJECT_DIR$/Admin/stocks.php" />
         <option value="$PROJECT_DIR$/Admin/usersPanel.php" />
-        <option value="$PROJECT_DIR$/Admin/adminLogin.php" />
         <option value="$PROJECT_DIR$/Client/requests/insertBasket.php" />
         <option value="$PROJECT_DIR$/Client/requests/deleteProductOrder.php" />
         <option value="$PROJECT_DIR$/Client/requests/incrementProductOrder.php" />
-        <option value="$PROJECT_DIR$/Client/basket.php" />
         <option value="$PROJECT_DIR$/Client/requests/loginCheck.php" />
-        <option value="$PROJECT_DIR$/Client/footer.php" />
         <option value="$PROJECT_DIR$/Client/login.php" />
         <option value="$PROJECT_DIR$/resources/css/clientnavbarCSS.css" />
         <option value="$PROJECT_DIR$/Client/clientnavbar.php" />
@@ -285,9 +220,17 @@
         <option value="$PROJECT_DIR$/Client/index.php" />
         <option value="$PROJECT_DIR$/resources/js/indexClient.js" />
         <option value="$PROJECT_DIR$/Client/shop.php" />
-        <option value="$PROJECT_DIR$/Client/requests/registerCheck.php" />
-        <option value="$PROJECT_DIR$/Client/register.php" />
         <option value="$PROJECT_DIR$/Client/requests/validateCode.php" />
+        <option value="$PROJECT_DIR$/Client/register.php" />
+        <option value="$PROJECT_DIR$/Client/requests/registerCheck.php" />
+        <option value="$PROJECT_DIR$/Client/footer.php" />
+        <option value="$PROJECT_DIR$/libraries.php" />
+        <option value="$PROJECT_DIR$/Client/basket.php" />
+        <option value="$PROJECT_DIR$/Admin/admin.html" />
+        <option value="$PROJECT_DIR$/Admin/index.html" />
+        <option value="$PROJECT_DIR$/resources/css/adminLogin.css" />
+        <option value="$PROJECT_DIR$/Admin/dashboard.php" />
+        <option value="$PROJECT_DIR$/Admin/adminLogin.php" />
       </list>
     </option>
   </component>
@@ -311,9 +254,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
+    <option name="x" value="-10" />
     <option name="width" value="1545" />
-    <option name="height" value="1039" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -332,18 +275,23 @@
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
               <item name="Client" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Merveilleuse" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Merveilleuse" type="b2602c69:ProjectViewProjectNode" />
@@ -512,7 +460,8 @@
       <workItem from="1529494693496" duration="3264000" />
       <workItem from="1529827868111" duration="5000000" />
       <workItem from="1529842260505" duration="5979000" />
-      <workItem from="1529910237965" duration="16403000" />
+      <workItem from="1529910237965" duration="18564000" />
+      <workItem from="1529956753250" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Side-Bar">
       <created>1518605878436</created>
@@ -633,11 +582,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529848087753</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Split DB Connect&#10;Extra filter&#10;Register Authentication">
+      <created>1529934912901</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1529934912902</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539520000" />
+    <option name="totallyTimeSpent" value="546708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,26 +612,26 @@
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" weight="0.32768363" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067115" side_tool="true" weight="0.36324787" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32909605" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32627118" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32627118" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49932885" weight="0.42655367" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.27259886" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18120806" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18389262" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.14832215" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.23825504" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32768363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50706214" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295302" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.12711865" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.12711865" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="16" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32768363" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32768363" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.27259886" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,7 +658,8 @@
     <MESSAGE value="Alpha ver. 0.8" />
     <MESSAGE value="Modularized the Code;&#10;New Requests;&#10;Sending mail working" />
     <MESSAGE value="Continuing the modularization of code&#10;defined connection charset&#10;fixing register mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuing the modularization of code&#10;defined connection charset&#10;fixing register mail" />
+    <MESSAGE value="Split DB Connect&#10;Extra filter&#10;Register Authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Split DB Connect&#10;Extra filter&#10;Register Authentication" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,47 +696,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/requests/updateBasketProducts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/clientnavbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/contact_form/Contact-Form-Clean.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/img/foto/IMG-20180403-WA0000.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/img/foto/IMG-20180403-WA0001.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/img/foto/IMG-20180403-WA0002.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/img/foto/IMG-20180403-WA0003.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -850,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/basket.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -922,31 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/producttable">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/requests/selectFlavours.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/shop-filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -976,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -990,10 +868,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/Client/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1006,22 +884,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/requests/registerCheck.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        <state relative-caret-position="204">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/requests/validateCode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b92a5a03-82b0-4476-9723-16fce61e8162/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/shop-filter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="198" selection-start-line="6" selection-start-column="198" selection-end-line="6" selection-end-column="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/basket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="195" column="178" selection-start-line="195" selection-start-column="178" selection-end-line="195" selection-end-column="178" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b92a5a03-82b0-4476-9723-16fce61e8162/schema/merveilleuse/table/producttable">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="74" lean-forward="true" selection-start-line="23" selection-start-column="74" selection-end-line="24" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="74" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="8" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/adminLogin.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="112" column="58" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/adminLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="61" column="47" lean-forward="true" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
