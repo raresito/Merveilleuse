@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 $sql = "select flavour
-        from producttable
+        from product
         where flavour is not null
         group by flavour";
 $result = mysqli_query($conn, $sql);

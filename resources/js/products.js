@@ -31,7 +31,7 @@ function changePhotoPrompt(){
 function sendChosenPhoto(){
     if(selectedPhoto != null){
         mydiv = document.getElementById("photoPreview");
-        mydiv.innerHTML = selectedPhoto.children[0].children[0].getAttribute('src').split("/")[6] + "<input type=\"hidden\" name=\"newProductPhoto\" value=\"" + selectedPhoto.children[0].children[0].getAttribute('src').split("/")[6] + " \"/>";
+        mydiv.innerHTML = selectedPhoto.children[0].children[0].getAttribute('src').split("/")[6];
     }
 }
 
@@ -62,6 +62,8 @@ $(document).ready(function (){
     })
 });
 
+
+
 function reloadProducts(){
     $.ajax({
         type: 'POST',
@@ -77,7 +79,7 @@ function reloadProducts(){
                     "<form method=\"post\" action=\"products.php\">" +
                     "<input name=\"nameProduct\" type=\"hidden\" value =\" " + myArray[i].nameProduct + " \"> " +
                     "<button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#editModal\" onclick=\"setEditModal("+ myArray[i].idProduct+ ",'"  + myArray[i].nameProduct + "',"+myArray[i].priceProduct+",'"+myArray[i].unitProduct+"','"+myArray[i].category+"','" + myArray[i].image + "')\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></button> " +
-                    "<button type=\"submit\" class=\"btn btn-sm\" name=\"deleteProduct\" value=\" " + myArray[i].idProduct + " \"><i class=\"material-icons\" title=\"Delete\">delete</i></button> " +
+                    "<button type=\"button\" class=\"btn btn-sm\" name=\"deleteProduct\" onclick=\"deleteProduct("+ myArray[i].idProduct+ ")\"><i class=\"material-icons\" title=\"Delete\">delete</i></button> " +
                     " </form> " +
                     " </td>";
             }

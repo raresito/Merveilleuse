@@ -7,22 +7,22 @@ require_once 'dbConnectClient.php';
 
 /*echo $_POST["id"];*/
 $checkUserHasProductAlready = "
-    select user.id, user.email, `order`.orderID, `order`.orderStatus, idProduct, quantity
-    from user join `order` on user.id = `order`.userID
-    join `product-order` on `order`.orderID = `product-order`.order_id
-    where emailUser = e" .$_SESSION["email"]. "mail
-    AND idProduct = i" .$_POST["id"]."d
+    select user.idUser, user.emailUser, `order`.idOrder, `order`.orderStatus, idProduct, quantity
+    from user join `order` on user.idUser = `order`.idUser
+    join `product-order` on `order`.idOrder = `product-order`.idOrder
+    where emailUser = " .$_SESSION["email"]. "
+    AND idProduct = " .$_POST["id"]."
     AND orderStatus = 0; ";
 $incrementProduct = "UPDATE `product-order`
                 set quantity = quantity + 1
                 where idOrder = (
-                        SELECT `order`.orderID
+                        SELECT `order`.idOrder
                         from `order`
                         join user
-                        on `order`.userID = user.id
-                        where user.email = e" .$_SESSION["email"]. "mail
+                        on `order`.idUser = user.idUser
+                        where user.emailUser = " .$_SESSION["email"]. "
                         And `order`.orderStatus = 0)
-                and product_id = i" .$_POST["id"]."d;";
+                and idProduct = i" .$_POST["id"]."d;";
 $checkUserHasOpenOrder = "SELECT idOrder
                 FROM `order`
                 where idUser = (SELECT idUser
@@ -32,10 +32,10 @@ $checkUserHasOpenOrder = "SELECT idOrder
 $createEmptyOrder = "INSERT INTO `order` (idUser)
                     VALUES ((SELECT idUser
                             from user
-                            where emailUser = '" .$_SESSIOemailail"]."'))";
+                            where emailUser = '" . $_SESSION["email"]. "'))";
 $createProductInOrder = '';
 $getProductName = "SELECT nameProduct
-                   FROM producttable
+                   FROM product
                     where idProduct = ".$_POST["id"].";";
 if(isset($_POST["id"])) {
     $hasOpenOrder = mysqli_query($conn, $checkUserHasOpenOrder);

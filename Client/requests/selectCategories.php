@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 $sql = "select category
-        from producttable
+        from product
         group by category";
 $result = mysqli_query($conn, $sql);
 $arr = array();

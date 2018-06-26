@@ -6,13 +6,13 @@ if($_POST["quant"] < 0){
 }
 
 if($_POST["quant"] == 0){
-    $sql = "delete from `product-order` where idOrder = " .$_POST['idOrder']." AND product_id = ".$_POST['idProd'].";";
+    $sql = "delete from `product-order` where idOrder = " .$_POST['idOrder']." AND idProduct = ".$_POST['idProd'].";";
     $result = mysqli_query($conn,$sql);
 }
 
 $sql = "update `product-order`
         set quantity = ".$_POST["quant"]."
-        where order_id = ".$_POST["idOrder"]." AND product_id = ".$_POST["idProd"].";";
+        where idOrder = ".$_POST["idOrder"]." AND idProduct = ".$_POST["idProd"].";";
 $result = mysqli_query($conn,$sql);
 
 if($result){

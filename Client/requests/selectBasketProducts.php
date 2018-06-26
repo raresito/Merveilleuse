@@ -9,17 +9,17 @@ if (session_status() == PHP_SESSION_NONE) {
 $subtotal = 0;
 
 if(isset($_SESSION['email'])) {
-    $sql = "select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
+    $sql = "select ar.emailUser, ar.idOrder,ar.idProduct,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
                             from(
-                                select emailUser, idOrder, idProduct, quantity
+                                select emailUser, po.idOrder, idProduct, quantity
                                     from (
-                                        select u.email, o.orderID, o.orderStatus
+                                        select u.emailUser, o.idOrder, o.orderStatus
                                             from user u join `order` o
-                                            on u.id = o.userID
-                                            where u.email = e" . $_SESSION["email"] . "mail && orderStatus = 0) prev
-                                    join products_orders po
-                                    on prev.orderID = po.order_id ) ar join producttable pt
-                            on ar.product_id = pt.idProduct;";
+                                            on u.idUser = o.idUser
+                                            where u.emailUser = " . $_SESSION["email"] . " && orderStatus = 0) prev
+                                    join `product-order` po
+                                    on prev.idOrder = po.idOrder ) ar join product pt
+                            on ar.idProduct = pt.idProduct;";
     $result = mysqli_query($conn, $sql);
     $arr = array();
     if ($result -> num_rows > 0) {

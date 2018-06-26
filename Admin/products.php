@@ -71,6 +71,53 @@ if($row["admin"] == 0){
                 });
             }
 
+            function addProduct(){
+                $.ajax({
+                    type: 'POST',
+                    url: 'requests/insertProduct.php',
+                    data: {
+                        newProductName: document.getElementById("newProductName").value,
+                        newProductPrice: document.getElementById("newProductPrice").value,
+                        newProductUnit: document.getElementById("newProductUnit").value,
+                        newProductPhoto: document.getElementById("photoPreview").innerHTML,
+                        newProductCategory: document.getElementById("newProductCategory").value
+                    },
+                    success: function(d){
+                        if(d === "Success") {
+                            document.getElementById("addedDiv").innerHTML = "" +
+                                "<div class=\"alert alert-success\" role=\"alert\">" +
+                                    "<strong>Încărcat!</strong> Ai adăugat un produs nou!" +
+                                "</div>";
+                            reloadProducts();
+                            $("#addModal").modal('hide');
+                        } else {
+                            console.log(d);
+                            document.getElementById("addedDiv").innerHTML = ""+
+                                    "<div class=\"alert alert-danger\" role=\"alert\">" +
+                                        "A apărut o problemă, mai încearcă odată!" +
+                                    "</div>"
+                            $("#addModal").modal('hide');
+                        }
+                    }
+                });
+            }
+
+            function deleteProduct(b){
+                alert(b);
+                $.ajax({
+                    type: 'POST',
+                    url: 'requests/deleteProduct.php',
+                    data:{
+                        editID: id,
+                        editNameProduct: $("#editProdusName").val(),
+                        editCategory: $("#editProdusCategory").val(),
+                        editPriceProduct: $("#editProdusPretUnitar").val(),
+                        editUnitProduct: $("#editProdusUM").val(),
+                        editImageProduct: $("#editProdusImagine").val()
+                    },
+                    success: function (result){
+            }
+
         </script>
 
     </head>
@@ -82,24 +129,8 @@ if($row["admin"] == 0){
             <div class = "container" style="margin-top: 25px">
             <div class="row">
                 <div class = "col-sm-12">
+                    <div id="addedDiv"></div>
                     <?php
-                    //var_dump($_POST);
-                    if(isset($_POST["newProductName"])) {
-                        $sqlinsert =  $_POST["newProductName"] . "\", \"" . $_POST["newProductPrice"] . "\",\"" . $_POST["newProductUnit"] . "\",\"" . $_POST["newProductPhoto"] . " \",\"" . $_POST["newProductCategory"] . " \")";
-                        $insert = mysqli_query($conn,$sqlinsert);
-                        echo mysqli_error($conn);
-                        //echo $insert;
-                        if ($insert) {
-                            echo '<div class="alert alert-success" role="alert">
-                              <strong>Încărcat!</strong> Ai adăugat un produs nou!
-                            </div>';
-                        } else {
-                            echo "File upload failed, please try again.";
-                            echo '<div class="alert alert-danger" role="alert">
-                                A apărut o problemă, mai încearcă odată!
-                            </div>';
-                        }
-                    }
 
                     if(isset($_POST["deleteProduct"])){
                         $sqldelete = "Delete from producttable where idProduct = '" . $_POST["deleteProduct"] . "';";
@@ -218,23 +249,23 @@ if($row["admin"] == 0){
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <label for="newProductName" >Denumire produs</label>
-                                    <input type="text" id="newProductName" name="newProductName" class="form-control" required>
+                                    <input type="text" id="newProductName" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <label>Categorie</label>
-                                    <input type="text" name="newProductCategory" class="form-control" required>
+                                    <input type="text" id="newProductCategory" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
                                     <label>Preț/Unitate de măsură</label>
-                                    <input type="number" name="newProductPrice" class="form-control" required>
+                                    <input type="number" id="newProductPrice" class="form-control" required>
                                 </div>
                                 <div class="col-sm-6">
                                     <label>Unitate de măsură</label>
-                                    <input type="text" name="newProductUnit" class="form-control" required>
+                                    <input type="text" id="newProductUnit" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -249,7 +280,7 @@ if($row["admin"] == 0){
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="addmodal" value="Cancel">
-                            <input type="submit" class="btn btn-info" data-dismiss="addmodal" name="submit" value="UPLOAD">
+                            <input type="button" class="btn btn-info" data-dismiss="addmodal" onclick = "addProduct()" value="UPLOAD">
                         </div>
                     </div>
 

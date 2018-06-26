@@ -19,7 +19,7 @@ if($result && $result->num_rows == 1){
     $_SESSION["name"] = $row["name"];
     $sql = "UPDATE user 
             SET lastLogin = '" . date("Y-m-d H:i:s") . "' 
-            WHERE email ='" . $_POST['email'] . "';";
+            WHERE emailUser ='" . $_POST['email'] . "';";
     $changeLastLogin = mysqli_query($conn,$sql);
     if(!$changeLastLogin){
         echo 'Fail!' . $sql;
