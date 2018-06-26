@@ -9,14 +9,14 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     $sql = "select po.order_id, po.quantity, po.product_id, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image
-            from products_orders po join producttable pt
+            from `product-order` po join producttable pt
             on pt.idProduct = po.product_id
-            where order_id in (select orderID 
-                                from orders 
+            where idOrder in (select idOrder 
+                                from `order` 
                                 where orderStatus = 1 
-                                and userID = (SELECT id
-                                              from users
-                                              where email = '".$_SESSION["email"]."'))
+                                and idUser = (SELECT idUser
+                                              from user
+                                              where emailUser = e" .$_SESSION["email"]. "mail))
              order by po.order_id";
 
 

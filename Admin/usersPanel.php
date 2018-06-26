@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'requests/dbConnectAdmin.php';
 
 
-$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
 if($row["admin"] == 0){
@@ -63,18 +63,18 @@ if($row["admin"] == 0){
 
         reloadUsers();
     </script>
-
+<!-- TODO Admin Management -->
 </head>
 <body>
 <div class="wrapper">
     <?php
     include("adminSidebar.php");
     ?>
-    <div class = "container">
+    <div class = "container" style="margin-top: 25px">
         <div class="row">
             <div class="col">
                 <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
-                    <i class="glyphicon glyphicon-align-left"></i>
+                    <i class="fas fa-align-left"></i>
                     <span></span>
                 </button>
                 <h3 class="text-left">

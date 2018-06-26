@@ -1,37 +1,10 @@
 <?php
-
-    require_once 'requests/dbConnectAdmin.php';
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
-
-    if(!isset($_SESSION['email'])){
-        if(isset($_POST['email'])){
-            $sql = "SELECT * FROM users WHERE email ='" . $_POST['email'] . "' AND admin = 1 AND password = '".md5($_POST["password"])."';";
-            $result = mysqli_query($conn,$sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result -> fetch_assoc()) {
-                    $_SESSION["email"] = $row["email"];
-                    $_SESSION["name"] = $row["name"];
-                }
-                header("location: dashboard.php");
-            }
-            else{
-                echo '<div class="alert alert-danger" role="alert">
-                                A apărut o problemă, mai încearcă odată!
-                            </div>';
-            }
+    if(isset($_POST["logoutVariable"])) {
+        if ($_POST["logoutVariable"] == "true") {
+            session_unset();
+            session_destroy();
+            header("Location: adminLogin.php");
         }
-    }
-    else{
-        if(isset($_POST["logoutVariable"])) {
-            if ($_POST["logoutVariable"] == "true") {
-                session_unset();
-                session_destroy();
-                header("Location: adminLogin.php");
-            }
-        }
-        header("Location: dashboard.php");
     }
 ?>
 <html>
@@ -56,43 +29,64 @@
         }
     </style>
 
+    <script>
+        function login(){
+            $.ajax({
+                type: 'POST',
+                url: 'requests/loginCheck.php',
+                data: {
+                    email: document.getElementById("inputEmail").value,
+                    password: document.getElementById("inputPassword").value
+                },
+                success: function (d) {
+                    document.getElementById("loginResponseDiv").hidden = false;
+                }
+            });
+        }
+    </script>
+
 </head>
 <body>
 
 <div class="flex-center" style="height: 100%;">
 <div class="container-fluid flex-center flex-column" >
     <div class="row">
-        <img src="../../resources/img/logo.jpg"> <!-- TODO Fix dieses -->
+        <img src="../resources/img/logo.jpg">
     </div>
-    <?php
-    if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){
-        echo'
-             <div class="alert alert-primary" role="alert">
-                   Te-ai delogat cu succes!
-             </div>  
-        ';
-    }
-    ?>
+    <div id="resultDiv">
+        <?php
+        if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){
+            echo'
+                 <div class="alert alert-primary" role="alert">
+                       Te-ai delogat cu succes!
+                 </div>  
+            ';
+        }
+        ?>
+    </div>
     <div id="alertDiv" class="row">
 
     </div>
     <div class="row" style="width:100%;">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <form id = "loginForm" action = "adminLogin.php" method = "post" role="form">
+            <div id="loginResponseDiv" class="alert alert-danger" role="alert" hidden>
+                <a href="dashboard.php"> Bine ai revenit! Click aici pentru a merge la Dashboard! </a>
+            </div>
+            <form id = "loginForm">
                 <div class="form-group">
 
                     <label for="exampleInputEmail1">
                         Email address
                     </label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" name="email"/>
+                    <input type="email" class="form-control" id="inputEmail" name="email"/>
                 </div>
                 <div class="form-group">
 
                     <label for="exampleInputPassword1">
                         Password
                     </label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" name="password"/>
+                    <input type="password" class="form-control" id="inputPassword" name="password"/>
                 </div>
                 <div class="checkbox">
 
@@ -100,7 +94,7 @@
                         <input type="checkbox" /> Remember me!
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" onclick="login()" class="btn btn-primary">
                     Submit
                 </button>
             </form>

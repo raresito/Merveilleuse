@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'requests/dbConnectAdmin.php';
 
 
-$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
 if($row["admin"] == 0){
@@ -20,7 +20,6 @@ if($row["admin"] == 0){
 <html>
 <head>
     <?php include '../libraries.php'; ?>
-    <!-- TODO Get more images -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
     <link href="../resources/css/merveilleuseProductList.css" rel="stylesheet">
@@ -58,7 +57,7 @@ if($row["admin"] == 0){
                 <div class="photo-gallery">
                     <div class="intro">
                         <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
-                            <i class="glyphicon glyphicon-align-left"></i>
+                            <i class="fas fa-align-left"></i>
                             <span></span>
                         </button>
                         <h2 class="text-center">Gallerie de fotografii</h2>

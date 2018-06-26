@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'requests/dbConnectAdmin.php';
 
 
-$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
 if($row["admin"] == 0){
@@ -15,7 +15,8 @@ if($row["admin"] == 0){
 }
 
 ?>
-
+<!-- TODO Major overhaul over here -->
+<!-- TODO Produs inactiv -->
 <html>
     <head>
         <?php include '../libraries.php'; ?>
@@ -33,20 +34,58 @@ if($row["admin"] == 0){
         <link rel="stylesheet" href="../resources/css/Lightbox-Gallery.css">
         <script src="../resources/js/products.js"></script>
 
+        <script>
+            function setEditModal(id, denumire, pret, unitate, categorie, imagine){
+                $("#editProdusId").val(id);
+                $("#editProdusName").val(denumire);
+                $("#editProdusCategory").val(categorie);
+                $("#editProdusPretUnitar").val(pret);
+                $("#editProdusUM").val(unitate);
+                $("#editProdusImagine").val(imagine);
+            }
+            //TODO ADD FLAVOUR
+            function editProdus(){
+                id = $("#editProdusId").val();
+                alert(id);
+                $.ajax({
+                    type: 'POST',
+                    url: 'requests/editProdus.php',
+                    data:{
+                        editID: id,
+                        editNameProduct: $("#editProdusName").val(),
+                        editCategory: $("#editProdusCategory").val(),
+                        editPriceProduct: $("#editProdusPretUnitar").val(),
+                        editUnitProduct: $("#editProdusUM").val(),
+                        editImageProduct: $("#editProdusImagine").val()
+                    },
+                    success: function (result){
+                        if(result === "Success"){
+                            $("#editModal").modal('hide');
+                            reloadProducts();
+                        }
+                        else{
+                            alert("Ne cerem scuze, a apărut o erorare");
+                            console.log("error" + result);
+                        }
+                    }
+                });
+            }
+
+        </script>
+
     </head>
     <body>
         <div class="wrapper">
             <?php
             include("adminSidebar.php");
             ?>
-            <div class = "container">
+            <div class = "container" style="margin-top: 25px">
             <div class="row">
                 <div class = "col-sm-12">
                     <?php
                     //var_dump($_POST);
                     if(isset($_POST["newProductName"])) {
-                        $sqlinsert = "INSERT into producttable (nameProduct, priceProduct, unitProduct, image, category)
-                                                     VALUES ( \"" . $_POST["newProductName"] . "\", \"" . $_POST["newProductPrice"] . "\",\"" . $_POST["newProductUnit"] . "\",\"" . $_POST["newProductPhoto"] . " \",\"" . $_POST["newProductCategory"] . " \")";
+                        $sqlinsert =  $_POST["newProductName"] . "\", \"" . $_POST["newProductPrice"] . "\",\"" . $_POST["newProductUnit"] . "\",\"" . $_POST["newProductPhoto"] . " \",\"" . $_POST["newProductCategory"] . " \")";
                         $insert = mysqli_query($conn,$sqlinsert);
                         echo mysqli_error($conn);
                         //echo $insert;
@@ -83,17 +122,11 @@ if($row["admin"] == 0){
 
                     $sql = "SELECT * FROM producttable";
                     $result = mysqli_query($conn,$sql);
-                    if(!$result){
-                        echo'No result';
-                        echo "Error: Our query failed to execute and here is why: \n";
-                        echo "Query: " . $sql . "\n";
-                        echo "Errno: " . $conn->errno . "\n";
-                        echo "Error: " . $conn->error . "\n";
-                    }
+
                     ?>
                     <div class="productTitle">
                         <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
-                            <i class="glyphicon glyphicon-align-left"></i>
+                            <i class="fas fa-align-left"></i>
                             <span></span>
                         </button>
                         <h1 class = "h2">Product List</h1>
@@ -114,30 +147,38 @@ if($row["admin"] == 0){
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Edit Product</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="nameEditInput">Name</label>
-                            <input type="text" class="form-control" id="nameEditInput" required>
+                            <label>ID Produs</label>
+                            <input type="text" class="form-control" id="editProdusId" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="categoryEditInput">Category</label>
-                            <input type="text" id="categoryEditInput" class="form-control" required>
+                            <label>Denumire Produs</label>
+                            <input type="text" class="form-control" id="editProdusName" required>
                         </div>
                         <div class="form-group">
-                            <label for="priceEditInput">Price/Unit</label>
-                            <input type="text" id="priceEditInput" class="form-control" required>
+                            <label>Categorie</label>
+                            <input type="text" id="editProdusCategory" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label></label>
-                            <textarea class="form-control" required></textarea>
+                            <label>Preț/Unitate de măsură</label>
+                            <input type="text" id="editProdusPretUnitar" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Unitate de măsură</label>
+                            <input type="text" id="editProdusUM" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Imagine</label>
+                            <input type="text" id="editProdusImagine" class="form-control" required>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save">
+                        <input type="submit" class="btn btn-info" value="Save" id="editSaveButton" onclick="editProdus()">
                     </div>
                 </div>
             </div>
@@ -176,23 +217,23 @@ if($row["admin"] == 0){
                         <div class="modal-body">
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label for="newProductName" >Name</label>
+                                    <label for="newProductName" >Denumire produs</label>
                                     <input type="text" id="newProductName" name="newProductName" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <label>Category</label>
+                                    <label>Categorie</label>
                                     <input type="text" name="newProductCategory" class="form-control" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <label>Price/Unit</label>
+                                    <label>Preț/Unitate de măsură</label>
                                     <input type="number" name="newProductPrice" class="form-control" required>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label>Unit</label>
+                                    <label>Unitate de măsură</label>
                                     <input type="text" name="newProductUnit" class="form-control" required>
                                 </div>
                             </div>

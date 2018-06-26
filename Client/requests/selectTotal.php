@@ -9,12 +9,12 @@ $subtotal = 0;
 
 $sql = "select ar.email, ar.order_id,ar.product_id,ar.quantity, pt.nameProduct, pt.priceProduct, pt.unitProduct, pt.image, pt.category
                             from(
-                                select email, order_id, product_id, quantity
+                                select emailUser, idOrder, idProduct, quantity
                                     from (
                                         select u.email, o.orderID, o.orderStatus
-                                            from users u join orders o
+                                            from user u join `order` o
                                             on u.id = o.userID
-                                            where u.email = '" . $_SESSION["email"] . "' && orderStatus = 0) prev
+                                            where u.email = e" . $_SESSION["email"] . "mail && orderStatus = 0) prev
                                     join products_orders po
                                     on prev.orderID = po.order_id ) ar join producttable pt
                             on ar.product_id = pt.idProduct;";

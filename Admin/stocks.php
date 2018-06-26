@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'requests/dbConnectAdmin.php';
 
 
-$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
 if($row["admin"] == 0){
@@ -18,7 +18,7 @@ if($row["admin"] == 0){
 if(isset($_POST["newIngredienteId"])){
 
 }
-
+//TODO ADD STOCKS
 ?>
 <html>
 <head>
@@ -49,6 +49,7 @@ if(isset($_POST["newIngredienteId"])){
                     { "data": "denumire" },
                     { "data": "categorie" },
                     { "data": "stocActual" },
+                    { "data": "U/M"},
                     { "data": "pret" },
                     {
                         "data": null,
@@ -56,7 +57,7 @@ if(isset($_POST["newIngredienteId"])){
                     }
                 ],
             } );
-
+            //TODO Ingrediente inactive
             $('#tabelProduse tbody').on( 'click', 'button', function () {
                 let data = table.row( $(this).parents('tr') ).data();
 
@@ -122,7 +123,8 @@ if(isset($_POST["newIngredienteId"])){
                     newIngredienteName: document.getElementById("newIngredienteName").value,
                     newIngredienteCategory: document.getElementById("newIngredienteCategory").value,
                     newIngredienteStocActual: document.getElementById("newIngredienteStocActual").value,
-                    newIngredientePretUnitar: document.getElementById("newIngredientePretUnitar").value
+                    newIngredientePretUnitar: document.getElementById("newIngredientePretUnitar").value,
+                    newIngredienteUnitateMasura: document.getElementById("newIngredienteUM").value
                 },
                 success: function (result){
                     if(result === "Success"){
@@ -188,6 +190,12 @@ if(isset($_POST["newIngredienteId"])){
                                     <input type="text" id="newIngredientePretUnitar" class="form-control" required>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label>Unitate de măsură</label>
+                                    <input type="text" id="newIngredienteUM" class="form-control" required>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -248,14 +256,14 @@ if(isset($_POST["newIngredienteId"])){
         <hr>
 
         <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
-            <i class="glyphicon glyphicon-align-left"></i>
+            <i class="fas fa-align-left"></i>
             <span></span>
         </button>
-        <form type="POST" action="bonConsum.php">
-            <button type="submit" class="btn btn-primary">
+        <form id="bonForm" method="POST" action="bonConsum.php">
+            <div  class="btn btn-primary">
                 <input type="date" name="dataBon" min="2018-01-01">
-                <label for="dataBon">Emite Bon de Consum</label>
-            </button>
+                <label onclick="document.getElementById('bonForm').submit();" for="dataBon">Emite Bon de Consum</label>
+            </div>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addIngredientModal">
                 Adaugă ingredient
             </button>
@@ -269,7 +277,8 @@ if(isset($_POST["newIngredienteId"])){
                     <th>Denumire Produs</th>
                     <th>Categorie</th>
                     <th>Stoc Actual</th>
-                    <th>Preț</th>
+                    <th>Unitate de măsură</th>
+                    <th>Preț unitar</th>
                     <th>Buttons</th>
                 </tr>
                 </thead>

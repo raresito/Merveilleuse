@@ -2,7 +2,7 @@
 
 include "dbConnectAdmin.php";
 //echo $_POST['userID'];
-$sql = "delete from users where id = ".$_POST['userID'].";";
+$sql = "delete from user where idUser = ".$_POST['userID'].";";
 $result = mysqli_query($conn,$sql);
 
 if($result!=false){

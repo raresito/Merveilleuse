@@ -7,16 +7,16 @@ if (session_status() == PHP_SESSION_NONE) {
 include 'dbConnectClient.php';
 
 $sql = "SELECT validation
-        FROM users
-        where email='" . $_POST["email"] . "' ";
+        FROM user
+        where emailUser=e" . $_POST["email"] . "mail ";
 
 $result = mysqli_query($conn, $sql);
 $row = $result ->fetch_assoc();
 if($row["validation"] == $_POST["code"]){
     echo "ok";
-    $sql = "UPDATE users
+    $sql = "UPDATE user
             set validation = 1
-            where email = '".$_POST["email"]."' ";
+            where emailUser = e" .$_POST["email"]."mail ";
     $re = mysqli_query($conn, $sql);
     if(!$re){
         echo $conn->error;

@@ -1,7 +1,7 @@
 <?php
 
 include "dbConnectAdmin.php";
-$sql = "select * from ingrediente";
+$sql = "select * from ingredient";
 $result = mysqli_query($conn,$sql);
 
 $arr = array();

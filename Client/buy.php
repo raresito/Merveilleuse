@@ -6,9 +6,9 @@ require '../vendor/autoload.php';
 
 var_dump($_POST);
 
-$sql = "update orders
+$sql = "update `order`
         set orderStatus = 1
-        where orderID = ".$_POST["id"].";";
+        where idOrder = " .$_POST["id"].";";
 $result = mysqli_query($conn,$sql);
 
 
@@ -17,8 +17,8 @@ if(!$result){
     die("Failed to modify order!");
 }
 
-$sql = "insert into adresses (name, surname, email, phone, location)
-        values ('".$_POST["lastName"]."', '".$_POST["name"]."','".$_POST["email"]."','".$_POST["mobil"]."','".$_POST["address"]."')";
+$sql = "insert into addresses (surname, nameAddress, emailAddress, phone, location)
+        values ('" .$_POST["lastName"]."', n".$_POST["name"]."ame,e".$_POST["email"]."mail,'".$_POST["mobil"]."','".$_POST["address"]."')";
 $result = mysqli_query($conn,$sql);
 
 if($result){
@@ -27,9 +27,9 @@ if($result){
     $mesaj =  'Multumim pentru comanda efectuata! Iata datele tale: \n Destinatar' . $_POST["lastName"]. ' ' . $_POST['name']. '\n '. $_POST["mobil"]. " \n ". $_POST["address"];
     sendMailMin($_POST["email"],$mesaj);
 } else {
-    $sql = "update orders
+    $sql = "update `order`
         set orderStatus = 0
-        where orderID = ".$_POST["id"].";";
+        where idOrder = " .$_POST["id"].";";
     $result = mysqli_query($conn,$sql);
     echo "Fail " . $sql;
 }

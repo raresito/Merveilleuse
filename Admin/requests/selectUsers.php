@@ -1,7 +1,7 @@
 <?php
 
 include "dbConnectAdmin.php";
-$sql = "select * from users";
+$sql = "select * from user";
 $result = mysqli_query($conn,$sql);
 
 $arr = array();

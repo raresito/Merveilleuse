@@ -1,12 +1,12 @@
 <?php
 include "dbConnectAdmin.php";
 
-$sql = "update ingrediente
-        set denumire = '".$_POST["editDenumire"]."',
-          categorie = '".$_POST["editCategorie"]."',
-          stocActual = ".$_POST["editStocActual"].",
-          pret = ".$_POST["editPretUnitar"]."
-        where id = '".$_POST["editID"]."'";
+$sql = "update ingredient
+        set nameIngredient = '" .$_POST["editDenumire"]."',
+          categoryIngredient = '".$_POST["editCategorie"]."',
+          stockIngredient = ".$_POST["editStocActual"].",
+          priceIngredient = ".$_POST["editPretUnitar"]."
+        where idIngredient = '".$_POST["editID"]."'";
 $result = mysqli_query($conn,$sql);
 
 if($result){

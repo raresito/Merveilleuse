@@ -7,32 +7,32 @@ require_once 'dbConnectClient.php';
 
 /*echo $_POST["id"];*/
 $checkUserHasProductAlready = "
-    select users.id, users.email, orders.orderID, orders.orderStatus, product_id, quantity
-    from users join orders on users.id = orders.userID
-    join products_orders on orders.orderID = products_orders.order_id
-    where email = '".$_SESSION["email"]."'
-    AND product_id = '".$_POST["id"]."'
+    select user.id, user.email, `order`.orderID, `order`.orderStatus, idProduct, quantity
+    from user join `order` on user.id = `order`.userID
+    join `product-order` on `order`.orderID = `product-order`.order_id
+    where emailUser = e" .$_SESSION["email"]. "mail
+    AND idProduct = i" .$_POST["id"]."d
     AND orderStatus = 0; ";
-$incrementProduct = "UPDATE products_orders
+$incrementProduct = "UPDATE `product-order`
                 set quantity = quantity + 1
-                where order_id = (
-                        SELECT orders.orderID
-                        from orders
-                        join users
-                        on orders.userID = users.id
-                        where users.email = '".$_SESSION["email"]."'
-                        And orders.orderStatus = 0)
-                and product_id = '".$_POST["id"]."';";
-$checkUserHasOpenOrder = "SELECT orderID
-                FROM orders
-                where userID = (SELECT id
-                                from users
-                                where email = '".$_SESSION["email"]."')
+                where idOrder = (
+                        SELECT `order`.orderID
+                        from `order`
+                        join user
+                        on `order`.userID = user.id
+                        where user.email = e" .$_SESSION["email"]. "mail
+                        And `order`.orderStatus = 0)
+                and product_id = i" .$_POST["id"]."d;";
+$checkUserHasOpenOrder = "SELECT idOrder
+                FROM `order`
+                where idUser = (SELECT idUser
+                                from user
+                                where emailUser = e" .$_SESSION["email"]."mail)
                 AND orderStatus = 0";
-$createEmptyOrder = "INSERT INTO orders (userID)
-                    VALUES ((SELECT id
-                            from users
-                            where email = '".$_SESSION["email"]."'))";
+$createEmptyOrder = "INSERT INTO `order` (idUser)
+                    VALUES ((SELECT idUser
+                            from user
+                            where emailUser = '" .$_SESSIOemailail"]."'))";
 $createProductInOrder = '';
 $getProductName = "SELECT nameProduct
                    FROM producttable
@@ -41,8 +41,8 @@ if(isset($_POST["id"])) {
     $hasOpenOrder = mysqli_query($conn, $checkUserHasOpenOrder);
     if ($hasOpenOrder && $hasOpenOrder -> num_rows > 0) {
         $row = $hasOpenOrder ->fetch_assoc();
-        $createProductInOrder = "INSERT INTO products_orders
-                    VALUES ( '".$row["orderID"]."', '".$_POST["id"]."', '1')";
+        $createProductInOrder = "INSERT INTO `product-order`
+                    VALUES ( '" .$row["orderID"]."', '".$_POST["id"]."', '1')";
 
         $hasProduct = mysqli_query($conn, $checkUserHasProductAlready);
         if ($hasProduct && $hasProduct -> num_rows > 0) {
@@ -64,7 +64,7 @@ if(isset($_POST["id"])) {
         echo "Error: " . $conn->error . "\n";*/
         if ($hasOpenOrder && $hasOpenOrder -> num_rows > 0) {
             $row = $hasOpenOrder -> fetch_assoc();
-            $createProductInOrder = "INSERT INTO products_orders
+            $createProductInOrder = "INSERT INTO `product-order`
                     VALUES ( '" . $row["orderID"] . "', '" . $_POST["id"] . "', '1')";
             /*echo "Insert 2";*/
             echo (mysqli_query($conn, $getProductName) -> fetch_assoc())["nameProduct"];

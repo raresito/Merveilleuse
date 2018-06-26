@@ -1,6 +1,6 @@
 <?php
 
-$target_dir = "../resources/img/foto/";
+$target_dir = "../../resources/img/foto/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        header("Location: gallery.php");
+        header("Location: ../gallery.php");
 
     } else {
         echo "Sorry, there was an error uploading your file.";

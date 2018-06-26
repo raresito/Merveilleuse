@@ -14,11 +14,11 @@ $basketAmount = '';
 if(isset($_SESSION["email"])) {
 
     $sql = "Select SUM(quantity) as suma
-            from products_orders
-            WHERE order_id = (SELECT orders.orderID
-                              from  orders join users
-                                  on userID = users.id
-                              where email = '".$_SESSION["email"]."'
+            from `product-order`
+            WHERE idOrder = (SELECT `order`.orderID
+                              from  `order` join user
+                                  on idUser = user.id
+                              where emailUser = e" .$_SESSION["email"]."mail
                                     AND orderStatus = 0);";
     $result = mysqli_query($conn, $sql);
     while($row = $result->fetch_assoc()){

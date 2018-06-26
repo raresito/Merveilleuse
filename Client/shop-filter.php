@@ -21,7 +21,7 @@ if(!array_key_exists("selection", $_POST) || $_POST["selection"] !== '' ) {
         $sql = $sql . " AND ";
     }
 
-    //TODO Implement aditional 2 filters
+    //TODO Implement aditional 1 filter
     if(isset($_POST["selection"]["flavour"])){
         if($wherePlaced == 0) {
             $sql = $sql . " where (";

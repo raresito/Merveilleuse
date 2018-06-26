@@ -7,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 require 'requests/dbConnectAdmin.php';
 
 
-$sql = "Select * from users where email = '".$_SESSION["email"]."' LIMIT 1 ";
+$sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
 if($row["admin"] == 0){
@@ -20,7 +20,6 @@ if($row["admin"] == 0){
 <html>
 <head>
     <?php include '../libraries.php'; ?>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../resources/css/merveilleuseSideBar.css" rel="stylesheet">
@@ -63,9 +62,9 @@ if($row["admin"] == 0){
     <?php
     include("adminSidebar.php");
     ?>
-    <div class = "container">
+    <div class = "container" style="margin-top: 25px">
         <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
-            <i class="glyphicon glyphicon-align-left"></i>
+            <i class="fas fa-align-left"></i>
             <span></span>
         </button>
         <div class="row">

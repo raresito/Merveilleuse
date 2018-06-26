@@ -6,31 +6,14 @@ use setasign\Fpdi\PdfReader;
 
 require 'requests/dbConnectAdmin.php';
 
-$sql = "select po.order_id, po.product_id, po.quantity, pi.cantitate, pt.nameProduct, pi.id_ingredient, ing.denumire, ing.pret, po.quantity * pi.cantitate as ingredientpecomanda, ing.`U/M` as unitati, ROUND(ing.pret * po.quantity * pi.cantitate,3) as pretingcom
-        from products_orders po join produs_ingredient pi
-        on po.product_id = pi.id_product
-        join producttable pt
-        on pi.id_product = pt.idProduct
-        join ingrediente ing
-        on pi.id_ingredient = ing.id
-        where po.order_id in (select orderID
-                           from orders
-                           where deliveryStatus = 1
-                                 and deliveryDate = '2018-06-15');";
-$result = mysqli_query($conn, $sql);
+
 
 setlocale(LC_CTYPE, 'en_US');
 
-if(isset($_POST["dataBon"])){
-    $dataZiua = substr($_POST["dataBon"],0,4);
-    $dataAnul = substr($_POST["dataBon"],5,2);
-    $dataLuna = substr($_POST["dataBon"],8,2);
-    echo 'ceva';
-}
 
 $source = "../bdcpdf.pdf";
 $numarDocument = 1214;
-$dataZiua = 9;
+$dataZiua = 28;
 $dataLuna = 6;
 $dataAnul = 2018;
 $predator = "Tudor Cristea";
@@ -46,6 +29,40 @@ $valoarea = 0.1;
 $sefCompartiment = "Tudor Cristea";
 $gestionar = "Tudor Cristea";
 $primitor2 = "Rares Cristea";
+
+
+if(isset($_POST["dataBon"])){
+    $dataAnul = substr($_POST["dataBon"],0,4);
+    $dataLuna = substr($_POST["dataBon"],5,2);
+    $dataZiua = substr($_POST["dataBon"],8,2);
+
+    $sql = "select po.idOrder, po.idProduct, po.quantity, pi.quantity, pt.nameProduct, pi.idIngredient, ing.nameIngredient, ing.priceIngredient, po.quantity * pi.quantity as ingredientpecomanda, ing.unitIngredient as unitati, ROUND(ing.priceIngredient * po.quantity * pi.quantity,3) as pretingcom
+        from `product-order` po join product_ingredient pi
+        on po.idProduct = pi.idProduct
+        join product pt
+        on pi.idProduct = pt.idProduct
+        join ingredient ing
+        on pi.idIngredient = ing.idIngredient
+        where po.idOrder in (select idOrder
+                           from `order`
+                           where deliveryStatus = 1
+                                 and deliveryDate = '" .$_POST["dataBon"]."');";
+    $result = mysqli_query($conn, $sql);
+} else {
+
+    $sql = "select po.idOrder, po.idProduct, po.quantity, pi.quantity, pt.nameProduct, pi.idIngredient, ing.nameIngredient, ing.priceIngredient, po.quantity * pi.quantity as ingredientpecomanda, ing.unitIngredient as unitati, ROUND(ing.priceIngredient * po.quantity * pi.quantity,3) as pretingcom
+        from `product-order` po join product_ingredient pi
+        on po.idProduct = pi.idProduct
+        join product pt
+        on pi.idProduct = pt.idProduct
+        join ingredient ing
+        on pi.idIngredient = ing.idIngredient
+        where po.idOrder in (select idOrder
+                           from `order`
+                           where deliveryStatus = 1
+                                 and deliveryDate = '2018-06-28');";
+    $result = mysqli_query($conn, $sql);
+}
 
 $pdf = new Fpdi();
 

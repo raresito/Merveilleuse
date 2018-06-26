@@ -1,8 +1,8 @@
 <?php
 
 include "dbConnectAdmin.php";
-$sql = "select MONTH(orderDate) as month, count(orderID) as cnt
-        from orders
+$sql = "select MONTH(orderDate) as month, count(idOrder) as cnt
+        from `order`
         group by MONTH(orderDate);";
 $result = mysqli_query($conn,$sql);
 

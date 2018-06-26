@@ -7,8 +7,8 @@ if (session_status() == PHP_SESSION_NONE) {
 include 'dbConnectClient.php';
 
 $activationKey = bin2hex(openssl_random_pseudo_bytes(10));
-$sql = "INSERT INTO users (email, password, lastLogin, name, validation) 
-        VALUES('" . $_POST["email"] . "','" . md5($_POST["password"]) . "','" . date("Y-m-d H:i:s") . "','" . $_POST["surname"] . " " . $_POST["name"] . "', '".$activationKey."')";
+$sql = "INSERT INTO user (emailUser, password, lastLogin, nameUser, validation) 
+        VALUES(e" . $_POST["email"] . "mail,'" . md5($_POST["password"]) . "','" . date("Y-m-d H:i:s") . "',n" . $_POST["surname"] . "a" . $_POST["name"] . "me, '".$activationKey."')";
 
 $result = mysqli_query($conn, $sql);
 
