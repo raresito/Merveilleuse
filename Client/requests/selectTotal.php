@@ -14,11 +14,12 @@ $sql = "select ar.emailUser, ar.idOrder,ar.idProduct,ar.quantity, pt.nameProduct
                                         select u.emailUser, o.idOrder, o.orderStatus
                                             from user u join `order` o
                                             on u.idUser = o.idUser
-                                            where u.emailUser = " . $_SESSION["email"] . " && orderStatus = 0) previ
+                                            where u.emailUser = '" . $_SESSION["email"] . "' && orderStatus = 0) previ
                                     join `product-order` po
                                     on previ.idOrder = po.idOrder ) ar join product pt
                             on ar.idProduct = pt.idProduct;";
 $result = mysqli_query($conn, $sql);
+echo mysqli_error($conn);
 $arr = array();
 if ($result -> num_rows > 0) {
     while ($rowProduct = $result -> fetch_assoc()) {

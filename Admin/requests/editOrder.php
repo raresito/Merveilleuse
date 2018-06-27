@@ -18,6 +18,10 @@ if($_POST["set"] == "deliveryStatus"){
 }
 $result = mysqli_query($conn,$sql);
 
+if($_POST["set"] == "deliveryStatus"){
+
+}
+
 if($result){
     echo "Success";
 } else {

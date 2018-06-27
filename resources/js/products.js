@@ -35,12 +35,6 @@ function sendChosenPhoto(){
     }
 }
 
-function selectDelete(ceva){
-    alert(ceva);
-    document.getElementById("deleteProduct").innerText = ceva;
-    document.getElementById("deleteInput").innerText = ceva;
-    console.log(document.getElementById("deleteInput").innerText)
-}
 
 $(document).ready(function (){
     $("#galleryButton").click(function(){
@@ -87,6 +81,98 @@ function reloadProducts(){
             table.innerHTML = head + body;
         }
     });
-};
+}
 
 reloadProducts();
+
+function setEditModal(id, denumire, pret, unitate, categorie, imagine){
+    $("#editProdusId").val(id);
+    $("#editProdusName").val(denumire);
+    $("#editProdusCategory").val(categorie);
+    $("#editProdusPretUnitar").val(pret);
+    $("#editProdusUM").val(unitate);
+    $("#editProdusImagine").val(imagine);
+}
+
+function deleteProduct(b){
+    alert(b);
+    $.ajax({
+        type: 'POST',
+        url: 'requests/deleteProduct.php',
+        data: {
+            editID: id,
+            editNameProduct: $("#editProdusName").val(),
+            editCategory: $("#editProdusCategory").val(),
+            editPriceProduct: $("#editProdusPretUnitar").val(),
+            editUnitProduct: $("#editProdusUM").val(),
+            editImageProduct: $("#editProdusImagine").val()
+        },
+        success: function (result) {
+            if(result !== "fail") {
+                document.getElementById("addedDiv").innerHTML = "" +
+                    "<div class=\"alert alert-danger\" role=\"alert\">\n" +
+                    "  <strong> Șters! </strong> Ai șters produsul " + result +
+                    "</div>";
+            } else {
+                console.log(result);
+            }
+        }
+    });
+}
+//TODO ADD FLAVOUR
+function editProdus(){
+    id = $("#editProdusId").val();
+    $.ajax({
+        type: 'POST',
+        url: 'requests/editProdus.php',
+        data:{
+            editID: id,
+            editNameProduct: $("#editProdusName").val(),
+            editCategory: $("#editProdusCategory").val(),
+            editPriceProduct: $("#editProdusPretUnitar").val(),
+            editUnitProduct: $("#editProdusUM").val(),
+            editImageProduct: $("#editProdusImagine").val()
+        },
+        success: function (result){
+            if(result === "Success"){
+                $("#editModal").modal('hide');
+                reloadProducts();
+            }
+            else{
+                alert("Ne cerem scuze, a apărut o erorare");
+                console.log("error" + result);
+            }
+        }
+    });
+}
+
+function addProduct(){
+    $.ajax({
+        type: 'POST',
+        url: 'requests/insertProduct.php',
+        data: {
+            newProductName: document.getElementById("newProductName").value,
+            newProductPrice: document.getElementById("newProductPrice").value,
+            newProductUnit: document.getElementById("newProductUnit").value,
+            newProductPhoto: document.getElementById("photoPreview").innerHTML,
+            newProductCategory: document.getElementById("newProductCategory").value
+        },
+        success: function(d){
+            if(d === "Success") {
+                document.getElementById("addedDiv").innerHTML = "" +
+                    "<div class=\"alert alert-success\" role=\"alert\">" +
+                    "<strong>Încărcat!</strong> Ai adăugat un produs nou!" +
+                    "</div>";
+                reloadProducts();
+                $("#addModal").modal('hide');
+            } else {
+                console.log(d);
+                document.getElementById("addedDiv").innerHTML = ""+
+                    "<div class=\"alert alert-danger\" role=\"alert\">" +
+                    "A apărut o problemă, mai încearcă odată!" +
+                    "</div>"
+                $("#addModal").modal('hide');
+            }
+        }
+    });
+}

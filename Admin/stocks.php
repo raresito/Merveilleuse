@@ -15,9 +15,9 @@ if($row["admin"] == 0){
 }
 
 
-if(isset($_POST["newIngredienteId"])){
+/*if(isset($_POST["newIngredienteId"])){
 
-}
+}*/
 //TODO ADD STOCKS
 ?>
 <html>
@@ -32,7 +32,7 @@ if(isset($_POST["newIngredienteId"])){
     <script>
         let table;
         $(document).ready(function() {
-            var selected = ["something"];
+            let selected = ["something"];
             /*$('#tabelProduse').width('100%')*/
              table = $('#tabelProduse').DataTable( {
                 "ajax": {
@@ -45,12 +45,12 @@ if(isset($_POST["newIngredienteId"])){
                         $(row).addClass('selected');
                     } },
                 "columns": [
-                    { "data": "id" },
-                    { "data": "denumire" },
-                    { "data": "categorie" },
-                    { "data": "stocActual" },
-                    { "data": "U/M"},
-                    { "data": "pret" },
+                    { "data": "idIngredient" },
+                    { "data": "nameIngredient" },
+                    { "data": "categoryIngredient" },
+                    { "data": "stockIngredient" },
+                    { "data": "unitIngredient"},
+                    { "data": "priceIngredient" },
                     {
                         "data": null,
                         "defaultContent": "<button>Edit</button>"
@@ -61,7 +61,7 @@ if(isset($_POST["newIngredienteId"])){
             $('#tabelProduse tbody').on( 'click', 'button', function () {
                 let data = table.row( $(this).parents('tr') ).data();
 
-                setEditModal(data.id, data.denumire, data.categorie, data.stocActual, data.pret);
+                setEditModal(data.idIngredient, data.nameIngredient, data.categoryIngredient, data.stockIngredient, data.priceIngredient);
             } );
             document.getElementById("tabelProduse_wrapper").style.width = '100%';
         } );
@@ -104,13 +104,13 @@ if(isset($_POST["newIngredienteId"])){
             });
         }
 
-        function sanitizeInput(){
+        /*function sanitizeInput(){
             id = document.getElementById("newIngredienteId").value;
             if(isNaN(parseFloat(n)) || !isFinite(n)){
                 return false;
             }
             return true;
-        }
+        }*/
 
         function insertIngredient(){
             /*if(!sanitizeInput()){

@@ -8,7 +8,7 @@ include 'dbConnectClient.php';
 
 $activationKey = bin2hex(openssl_random_pseudo_bytes(10));
 $sql = "INSERT INTO user (emailUser, password, lastLogin, nameUser, validation) 
-        VALUES('" . $_POST["email"] . "','" . md5($_POST["password"]) . "','" . date("Y-m-d H:i:s") . "'," . $_POST["surname"] . " " . $_POST["name"] . ", '".$activationKey."')";
+        VALUES('" . $_POST["email"] . "','" . md5($_POST["password"]) . "','" . date("Y-m-d H:i:s") . "','" . $_POST["surname"] . "' '" . $_POST["name"] . "', '".$activationKey."')";
 
 $result = mysqli_query($conn, $sql);
 

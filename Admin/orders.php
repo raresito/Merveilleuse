@@ -61,14 +61,15 @@ if($row["admin"] == 0){
                             "</tr></thead>";
                     ceva = '';
                     for(let i = 0; i < myArray.length; i++){
+                        console.log(myArray[i]);
                         ceva = ceva + "<tr> " +
-                                        "<td>" + myArray[i].orderID + "</td>" +
-                                        "<td> " + myArray[i].userID + " </td> " +
-                                        "<td> " + ((myArray[i].orderDate !== null) ? myArray[i].orderDate : "Not delivered") + " </td>" +
-                                        "<td> " + ((myArray[i].orderStatus !== "0") ? "Delivered" : "Not delivered") + " </td>" +
-                                        "<td> " + ((myArray[i].deliveryStatus !== "0") ? "Delivered" : "Not Delivered" ) + " </td>" +
-                                        "<td> " + ((myArray[i].deliveryDate !== null) ? myArray[i].deliveryDate : "Not Delivered" ) + " </td>" +
-                                        "<td> <button type=\"button\" class=\"btn btn-sm\" style = \"width:100%\" data-toggle=\"modal\" data-target=\"#viewOrderModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\" title=\"View\" onclick=\"populateModal(" + myArray[i].orderID + ")\"> <i class=\"fas fa-eye\"></i></button> </td>"
+                                        "<td>" + myArray[i].idOrder + "</td>" +
+                                        "<td> " + myArray[i].idUser + " </td> " +
+                                        "<td> " + ((myArray[i].orderDate !== null) ? myArray[i].orderDate : "În selecție") + " </td>" +
+                                        "<td> " + ((myArray[i].orderStatus !== "0") ? "Plasată!" : "În selecție") + " </td>" +
+                                        "<td> " + ((myArray[i].deliveryStatus !== "0") ? "Livrată" : "Nelivrată" ) + " </td>" +
+                                        "<td> " + ((myArray[i].deliveryDate !== null) ? myArray[i].deliveryDate : "Nelivrată" ) + " </td>" +
+                                        "<td> <button type=\"button\" class=\"btn btn-sm\" style = \"width:100%\" data-toggle=\"modal\" data-target=\"#viewOrderModal\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\" title=\"View\" onclick=\"populateModal(" + myArray[i].idOrder + ")\"> <i class=\"fas fa-eye\"></i></button> </td>"
                     }
                     body = "<tbody>" + ceva + "</tbody>";
                     document.getElementById("spinnerOrders").innerHTML = '';
@@ -107,7 +108,7 @@ if($row["admin"] == 0){
                     let tbody = document.createElement("TBODY");
                     for(let i = 0; i < productsArray.length; i++){
                         let row = document.createElement("TR");
-                        row.innerHTML = "<td>" + productsArray[i].product_id + "</td>" +
+                        row.innerHTML = "<td>" + productsArray[i].idProduct + "</td>" +
                                         "<td><img src='../resources/img/foto/" + productsArray[i].image + "' style=\"max-height: 70px;\"></td>" +
                                         "<td>" + productsArray[i].nameProduct + "</td>" +
                                         "<td>" + productsArray[i].quantity + "</td>" +

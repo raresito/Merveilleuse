@@ -20,14 +20,14 @@ $incrementProduct = "UPDATE `product-order`
                         from `order`
                         join user
                         on `order`.idUser = user.idUser
-                        where user.emailUser = " .$_SESSION["email"]. "
+                        where user.emailUser = '" .$_SESSION["email"]. "'
                         And `order`.orderStatus = 0)
-                and idProduct = i" .$_POST["id"]."d;";
+                and idProduct = " .$_POST["id"].";";
 $checkUserHasOpenOrder = "SELECT idOrder
                 FROM `order`
                 where idUser = (SELECT idUser
                                 from user
-                                where emailUser = e" .$_SESSION["email"]."mail)
+                                where emailUser = '" .$_SESSION["email"]."')
                 AND orderStatus = 0";
 $createEmptyOrder = "INSERT INTO `order` (idUser)
                     VALUES ((SELECT idUser
@@ -42,7 +42,7 @@ if(isset($_POST["id"])) {
     if ($hasOpenOrder && $hasOpenOrder -> num_rows > 0) {
         $row = $hasOpenOrder ->fetch_assoc();
         $createProductInOrder = "INSERT INTO `product-order`
-                    VALUES ( '" .$row["orderID"]."', '".$_POST["id"]."', '1')";
+                    VALUES ( '" .$row["idOrder"]."', '".$_POST["id"]."', '1')";
 
         $hasProduct = mysqli_query($conn, $checkUserHasProductAlready);
         if ($hasProduct && $hasProduct -> num_rows > 0) {
@@ -65,7 +65,7 @@ if(isset($_POST["id"])) {
         if ($hasOpenOrder && $hasOpenOrder -> num_rows > 0) {
             $row = $hasOpenOrder -> fetch_assoc();
             $createProductInOrder = "INSERT INTO `product-order`
-                    VALUES ( '" . $row["orderID"] . "', '" . $_POST["id"] . "', '1')";
+                    VALUES ( '" . $row["idOrder"] . "', '" . $_POST["id"] . "', '1')";
             /*echo "Insert 2";*/
             echo (mysqli_query($conn, $getProductName) -> fetch_assoc())["nameProduct"];
             /*echo $_POST["id"];*/

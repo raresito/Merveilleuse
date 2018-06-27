@@ -4,27 +4,37 @@ include "requests/dbConnectClient.php";
 use PHPMailer\PHPMailer\PHPMailer;
 require '../vendor/autoload.php';
 
-var_dump($_POST);
-
 $sql = "update `order`
-        set orderStatus = 1
+        set orderStatus = 1, orderDate = CURDATE()
         where idOrder = " .$_POST["id"].";";
 $result = mysqli_query($conn,$sql);
-
-
 
 if(!$result){
     die("Failed to modify order!");
 }
 
 $sql = "insert into addresses (surname, nameAddress, emailAddress, phone, location)
-        values ('" .$_POST["lastName"]."', n".$_POST["name"]."ame,e".$_POST["email"]."mail,'".$_POST["mobil"]."','".$_POST["address"]."')";
+        values ('" .$_POST["lastName"]."', '".$_POST["name"]."','".$_POST["email"]."','".$_POST["mobil"]."','".$_POST["address"]."')";
 $result = mysqli_query($conn,$sql);
 
 if($result){
+    $sql = "select *
+            from `order` join `product-order`
+              on `order`.idOrder = `product-order`.idOrder
+              join product on product.idProduct = `product-order`.idProduct
+            where `order`.idOrder = 40";
+    $result = mysqli_query($conn,$sql);
+
     echo "Success";
     $subiect = 'Merveilleuse - Comanda nr.' . $_POST["id"];
-    $mesaj =  'Multumim pentru comanda efectuata! Iata datele tale: \n Destinatar' . $_POST["lastName"]. ' ' . $_POST['name']. '\n '. $_POST["mobil"]. " \n ". $_POST["address"];
+    $mesaj =  'Multumim pentru comanda efectuata! Iata datele tale: <br> Destinatar ' .
+        $_POST["lastName"]. ' ' .
+        $_POST['name']. ' '.
+        $_POST["mobil"]. " ".
+        $_POST["address"]. " <br>";
+    while($row = $result->fetch_assoc()){
+        $mesaj = $mesaj . $row["idProduct"] . ", " . $row["nameProduct"] . ", " . $row["priceProduct"] * $row["quantity"] . "<br>" ;
+    }
     sendMailMin($_POST["email"],$mesaj);
 } else {
     $sql = "update `order`

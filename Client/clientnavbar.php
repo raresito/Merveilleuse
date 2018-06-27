@@ -15,10 +15,10 @@ if(isset($_SESSION["email"])) {
 
     $sql = "Select SUM(quantity) as suma
             from `product-order`
-            WHERE idOrder = (SELECT `order`.orderID
+            WHERE idOrder = (SELECT `order`.idOrder
                               from  `order` join user
-                                  on idUser = user.id
-                              where emailUser = e" .$_SESSION["email"]."mail
+                                  on `order`.idUser = user.idUser
+                              where emailUser = '" .$_SESSION["email"]."'
                                     AND orderStatus = 0);";
     $result = mysqli_query($conn, $sql);
     while($row = $result->fetch_assoc()){

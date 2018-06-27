@@ -15,8 +15,8 @@ $result = mysqli_query($conn, $sql);
 
 if($result && $result->num_rows == 1){
     $row = $result -> fetch_assoc();
-    $_SESSION["email"] = $row["email"];
-    $_SESSION["name"] = $row["name"];
+    $_SESSION["email"] = $row["emailUser"];
+    $_SESSION["name"] = $row["nameUser"];
     $sql = "UPDATE user 
             SET lastLogin = '" . date("Y-m-d H:i:s") . "' 
             WHERE emailUser ='" . $_POST['email'] . "';";

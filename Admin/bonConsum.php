@@ -62,6 +62,7 @@ if(isset($_POST["dataBon"])){
                            where deliveryStatus = 1
                                  and deliveryDate = '2018-06-28');";
     $result = mysqli_query($conn, $sql);
+    echo mysqli_error($conn);
 }
 
 $pdf = new Fpdi();
@@ -100,16 +101,16 @@ $i = 0;
 while($row = $result -> fetch_assoc()){
 
     $pdf->SetXY(180, 49);
-    $pdf->Write(0, $row["order_id"]);
+    $pdf->Write(0, $row["idOrder"]);
 
     $pdf->SetXY(35, 62 + $i );
-    $pdf->Write(0, em($row["denumire"]));
+    $pdf->Write(0, em($row["nameIngredient"]));
 
     $pdf->SetXY(138, 62 +$i );
     $pdf->Write(0, $row["ingredientpecomanda"]);
 
     $pdf->SetXY(170, 62 +$i );
-    $pdf->Write(0, $row["id_ingredient"]);
+    $pdf->Write(0, $row["idIngredient"]);
 
     $pdf->SetXY(205, 62 +$i );
     $pdf->Write(0, $row["unitati"]);
@@ -118,7 +119,7 @@ while($row = $result -> fetch_assoc()){
     $pdf->Write(0, $row["ingredientpecomanda"]);
 
     $pdf->SetXY(245, 62 +$i );
-    $pdf->Write(0, $row["pret"]);
+    $pdf->Write(0, $row["priceIngredient"]);
 
     $pdf->SetXY(270, 62 +$i );
     $pdf->Write(0, $row["pretingcom"]);

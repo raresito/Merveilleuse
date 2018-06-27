@@ -51,8 +51,8 @@ if($row["admin"] == 0){
                     head = "<thead><tr><th>#</th><th>Email</th><th>Last Login</th><th>Actions</th>  </tr></thead>";
                     ceva = '';
                     for(var i = 0; i < myArray.length; i++){
-                        ceva = ceva + "<tr> <td>" + myArray[i].id + "</td> <td> " + myArray[i].email + " </td> <td> " + myArray[i].lastLogin + " </td> <td>" +
-                            " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#deleteModal\" value = " + myArray[i].id + " onclick=\"deleteUser(this)\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\"  title=\"Delete\" >delete</i></button>\n" +
+                        ceva = ceva + "<tr> <td>" + myArray[i].idUser + "</td> <td> " + myArray[i].emailUser + " </td> <td> " + myArray[i].lastLogin + " </td> <td>" +
+                            " <button type=\"button\" class=\"btn btn-sm\" data-toggle=\"modal\" data-target=\"#deleteModal\" value = " + myArray[i].idUser + " onclick=\"deleteUser(this)\"><i class=\"material-icons\" data-toggle=\"tooltip\" data-target=\"\"  title=\"Delete\" >delete</i></button>\n" +
                             " </td>"
                     }
                     body = "<tbody>" + ceva + "</tbody>";

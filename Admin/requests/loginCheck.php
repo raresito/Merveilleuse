@@ -14,18 +14,9 @@ $result = mysqli_query($conn,$sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result -> fetch_assoc()) {
-        $_SESSION["email"] = $row["email"];
-        $_SESSION["name"] = $row["name"];
+        $_SESSION["email"] = $row["emailUser"];
+        $_SESSION["name"] = $row["nameUser"];
     }
 
     echo "Success";
-}
-        /*else{
-            echo '<div class="alert alert-danger" role="alert">
-                                A apărut o problemă, mai încearcă odată!
-                            </div>';
-
-        }*/
-else{
-    header("Location: dashboard.php");
 }

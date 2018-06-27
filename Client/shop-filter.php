@@ -2,7 +2,7 @@
 
 include 'requests/dbConnectClient.php';
 
-$sql = "SELECT * FROM producttable" ;
+$sql = "SELECT * FROM product" ;
 
 if(!array_key_exists("selection", $_POST) || $_POST["selection"] !== '' ) {
     $wherePlaced = 0;
@@ -35,13 +35,9 @@ if(!array_key_exists("selection", $_POST) || $_POST["selection"] !== '' ) {
     }
 }
 
-/*echo $sql;*/
 $result = mysqli_query($conn,$sql);
-
 $response='';
-
 $arr = array();
-
 if ($result && $result->num_rows > 0) {
     while ($row = $result -> fetch_assoc()) {
         $arr[] = $row;

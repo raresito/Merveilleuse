@@ -16,7 +16,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 where orderStatus = 1 
                                 and idUser = (SELECT idUser
                                               from user
-                                              where emailUser = " .$_SESSION["email"]. "))
+                                              where emailUser = '" .$_SESSION["email"]. "'))
              order by po.idOrder";
 
 

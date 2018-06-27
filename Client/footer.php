@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../resources/css/Footer-Clean.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-<div class="footer-clean" style="bottom:0; margin-top: 20px">
+<div id="footer" class="footer-clean" style="bottom:0; margin-top: 20px">
     <footer style = "margin-top: 40px;">
         <div class="container">
             <div class="row justify-content-center">

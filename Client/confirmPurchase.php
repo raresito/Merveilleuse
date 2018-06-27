@@ -28,7 +28,7 @@ if(!isset($_SESSION["email"])){
     <?php include '../libraries.php' ?>
 
     <script>
-        let order_id;
+        var orderId;
         function selectOrder(){
             $.ajax({
                 type: 'POST',
@@ -37,7 +37,7 @@ if(!isset($_SESSION["email"])){
                 success: function (d){
                     console.log(d);
                     let productArray = JSON.parse(d);
-                    order_id = productArray[0].order_id;
+                    orderId = productArray[0].idOrder;
                     let total = 0;
                     document.getElementById("number-of-products").innerText = productArray.length;
                     for(let i = 0; i < productArray.length; i++) {
@@ -65,21 +65,39 @@ if(!isset($_SESSION["email"])){
         function purchase(){
 
             $.ajax({
-                type: 'POST',
-                url: 'buy.php',
-                data:{
-                    id: order_id,
-                    name: $("#firstName").val(),
-                    lastName: $("#lastName").val(),
-                    email: $("#email").val(),
-                    mobil: $("#phone").val(),
-                    address: $("#address").val()
-                },
-                success: function (d){
-                    console.log(d);
-                    $("#content").innerHTML = '';
-                }
-            })
+                    type: 'POST',
+                    url: '../selectOrders.php',
+                    data:{
+                        type: "mine",
+                        email: "<?php echo $_SESSION["email"]; ?>"
+                    },
+                    success: function (d) {
+                        arr = JSON.parse(d);
+                        console.log(arr[0].orderId);
+                        $.ajax({
+                            type: 'POST',
+                            url: 'buy.php',
+                            data:{
+                                id: arr[0].orderId,
+                                name: $("#firstName").val(),
+                                lastName: $("#lastName").val(),
+                                email: $("#email").val(),
+                                mobil: $("#phone").val(),
+                                address: $("#address").val()
+                            },
+                            success: function (d){
+                                console.log(d);
+                                document.getElementById("content").innerHTML = '' +
+                                    '<div id="addSuccess" class="alert alert-success" role="alert">\n' +
+                                        'Comandă plasată!' +
+                                    '</div>';
+                                document.getElementById("footer").style.marginTop = "250px";
+                            }
+                        });
+                    }
+            });
+
+
         }
     </script>
 

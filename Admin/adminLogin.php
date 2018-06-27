@@ -39,7 +39,10 @@
                     password: document.getElementById("inputPassword").value
                 },
                 success: function (d) {
-                    document.getElementById("loginResponseDiv").hidden = false;
+                    if(d === "Success") {
+                        document.getElementById("loginResponseDiv").hidden = false;
+                    }
+                    else { console.log(d) }
                 }
             });
         }
@@ -73,31 +76,26 @@
             <div id="loginResponseDiv" class="alert alert-danger" role="alert" hidden>
                 <a href="dashboard.php"> Bine ai revenit! Click aici pentru a merge la Dashboard! </a>
             </div>
-            <form id = "loginForm">
-                <div class="form-group">
-
-                    <label for="exampleInputEmail1">
-                        Email address
-                    </label>
-                    <input type="email" class="form-control" id="inputEmail" name="email"/>
-                </div>
-                <div class="form-group">
-
-                    <label for="exampleInputPassword1">
-                        Password
-                    </label>
-                    <input type="password" class="form-control" id="inputPassword" name="password"/>
-                </div>
-                <div class="checkbox">
-
-                    <label>
-                        <input type="checkbox" /> Remember me!
-                    </label>
-                </div>
-                <button type="submit" onclick="login()" class="btn btn-primary">
-                    Submit
-                </button>
-            </form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">
+                    Email address
+                </label>
+                <input type="email" class="form-control" id="inputEmail" name="email"/>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">
+                    Password
+                </label>
+                <input type="password" class="form-control" id="inputPassword" name="password"/>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" /> Remember me!
+                </label>
+            </div>
+            <button type="button" onclick="login()" class="btn btn-primary">
+                Submit
+            </button>
         </div>
         <div class="col-md-3"></div>
     </div>

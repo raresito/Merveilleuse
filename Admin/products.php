@@ -5,8 +5,6 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 require 'requests/dbConnectAdmin.php';
-
-
 $sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
@@ -34,92 +32,6 @@ if($row["admin"] == 0){
         <link rel="stylesheet" href="../resources/css/Lightbox-Gallery.css">
         <script src="../resources/js/products.js"></script>
 
-        <script>
-            function setEditModal(id, denumire, pret, unitate, categorie, imagine){
-                $("#editProdusId").val(id);
-                $("#editProdusName").val(denumire);
-                $("#editProdusCategory").val(categorie);
-                $("#editProdusPretUnitar").val(pret);
-                $("#editProdusUM").val(unitate);
-                $("#editProdusImagine").val(imagine);
-            }
-            //TODO ADD FLAVOUR
-            function editProdus(){
-                id = $("#editProdusId").val();
-                alert(id);
-                $.ajax({
-                    type: 'POST',
-                    url: 'requests/editProdus.php',
-                    data:{
-                        editID: id,
-                        editNameProduct: $("#editProdusName").val(),
-                        editCategory: $("#editProdusCategory").val(),
-                        editPriceProduct: $("#editProdusPretUnitar").val(),
-                        editUnitProduct: $("#editProdusUM").val(),
-                        editImageProduct: $("#editProdusImagine").val()
-                    },
-                    success: function (result){
-                        if(result === "Success"){
-                            $("#editModal").modal('hide');
-                            reloadProducts();
-                        }
-                        else{
-                            alert("Ne cerem scuze, a apărut o erorare");
-                            console.log("error" + result);
-                        }
-                    }
-                });
-            }
-
-            function addProduct(){
-                $.ajax({
-                    type: 'POST',
-                    url: 'requests/insertProduct.php',
-                    data: {
-                        newProductName: document.getElementById("newProductName").value,
-                        newProductPrice: document.getElementById("newProductPrice").value,
-                        newProductUnit: document.getElementById("newProductUnit").value,
-                        newProductPhoto: document.getElementById("photoPreview").innerHTML,
-                        newProductCategory: document.getElementById("newProductCategory").value
-                    },
-                    success: function(d){
-                        if(d === "Success") {
-                            document.getElementById("addedDiv").innerHTML = "" +
-                                "<div class=\"alert alert-success\" role=\"alert\">" +
-                                    "<strong>Încărcat!</strong> Ai adăugat un produs nou!" +
-                                "</div>";
-                            reloadProducts();
-                            $("#addModal").modal('hide');
-                        } else {
-                            console.log(d);
-                            document.getElementById("addedDiv").innerHTML = ""+
-                                    "<div class=\"alert alert-danger\" role=\"alert\">" +
-                                        "A apărut o problemă, mai încearcă odată!" +
-                                    "</div>"
-                            $("#addModal").modal('hide');
-                        }
-                    }
-                });
-            }
-
-            function deleteProduct(b){
-                alert(b);
-                $.ajax({
-                    type: 'POST',
-                    url: 'requests/deleteProduct.php',
-                    data:{
-                        editID: id,
-                        editNameProduct: $("#editProdusName").val(),
-                        editCategory: $("#editProdusCategory").val(),
-                        editPriceProduct: $("#editProdusPretUnitar").val(),
-                        editUnitProduct: $("#editProdusUM").val(),
-                        editImageProduct: $("#editProdusImagine").val()
-                    },
-                    success: function (result){
-            }
-
-        </script>
-
     </head>
     <body>
         <div class="wrapper">
@@ -130,31 +42,6 @@ if($row["admin"] == 0){
             <div class="row">
                 <div class = "col-sm-12">
                     <div id="addedDiv"></div>
-                    <?php
-
-                    if(isset($_POST["deleteProduct"])){
-                        $sqldelete = "Delete from producttable where idProduct = '" . $_POST["deleteProduct"] . "';";
-                        //echo $sqldelete;
-                        $delete = mysqli_query($conn,$sqldelete);
-                        //echo $delete;
-                        //echo mysqli_error($conn);
-                        if($delete){
-                            echo '<div class="alert alert-success" role="alert">
-                              <strong>Șters!</strong> Ai șters produsul '.$_POST["nameProduct"].'
-                            </div>';
-                        } else {
-                            echo "File upload failed, please try again.";
-                            echo '<div class="alert alert-danger" role="alert">
-                                A apărut o problemă, mai încearcă odată!
-                            </div>';
-                        }
-
-                    }
-
-                    $sql = "SELECT * FROM producttable";
-                    $result = mysqli_query($conn,$sql);
-
-                    ?>
                     <div class="productTitle">
                         <button type="button" id="sidebarCollapse" onclick="collapse()" class="btn btn-info navbar-btn">
                             <i class="fas fa-align-left"></i>
@@ -171,11 +58,8 @@ if($row["admin"] == 0){
             </div>
         </div>
         </div>
-        <!-- Modal -->
         <div id="editModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
-
-                <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Edit Product</h4>
@@ -276,14 +160,12 @@ if($row["admin"] == 0){
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="addmodal" value="Cancel">
                             <input type="button" class="btn btn-info" data-dismiss="addmodal" onclick = "addProduct()" value="UPLOAD">
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>

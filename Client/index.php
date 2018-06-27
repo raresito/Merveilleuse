@@ -42,16 +42,17 @@
         <div class="row">
             <div class="swiper-container main-slider" id="myCarousel">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/unu.jpg')" data-hash="slide1">
+                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/foto/tiramisu.jpeg')" data-hash="slide1">
                         <h2>În prăjitura vieţii, prietenii sunt chipsuri de ciocolată.</h2>
                     </div>
-                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/doi.jpg')" data-hash="slide2">
+                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/foto/duoMousseCioco.jpeg')" data-hash="slide2">
                         <h2>O dietă echilibrată înseamnă câte o prăjitură în fiecare mână.</h2>
                     </div>
+                    <div class="swiper-slide slider-bg-position" style="background:url('../resources/img/foto/IMG-20180403-WA0000.jpg')" data-hash="slide2">
+                        <h2>Îţi dai seama că ai îmbătrânit când lumânările de pe tort costă cu mult mai mult decât tortul.</h2>
+                    </div>
                 </div>
-                <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
                 <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
                 <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
             </div>
@@ -60,7 +61,7 @@
     </div>
 
 
-
+    <hr>
     <div class="container-fluid">
         <div id="image-holder" class="row">
 

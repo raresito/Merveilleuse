@@ -6,7 +6,10 @@ $sql = "delete from product
 $result = mysqli_query($conn,$sql);
 
 if($result!=false){
-    echo 'Success';
+    $sql = "select nameProduct
+            from product
+            where idProduct =" . $_POST['idProduct'].";";
+    echo mysqli_query($conn, $sql)->fetch_assoc()["nameProduct"];
 }
 else{
     echo 'fail';

@@ -30,6 +30,7 @@ if($row["admin"] == 0){
         window.onload = function(){
             today();
             openOrderCount();
+            doneOrderCount();
         };
         function today(){
             let today = new Date();
@@ -52,9 +53,21 @@ if($row["admin"] == 0){
             });
         }
 
+        function doneOrderCount(){
+            $.ajax({
+                type: 'POST',
+                url: '../selectOrders.php',
+                data:{type: "done"},
+                success: function (d){
+                    document.getElementById("divDoneOrderCount").innerText = d;
+                }
+            });
+        }
+
 
     </script>
 
+    <!-- TODO GDPR -->
 
 </head>
 <body>
@@ -101,6 +114,21 @@ if($row["admin"] == 0){
                     <a href="bonConsum.php">
                         <div class="card-footer">
                             <span class="pull-left">Descarca PDF</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Comenzi livrate luna aceasta:</h5><div id="divDoneOrderCount" class="huge"></div>
+                    </div>
+                    <a href="orders.php">
+                        <div class="card-footer">
+                            <span class="pull-left">Vezi Comenzi</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>

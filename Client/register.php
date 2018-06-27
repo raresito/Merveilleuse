@@ -98,7 +98,7 @@ if(isset($_SESSION["email"]))
 
                             },
                             success: function (rd) {
-
+                                console.log(rd);
                             }
                         });
                         rp.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">" +
