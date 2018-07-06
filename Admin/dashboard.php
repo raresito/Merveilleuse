@@ -10,7 +10,7 @@ require 'requests/dbConnectAdmin.php';
 $sql = "Select * from user where emailUser = '" .$_SESSION["email"]."' LIMIT 1 ";
 $result = mysqli_query($conn,$sql);
 $row = $result ->fetch_assoc();
-if($row["admin"] == 0){
+if($row["admin"] != 1){
     header("Location: adminLogin.php");
 }
 
