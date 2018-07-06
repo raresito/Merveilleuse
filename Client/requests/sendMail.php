@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-ini_set('display_errors', 1);
-
 $destinatar = 'rares@raresito.com';
 $denumireDestinatar = 'John Doe';
 $subiectMail = 'Comanda Merveilleuse';
 $fromName = 'Merveilleuse';
 $fromEmail = 'rares@raresito.com';
 $replyTo = 'rares@raresito.com';
-$mesaj = 'cc';
+$mesaj = '';
 
 if(isset($_POST['email'])){
     $destinatar = $_POST['email'];
@@ -36,42 +34,36 @@ if(isset($_POST['message'])){
 }
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 require '../../vendor/autoload.php';
-try {
-    $mail = new PHPMailer(true);
-    $mail -> isSMTP();
-    $mail->SMTPDEbug = 4;
-    $mail -> Host = 'smtp.gmail.com';
-    $mail -> Port = 587;
-    $mail -> SMTPSecure = 'tls';
-    $mail -> SMTPAuth = true;
-    $mail -> Username = "raresphpcristea@gmail.com";
-    $mail -> Password = "googlephp";
-    $mail -> setFrom($fromEmail, $fromName);
-    $mail -> addReplyTo($fromEmail, 'Merveilleuse Minion');
-    $mail -> addAddress($destinatar, $denumireDestinatar);
-    $mail -> Subject = $subiectMail;
-    $mail -> msgHTML($mesaj, __DIR__);
-    $mail -> AltBody = 'This is a plain-text message body';
 
-    $mail -> SMTPOptions = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-        )
-    );
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->SMTPDebug = 0;
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls';
+$mail->SMTPAuth = true;
+$mail->Username = "raresphpcristea@gmail.com";
+$mail->Password = "googlephp";
+$mail->setFrom($fromEmail, $fromName);
+$mail->addReplyTo($fromEmail, 'Merveilleuse Minion');
+$mail->addAddress($destinatar,$denumireDestinatar);
+$mail->Subject = $subiectMail;
+$mail->msgHTML($mesaj, __DIR__);
+$mail->AltBody = 'This is a plain-text message body';
 
-    if (!$mail -> send()) {
-        echo "Mailer Error: " . $mail -> ErrorInfo;
-    } else {
-        echo "Message sent!";
-    }
-} catch (Exception $e) {
-    echo $e->errorMessage(); //Pretty error messages from PHPMailer
-} catch (\Exception $e) { //The leading slash means the Global PHP Exception class will be caught
-    echo $e->getMessage(); //Boring error messages from anything else!
+$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
+
+if (!$mail->send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+    echo "Message sent!";
 }
 
 ?>

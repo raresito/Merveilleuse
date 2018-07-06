@@ -1,6 +1,6 @@
 <?php
-
 require_once 'dbConnectAdmin.php';
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -10,10 +10,7 @@ $sql = "SELECT *
         WHERE emailUser ='" . $_POST['email'] . "' 
         AND admin = 1 
         AND password = '".md5($_POST["password"])."';";
-
 $result = mysqli_query($conn,$sql);
-
-echo $conn->error;
 
 if ($result->num_rows > 0) {
     while ($row = $result -> fetch_assoc()) {
@@ -23,5 +20,3 @@ if ($result->num_rows > 0) {
 
     echo "Success";
 }
-else echo "nut";
-

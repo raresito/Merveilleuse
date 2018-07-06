@@ -1,14 +1,12 @@
 <?php
 
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 require_once ("../vendor/autoload.php");
 use setasign\Fpdi\Fpdi;
 use setasign\Fpdi\PdfReader;
 
-require_once 'requests/dbConnectAdmin.php';
+require 'requests/dbConnectAdmin.php';
+
+
 
 setlocale(LC_CTYPE, 'en_US');
 
@@ -144,8 +142,4 @@ function em($word) {
     $word = iconv('UTF-8', 'ISO-8859-2', $word);
     return $word;
 }
-
-?>
-
-
 

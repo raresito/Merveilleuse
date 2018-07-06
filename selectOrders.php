@@ -15,12 +15,7 @@ if(isset($_POST["type"])) {
 
         echo json_encode($arr);
     } elseif ($_POST["type"] == "open") {
-        $sql = "select * 
-                from `order` join user
-                on user.idUser = `order`.idUser
-                join addresses
-                on addresses.idAddress = `order`.idAddress
-                where deliveryStatus = 0";
+        $sql = "select * from `order` where deliveryStatus = 0";
         $result = mysqli_query($conn, $sql);
         echo $result -> num_rows;
 
@@ -66,9 +61,6 @@ if(isset($_POST["type"])) {
                 where MONTH(deliveryDate) = MONTH(CURRENT_DATE())
                 group by MONTH(deliveryDate)";
         $result = mysqli_query($conn, $sql);
-        if($result -> fetch_assoc()["nom"] == null){
-            echo '0';
-        }
         echo $result -> fetch_assoc()["nom"];
     }
 }

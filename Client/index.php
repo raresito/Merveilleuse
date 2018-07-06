@@ -23,6 +23,8 @@
         <!-- Font Awesome Style -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+        <script src = "../resources/js/indexClient.js"></script>
+
 
         <title>Merveilleuse - Atelier de prajituri Artizanale</title>
 
@@ -68,7 +70,6 @@
 
     <?php include '../Client/footer.php' ?>
 
-    <script src = "../resources/js/indexClient.js"></script>
     <script src="../resources/js/scrollPosStyler.js"></script>
     <script src="../resources/js/swiper.min.js"></script>
     <script src="../resources/js/isotope.min.js"></script>

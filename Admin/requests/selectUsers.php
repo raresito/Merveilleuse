@@ -1,15 +1,13 @@
 <?php
 
 include "dbConnectAdmin.php";
+$sql = "select * from user";
+$result = mysqli_query($conn,$sql);
 
-$stmt = $conn->prepare("select * from user");
-$stmt->execute();
-$result = $stmt->get_result();
-if($result->num_rows === 0) exit('No rows');
-while($row = $result->fetch_assoc()) {
+$arr = array();
+while($row = mysqli_fetch_assoc($result)){
     $arr[] = $row;
 }
-$stmt->close();
 
 echo json_encode($arr);
 ?>

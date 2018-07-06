@@ -1,12 +1,11 @@
 <?php
     if(isset($_POST["logoutVariable"])) {
-        if ($_POST["logoutVariable"] == true) {
+        if ($_POST["logoutVariable"] == "true") {
             session_unset();
             session_destroy();
             header("Location: adminLogin.php");
         }
     }
-    echo $_POST["logoutVariable"];
 ?>
 <html>
 <head>
@@ -57,9 +56,7 @@
     <div class="row">
         <img src="../resources/img/logo.jpg">
     </div>
-
-
-    <div class="row top-buffer" id="resultDiv">
+    <div id="resultDiv">
         <?php
         if(isset($_POST["logoutVariable"]) && $_POST["logoutVariable"] == "true"){
             echo'
@@ -70,10 +67,13 @@
         }
         ?>
     </div>
-    <div class="row mt-4" style="width:100%;">
+    <div id="alertDiv" class="row">
+
+    </div>
+    <div class="row" style="width:100%;">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div id="loginResponseDiv" class="alert alert-info" role="alert" hidden>
+            <div id="loginResponseDiv" class="alert alert-danger" role="alert" hidden>
                 <a href="dashboard.php"> Bine ai revenit! Click aici pentru a merge la Dashboard! </a>
             </div>
             <div class="form-group">
